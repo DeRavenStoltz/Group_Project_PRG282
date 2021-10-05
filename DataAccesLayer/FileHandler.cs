@@ -18,7 +18,6 @@ namespace Group_Project_PRG282.DataAccesLayer
 
         public List<string> getUsers()
         {
-            File.Create(users); 
             List<string> usernames = File.ReadAllLines(users).ToList();
 
             return usernames;
