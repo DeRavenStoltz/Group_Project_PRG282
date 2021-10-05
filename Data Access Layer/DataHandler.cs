@@ -60,18 +60,25 @@ namespace Group_Project_PRG282
             return false;
         }
 
-        public void GetStudents()
+        public List<Student> GetStudents()
         {
-            try
-            {
-                
+            List<Student> students = new List<Student>();
 
-            }
-            catch (Exception)
-            {
+            connection.Open();
 
-                throw;
+            SqlCommand studentCommand = new SqlCommand(@"SELECT * FROM tblStudents", connection);
+
+            SqlDataReader reader = studentCommand.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    students.Add(new Student(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5)));
+                }
             }
+
+            return students;
         }
     }
 }
