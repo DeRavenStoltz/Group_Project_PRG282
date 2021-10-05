@@ -30,8 +30,8 @@
         {
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.usernameBoxLogin = new System.Windows.Forms.TextBox();
-            this.passwordBoxLogin = new System.Windows.Forms.TextBox();
+            this.txtusernameBoxLogin = new System.Windows.Forms.TextBox();
+            this.txtpasswordBoxLogin = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnClearLogin = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(176, 198);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(103, 29);
             this.btnLogin.TabIndex = 0;
@@ -61,23 +61,23 @@
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Username";
             // 
-            // usernameBoxLogin
+            // txtusernameBoxLogin
             // 
-            this.usernameBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.usernameBoxLogin.Location = new System.Drawing.Point(95, 90);
-            this.usernameBoxLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.usernameBoxLogin.Name = "usernameBoxLogin";
-            this.usernameBoxLogin.Size = new System.Drawing.Size(166, 26);
-            this.usernameBoxLogin.TabIndex = 2;
+            this.txtusernameBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtusernameBoxLogin.Location = new System.Drawing.Point(95, 90);
+            this.txtusernameBoxLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtusernameBoxLogin.Name = "txtusernameBoxLogin";
+            this.txtusernameBoxLogin.Size = new System.Drawing.Size(166, 26);
+            this.txtusernameBoxLogin.TabIndex = 2;
             // 
-            // passwordBoxLogin
+            // txtpasswordBoxLogin
             // 
-            this.passwordBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.passwordBoxLogin.Location = new System.Drawing.Point(95, 149);
-            this.passwordBoxLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.passwordBoxLogin.Name = "passwordBoxLogin";
-            this.passwordBoxLogin.Size = new System.Drawing.Size(166, 26);
-            this.passwordBoxLogin.TabIndex = 4;
+            this.txtpasswordBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtpasswordBoxLogin.Location = new System.Drawing.Point(95, 149);
+            this.txtpasswordBoxLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtpasswordBoxLogin.Name = "txtpasswordBoxLogin";
+            this.txtpasswordBoxLogin.Size = new System.Drawing.Size(166, 26);
+            this.txtpasswordBoxLogin.TabIndex = 4;
             // 
             // lblPassword
             // 
@@ -105,7 +105,7 @@
             // 
             this.btnClearLogin.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClearLogin.Location = new System.Drawing.Point(69, 198);
-            this.btnClearLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClearLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearLogin.Name = "btnClearLogin";
             this.btnClearLogin.Size = new System.Drawing.Size(103, 29);
             this.btnClearLogin.TabIndex = 6;
@@ -152,17 +152,18 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClearLogin);
             this.Controls.Add(this.lblLogin);
-            this.Controls.Add(this.passwordBoxLogin);
+            this.Controls.Add(this.txtpasswordBoxLogin);
             this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.usernameBoxLogin);
+            this.Controls.Add(this.txtusernameBoxLogin);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnLogin);
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,8 +173,8 @@
 
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.TextBox usernameBoxLogin;
-        private System.Windows.Forms.TextBox passwordBoxLogin;
+        private System.Windows.Forms.TextBox txtusernameBoxLogin;
+        private System.Windows.Forms.TextBox txtpasswordBoxLogin;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Button btnClearLogin;

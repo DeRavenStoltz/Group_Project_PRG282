@@ -17,7 +17,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             try
             {
                 List<User> users = new List<User>();
-
+               
                 foreach (var name in usernames)
                 {
                     string[] entries = name.Split(',');
@@ -29,7 +29,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                     System.Windows.Forms.MessageBox.Show("Please enter username", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
                     return; 
                 }
-                if (username == "")
+                if (password == "")
                 {
                     System.Windows.Forms.MessageBox.Show("Please enter password", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
                     return; 
@@ -45,7 +45,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                 {
                     if (loginSuccess != null)
                     {
-                        loginSuccess();
+                        loginSuccess.Invoke();
                     }
                 }
             }

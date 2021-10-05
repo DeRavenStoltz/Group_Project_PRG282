@@ -51,6 +51,7 @@
     <Compile Include="DataAccesLayer\DataHandler.cs" />
     <Compile Include="DataAccesLayer\FileHandler.cs" />
     <Compile Include="DataAccesLayer\User.cs" />
+    <Compile Include="Presentation Layer\ComponentController.cs" />
     <Compile Include="Presentation Layer\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +103,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
