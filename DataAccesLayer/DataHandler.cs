@@ -3,16 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
-using System.Threading;
 
-
-using Group_Project_PRG282.Presentation_Layer;
-
-namespace Group_Project_PRG282
+namespace Group_Project_PRG282.DataAccesLayer
 {
     class DataHandler
     {
@@ -49,7 +44,7 @@ namespace Group_Project_PRG282
                 {
                     return false;
                 }
-                
+
             }
             catch (Exception er)
             {
@@ -64,7 +59,7 @@ namespace Group_Project_PRG282
         {
             try
             {
-                
+
 
             }
             catch (Exception)
