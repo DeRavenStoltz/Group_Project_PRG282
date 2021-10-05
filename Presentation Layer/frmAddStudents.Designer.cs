@@ -31,19 +31,19 @@ namespace Group_Project_PRG282.Presentation_Layer
         {
             this.lblAddStudents = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.addStudAddress = new System.Windows.Forms.TextBox();
+            this.addStudPhone = new System.Windows.Forms.TextBox();
+            this.rdioAddFemale = new System.Windows.Forms.RadioButton();
+            this.rdioAddMale = new System.Windows.Forms.RadioButton();
+            this.addDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.addFullName = new System.Windows.Forms.TextBox();
+            this.addStudNumber = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.addStudNumber = new System.Windows.Forms.TextBox();
-            this.addFullName = new System.Windows.Forms.TextBox();
-            this.addDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.rdioAddMale = new System.Windows.Forms.RadioButton();
-            this.rdioAddFemale = new System.Windows.Forms.RadioButton();
-            this.addStudPhone = new System.Windows.Forms.TextBox();
-            this.addStudAddress = new System.Windows.Forms.TextBox();
             this.ModuleDetails = new System.Windows.Forms.GroupBox();
             this.addStudModuleDes = new System.Windows.Forms.TextBox();
             this.addStudModuleName = new System.Windows.Forms.TextBox();
@@ -91,6 +91,67 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Details";
+            // 
+            // addStudAddress
+            // 
+            this.addStudAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addStudAddress.Location = new System.Drawing.Point(19, 587);
+            this.addStudAddress.Name = "addStudAddress";
+            this.addStudAddress.Size = new System.Drawing.Size(303, 35);
+            this.addStudAddress.TabIndex = 22;
+            // 
+            // addStudPhone
+            // 
+            this.addStudPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addStudPhone.Location = new System.Drawing.Point(19, 485);
+            this.addStudPhone.Name = "addStudPhone";
+            this.addStudPhone.Size = new System.Drawing.Size(303, 35);
+            this.addStudPhone.TabIndex = 21;
+            // 
+            // rdioAddFemale
+            // 
+            this.rdioAddFemale.AutoSize = true;
+            this.rdioAddFemale.Location = new System.Drawing.Point(205, 387);
+            this.rdioAddFemale.Name = "rdioAddFemale";
+            this.rdioAddFemale.Size = new System.Drawing.Size(102, 29);
+            this.rdioAddFemale.TabIndex = 20;
+            this.rdioAddFemale.TabStop = true;
+            this.rdioAddFemale.Text = "Female";
+            this.rdioAddFemale.UseVisualStyleBackColor = true;
+            // 
+            // rdioAddMale
+            // 
+            this.rdioAddMale.AutoSize = true;
+            this.rdioAddMale.Location = new System.Drawing.Point(43, 387);
+            this.rdioAddMale.Name = "rdioAddMale";
+            this.rdioAddMale.Size = new System.Drawing.Size(80, 29);
+            this.rdioAddMale.TabIndex = 19;
+            this.rdioAddMale.TabStop = true;
+            this.rdioAddMale.Text = "Male";
+            this.rdioAddMale.UseVisualStyleBackColor = true;
+            // 
+            // addDatePicker
+            // 
+            this.addDatePicker.Location = new System.Drawing.Point(19, 283);
+            this.addDatePicker.Name = "addDatePicker";
+            this.addDatePicker.Size = new System.Drawing.Size(303, 30);
+            this.addDatePicker.TabIndex = 18;
+            // 
+            // addFullName
+            // 
+            this.addFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addFullName.Location = new System.Drawing.Point(19, 180);
+            this.addFullName.Name = "addFullName";
+            this.addFullName.Size = new System.Drawing.Size(303, 35);
+            this.addFullName.TabIndex = 16;
+            // 
+            // addStudNumber
+            // 
+            this.addStudNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addStudNumber.Location = new System.Drawing.Point(19, 79);
+            this.addStudNumber.Name = "addStudNumber";
+            this.addStudNumber.Size = new System.Drawing.Size(303, 35);
+            this.addStudNumber.TabIndex = 15;
             // 
             // label8
             // 
@@ -151,67 +212,6 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblUsername.Size = new System.Drawing.Size(168, 25);
             this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "Student Number";
-            // 
-            // addStudNumber
-            // 
-            this.addStudNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudNumber.Location = new System.Drawing.Point(19, 79);
-            this.addStudNumber.Name = "addStudNumber";
-            this.addStudNumber.Size = new System.Drawing.Size(303, 35);
-            this.addStudNumber.TabIndex = 15;
-            // 
-            // addFullName
-            // 
-            this.addFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addFullName.Location = new System.Drawing.Point(19, 180);
-            this.addFullName.Name = "addFullName";
-            this.addFullName.Size = new System.Drawing.Size(303, 35);
-            this.addFullName.TabIndex = 16;
-            // 
-            // addDatePicker
-            // 
-            this.addDatePicker.Location = new System.Drawing.Point(19, 283);
-            this.addDatePicker.Name = "addDatePicker";
-            this.addDatePicker.Size = new System.Drawing.Size(303, 30);
-            this.addDatePicker.TabIndex = 18;
-            // 
-            // rdioAddMale
-            // 
-            this.rdioAddMale.AutoSize = true;
-            this.rdioAddMale.Location = new System.Drawing.Point(43, 387);
-            this.rdioAddMale.Name = "rdioAddMale";
-            this.rdioAddMale.Size = new System.Drawing.Size(80, 29);
-            this.rdioAddMale.TabIndex = 19;
-            this.rdioAddMale.TabStop = true;
-            this.rdioAddMale.Text = "Male";
-            this.rdioAddMale.UseVisualStyleBackColor = true;
-            // 
-            // rdioAddFemale
-            // 
-            this.rdioAddFemale.AutoSize = true;
-            this.rdioAddFemale.Location = new System.Drawing.Point(205, 387);
-            this.rdioAddFemale.Name = "rdioAddFemale";
-            this.rdioAddFemale.Size = new System.Drawing.Size(102, 29);
-            this.rdioAddFemale.TabIndex = 20;
-            this.rdioAddFemale.TabStop = true;
-            this.rdioAddFemale.Text = "Female";
-            this.rdioAddFemale.UseVisualStyleBackColor = true;
-            // 
-            // addStudPhone
-            // 
-            this.addStudPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudPhone.Location = new System.Drawing.Point(19, 485);
-            this.addStudPhone.Name = "addStudPhone";
-            this.addStudPhone.Size = new System.Drawing.Size(303, 35);
-            this.addStudPhone.TabIndex = 21;
-            // 
-            // addStudAddress
-            // 
-            this.addStudAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudAddress.Location = new System.Drawing.Point(19, 587);
-            this.addStudAddress.Name = "addStudAddress";
-            this.addStudAddress.Size = new System.Drawing.Size(303, 35);
-            this.addStudAddress.TabIndex = 22;
             // 
             // ModuleDetails
             // 
@@ -291,6 +291,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnAddStudent.TabIndex = 24;
             this.btnAddStudent.Text = "ADD STUDENT";
             this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // btnClear
             // 

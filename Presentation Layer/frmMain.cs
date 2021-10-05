@@ -27,14 +27,9 @@ namespace Group_Project_PRG282.Presentation_Layer
         private void frmMain_Load(object sender, EventArgs e)
         {
             DataHandler datahandler = new DataHandler();
-            students = datahandler.GetStudents();
+            students = datahandler.GetStudents(datahandler.ConnectDatabase());
             bindingSource.DataSource = students;
             studentDataGrid.DataSource = bindingSource;
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -78,6 +73,20 @@ namespace Group_Project_PRG282.Presentation_Layer
         private void btnMoveLast_Click(object sender, EventArgs e)
         {
             bindingSource.MoveLast();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            DataHandler dh = new DataHandler();
+            bindingSource.DataSource = dh.SearchStudent(students, searchBox.Text);
+            studentDataGrid.DataSource = bindingSource;
+
+        }
+
+        private void btnViewAll_Click(object sender, EventArgs e)
+        {
+            bindingSource.DataSource = students;
+            studentDataGrid.DataSource = bindingSource;
         }
     }
 }

@@ -45,5 +45,29 @@ namespace Group_Project_PRG282.Presentation_Layer
         {
             this.Close();
         }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            string gender;
+            if (rdioAddMale.Checked)
+            {
+                gender = rdioAddMale.Text;
+            }
+            else
+            {
+                gender = rdioAddFemale.Text;
+            }
+
+            DataHandler dh = new DataHandler();
+
+            if (dh.InsertStudents(dh.ConnectDatabase(), addFullName.Text, addDatePicker.Text, gender, addStudPhone.Text, addStudAddress.Text) == true)
+            {
+                MessageBox.Show("Student Added Succesfully");
+            }
+            else
+            {
+                MessageBox.Show("There was an error, please try again");
+            }
+        }
     }
 }

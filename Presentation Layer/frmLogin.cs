@@ -48,7 +48,7 @@ namespace Group_Project_PRG282
                 return;
             }
 
-            bool flag = dh.UserLogin(usernameBoxLogin.Text, passwordBoxLogin.Text);
+            bool flag = dh.UserLogin(dh.ConnectDatabase(), usernameBoxLogin.Text, passwordBoxLogin.Text);
 
             if (flag == true)
             {

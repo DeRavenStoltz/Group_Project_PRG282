@@ -51,7 +51,6 @@
             this.btnMovePrevious = new System.Windows.Forms.Button();
             this.btnMoveFirst = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -59,6 +58,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.btnViewAll = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentImageBox)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -271,13 +271,13 @@
             this.studentDataGrid.RowHeadersWidth = 62;
             this.studentDataGrid.RowTemplate.Height = 28;
             this.studentDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.studentDataGrid.Size = new System.Drawing.Size(1087, 559);
+            this.studentDataGrid.Size = new System.Drawing.Size(1207, 559);
             this.studentDataGrid.TabIndex = 17;
             this.studentDataGrid.SelectionChanged += new System.EventHandler(this.studentDataGrid_SelectionChanged);
             // 
             // btnMoveLast
             // 
-            this.btnMoveLast.Location = new System.Drawing.Point(942, 623);
+            this.btnMoveLast.Location = new System.Drawing.Point(1062, 623);
             this.btnMoveLast.Name = "btnMoveLast";
             this.btnMoveLast.Size = new System.Drawing.Size(167, 54);
             this.btnMoveLast.TabIndex = 16;
@@ -287,7 +287,7 @@
             // 
             // buttonMoveNext
             // 
-            this.buttonMoveNext.Location = new System.Drawing.Point(769, 623);
+            this.buttonMoveNext.Location = new System.Drawing.Point(889, 623);
             this.buttonMoveNext.Name = "buttonMoveNext";
             this.buttonMoveNext.Size = new System.Drawing.Size(167, 54);
             this.buttonMoveNext.TabIndex = 15;
@@ -317,27 +317,17 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnRefresh);
+            this.groupBox3.Controls.Add(this.btnViewAll);
             this.groupBox3.Controls.Add(this.button8);
             this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Controls.Add(this.btnCreate);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox3.Location = new System.Drawing.Point(588, 826);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1120, 158);
+            this.groupBox3.Size = new System.Drawing.Size(1255, 158);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Operations";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(779, 66);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(325, 54);
-            this.btnRefresh.TabIndex = 21;
-            this.btnRefresh.Text = "REFRESH";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // button8
             // 
@@ -387,6 +377,7 @@
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // searchBox
             // 
@@ -408,6 +399,16 @@
             this.lblWelcome.TabIndex = 16;
             this.lblWelcome.Text = "\"UserWelcome\"";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnViewAll
+            // 
+            this.btnViewAll.Location = new System.Drawing.Point(789, 66);
+            this.btnViewAll.Name = "btnViewAll";
+            this.btnViewAll.Size = new System.Drawing.Size(440, 54);
+            this.btnViewAll.TabIndex = 21;
+            this.btnViewAll.Text = "VIEW ALL STUDENTS";
+            this.btnViewAll.UseVisualStyleBackColor = true;
+            this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);
             // 
             // frmMain
             // 
@@ -464,10 +465,10 @@
         private System.Windows.Forms.Button buttonMoveNext;
         private System.Windows.Forms.Button btnMovePrevious;
         private System.Windows.Forms.Button btnMoveFirst;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Button btnViewAll;
     }
 }
