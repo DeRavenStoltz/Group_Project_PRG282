@@ -14,22 +14,24 @@ namespace Group_Project_PRG282.Presentation_Layer
     
     public partial class frmMain : Form
     {
-        SqlConnection connection;
+        SqlConnection connection = new SqlConnection("Server=(local); Initial Catalog=NORTHWND; Integrated Security=true");
         public frmMain()
         {
             InitializeComponent();
-            connection = new SqlConnection("Server=(local); Initial Catalog=NORTHWND; Integrated Security=true");
+            connection.Open();
+            connection.Close();
+        }
+        public frmMain(string currentUser)
+        {
+            InitializeComponent();
+            lblWelcome.Text = $"Welcome {currentUser}";
+            connection.Open();
+            connection.Close();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            connection.Open();
-
-            SqlCommand command = new SqlCommand("SELECT FirstName + ' ' + LastName AS FullName FROM Employees WHERE EmployeeID = 1", connection);
-
-            lblWelcome.Text = "Welcome, " + command.ExecuteScalar().ToString(); ;
-
-            connection.Close();
+   
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

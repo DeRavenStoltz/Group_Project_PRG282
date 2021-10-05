@@ -46,7 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\CheckLogin.cs" />
+    <Compile Include="BusinessLogicLayer\RegisterUser.cs" />
+    <Compile Include="Data Access Layer\DataHandler.cs" />
     <Compile Include="Data Access Layer\FileHandler.cs" />
+    <Compile Include="Data Access Layer\User.cs" />
     <Compile Include="DataHandler.cs" />
     <Compile Include="Presentation Layer\frmLogin.cs">
       <SubType>Form</SubType>
