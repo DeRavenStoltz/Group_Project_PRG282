@@ -51,5 +51,11 @@ namespace Group_Project_PRG282.Presentation_Layer
             connection.Close();
         }
 
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            frmAddStudents addStudents = new frmAddStudents();
+            addStudents.Show();
+            this.Hide();
+        }
     }
 }

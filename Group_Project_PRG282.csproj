@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Data Access Layer\FileHandler.cs" />
     <Compile Include="Data Access Layer\DataHandler.cs" />
+    <Compile Include="Presentation Layer\frmAddStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmAddStudents.Designer.cs">
+      <DependentUpon>frmAddStudents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation Layer\frmAddStudents.resx">
+      <DependentUpon>frmAddStudents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

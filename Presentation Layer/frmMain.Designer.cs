@@ -338,7 +338,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(232, 54);
             this.button8.TabIndex = 20;
-            this.button8.Text = "DELETE";
+            this.button8.Text = "DELETE STUDENT";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button6
@@ -347,7 +347,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(231, 54);
             this.button6.TabIndex = 19;
-            this.button6.Text = "UPDATE";
+            this.button6.Text = "UPDATE STUDENT";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // btnCreate
@@ -356,8 +356,9 @@
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(231, 54);
             this.btnCreate.TabIndex = 18;
-            this.btnCreate.Text = "CREATE";
+            this.btnCreate.Text = "ADD STUDENT";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // groupBox4
             // 
