@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Group_Project_PRG282.DataAccesLayer;
+using Group_Project_PRG282.BusinessLogicLayer;
+using Group_Project_PRG282.Presentation_Layer;
+
 namespace Group_Project_PRG282.Presentation_Layer
 {
     public partial class frmAddStudents : Form
@@ -38,12 +42,37 @@ namespace Group_Project_PRG282.Presentation_Layer
         {
             frmMain main = new frmMain();
             main.Show();
-            this.Hide();
+            Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            string gender;
+            if (rdioAddMale.Checked)
+            {
+                gender = rdioAddMale.Text;
+            }
+            else
+            {
+                gender = rdioAddFemale.Text;
+            }
+
+            DataHandler dh = new DataHandler();
+            DatabaseOperations operations = new DatabaseOperations();
+
+            if (operations.InsertStudents(dh.ConnectDatabase(), addFullName.Text, addDatePicker.Text, gender, addStudPhone.Text, addStudAddress.Text) == true)
+            {
+                MessageBox.Show("Student Added Succesfully");
+            }
+            else
+            {
+                MessageBox.Show("There was an error, please try again");
+            }
         }
     }
 }
