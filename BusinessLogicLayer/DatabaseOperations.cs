@@ -13,6 +13,9 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 {
     class DatabaseOperations
     {
+
+       // public bool InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress)
+
         public byte[] UploadPhoto()
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -31,6 +34,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
         }
 
         public bool InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes)
+
         {
             string query = @"INSERT INTO tblStudents(studentFullName, studentDOB, studentGender, studentPhone, studentAddress, studentImage) VALUES(@fullName, @dateOfBirth, @studentGender, @studentPhone, @studentAddress, @studentImage)";
 
@@ -64,7 +68,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             connection.Close();
             return true;
         }
-
         public List<Student> SearchStudent(List<Student> students, string search)
         {
             List<Student> searchedStudents = new List<Student>();
@@ -76,6 +79,20 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                 }
             }
             return searchedStudents;
+        }
+        public void deleteStudent(SqlConnection connection, int ID, string fullName)
+        {
+            connection.Open();
+            DialogResult userInput;
+            userInput = MessageBox.Show($"Are you sure you want to delete student, {fullName}?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            string delString = $"DELETE FROM tblStudents WHERE studentNumber = {ID} ";
+
+            if (userInput == DialogResult.Yes)
+            {
+                SqlCommand com = new SqlCommand(delString,connection);
+                com.ExecuteNonQuery();
+            }
+            connection.Close();
         }
     }
 }
