@@ -1,4 +1,6 @@
-﻿namespace Group_Project_PRG282.Presentation_Layer
+﻿using System;
+
+namespace Group_Project_PRG282.Presentation_Layer
 {
     partial class frmMain
     {
@@ -51,6 +53,7 @@
             this.btnMovePrevious = new System.Windows.Forms.Button();
             this.btnMoveFirst = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnViewAll = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -58,7 +61,6 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.btnViewAll = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentImageBox)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -96,7 +98,6 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(36, 248);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(374, 735);
             this.groupBox1.Size = new System.Drawing.Size(526, 736);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
@@ -128,7 +129,6 @@
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblPhoneNumber.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(188, 598);
             this.lblPhoneNumber.Location = new System.Drawing.Point(239, 598);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(152, 25);
@@ -150,7 +150,6 @@
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblGender.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblGender.Location = new System.Drawing.Point(188, 549);
             this.lblGender.Location = new System.Drawing.Point(239, 550);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(91, 25);
@@ -169,14 +168,6 @@
             // 
             // lblFullNameTop
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(135, 45);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 25);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "\"FullName\"";
             this.lblFullNameTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblFullNameTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullNameTop.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -191,7 +182,6 @@
             // 
             this.studentImageBox.Location = new System.Drawing.Point(20, 85);
             this.studentImageBox.Name = "studentImageBox";
-            this.studentImageBox.Size = new System.Drawing.Size(332, 298);
             this.studentImageBox.Size = new System.Drawing.Size(482, 299);
             this.studentImageBox.TabIndex = 8;
             this.studentImageBox.TabStop = false;
@@ -201,7 +191,6 @@
             this.lblDateOfBirth.AutoSize = true;
             this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblDateOfBirth.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblDateOfBirth.Location = new System.Drawing.Point(188, 506);
             this.lblDateOfBirth.Location = new System.Drawing.Point(239, 506);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
             this.lblDateOfBirth.Size = new System.Drawing.Size(127, 25);
@@ -223,7 +212,6 @@
             this.lblFullName.AutoSize = true;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblFullName.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblFullName.Location = new System.Drawing.Point(188, 460);
             this.lblFullName.Location = new System.Drawing.Point(239, 460);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(109, 25);
@@ -245,7 +233,6 @@
             this.lblStudNumber.AutoSize = true;
             this.lblStudNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblStudNumber.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblStudNumber.Location = new System.Drawing.Point(188, 412);
             this.lblStudNumber.Location = new System.Drawing.Point(239, 412);
             this.lblStudNumber.Name = "lblStudNumber";
             this.lblStudNumber.Size = new System.Drawing.Size(163, 25);
@@ -270,10 +257,8 @@
             this.groupBox2.Controls.Add(this.btnMovePrevious);
             this.groupBox2.Controls.Add(this.btnMoveFirst);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox2.Location = new System.Drawing.Point(429, 115);
             this.groupBox2.Location = new System.Drawing.Point(588, 116);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1125, 691);
             this.groupBox2.Size = new System.Drawing.Size(1255, 691);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
@@ -288,19 +273,12 @@
             this.studentDataGrid.RowHeadersWidth = 62;
             this.studentDataGrid.RowTemplate.Height = 28;
             this.studentDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.studentDataGrid.Size = new System.Drawing.Size(1088, 558);
             this.studentDataGrid.Size = new System.Drawing.Size(1207, 559);
             this.studentDataGrid.TabIndex = 17;
             this.studentDataGrid.SelectionChanged += new System.EventHandler(this.studentDataGrid_SelectionChanged);
             // 
             // btnMoveLast
             // 
-            this.button3.Location = new System.Drawing.Point(942, 623);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(166, 54);
-            this.button3.TabIndex = 16;
-            this.button3.Text = ">>";
-            this.button3.UseVisualStyleBackColor = true;
             this.btnMoveLast.Location = new System.Drawing.Point(1062, 623);
             this.btnMoveLast.Name = "btnMoveLast";
             this.btnMoveLast.Size = new System.Drawing.Size(167, 54);
@@ -311,12 +289,6 @@
             // 
             // buttonMoveNext
             // 
-            this.button4.Location = new System.Drawing.Point(770, 623);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 54);
-            this.button4.TabIndex = 15;
-            this.button4.Text = ">";
-            this.button4.UseVisualStyleBackColor = true;
             this.buttonMoveNext.Location = new System.Drawing.Point(889, 623);
             this.buttonMoveNext.Name = "buttonMoveNext";
             this.buttonMoveNext.Size = new System.Drawing.Size(167, 54);
@@ -327,12 +299,6 @@
             // 
             // btnMovePrevious
             // 
-            this.button2.Location = new System.Drawing.Point(195, 618);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 54);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "<";
-            this.button2.UseVisualStyleBackColor = true;
             this.btnMovePrevious.Location = new System.Drawing.Point(195, 619);
             this.btnMovePrevious.Name = "btnMovePrevious";
             this.btnMovePrevious.Size = new System.Drawing.Size(167, 54);
@@ -343,12 +309,6 @@
             // 
             // btnMoveFirst
             // 
-            this.button1.Location = new System.Drawing.Point(22, 618);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 54);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "<<";
-            this.button1.UseVisualStyleBackColor = true;
             this.btnMoveFirst.Location = new System.Drawing.Point(22, 619);
             this.btnMoveFirst.Name = "btnMoveFirst";
             this.btnMoveFirst.Size = new System.Drawing.Size(167, 54);
@@ -364,14 +324,22 @@
             this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Controls.Add(this.btnCreate);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox3.Location = new System.Drawing.Point(434, 826);
             this.groupBox3.Location = new System.Drawing.Point(588, 826);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1120, 158);
             this.groupBox3.Size = new System.Drawing.Size(1255, 158);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Operations";
+            // 
+            // btnViewAll
+            // 
+            this.btnViewAll.Location = new System.Drawing.Point(789, 66);
+            this.btnViewAll.Name = "btnViewAll";
+            this.btnViewAll.Size = new System.Drawing.Size(440, 54);
+            this.btnViewAll.TabIndex = 21;
+            this.btnViewAll.Text = "VIEW ALL STUDENTS";
+            this.btnViewAll.UseVisualStyleBackColor = true;
+            this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);
             // 
             // button8
             // 
@@ -436,32 +404,18 @@
             this.lblWelcome.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblWelcome.Location = new System.Drawing.Point(1244, 58);
             this.lblWelcome.Location = new System.Drawing.Point(0, 0);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(163, 25);
             this.lblWelcome.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.lblWelcome.Size = new System.Drawing.Size(1865, 104);
             this.lblWelcome.TabIndex = 16;
             this.lblWelcome.Text = "\"UserWelcome\"";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnViewAll
-            // 
-            this.btnViewAll.Location = new System.Drawing.Point(789, 66);
-            this.btnViewAll.Name = "btnViewAll";
-            this.btnViewAll.Size = new System.Drawing.Size(440, 54);
-            this.btnViewAll.TabIndex = 21;
-            this.btnViewAll.Text = "VIEW ALL STUDENTS";
-            this.btnViewAll.UseVisualStyleBackColor = true;
-            this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1594, 1009);
-            this.Controls.Add(this.lblWelcome);
             this.ClientSize = new System.Drawing.Size(1865, 1009);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -471,7 +425,7 @@
             this.Controls.Add(this.lblWelcome);
             this.Name = "frmMain";
             this.Text = "frmMain";
-            this.Load += new System.EventHandler(this.frmMain_Load);
+            this.Load += new System.EventHandler(this.frmMain_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentImageBox)).EndInit();
@@ -518,5 +472,6 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Button btnViewAll;
+
     }
 }

@@ -19,20 +19,15 @@ namespace Group_Project_PRG282.Presentation_Layer
     
     public partial class frmMain : Form
     {
-        SqlConnection connection;
         BindingSource bindingSource = new BindingSource();
         List<Student> students = new List<Student>();
         public frmMain()
         {
             InitializeComponent();
-            connection = new SqlConnection("Server=(local); Initial Catalog=StudentSystem; Integrated Security=true");
         }
         public frmMain(string currentUser)
         {
-            DataHandler datahandler = new DataHandler();
-            students = datahandler.GetStudents(datahandler.ConnectDatabase());
-            bindingSource.DataSource = students;
-            studentDataGrid.DataSource = bindingSource;
+
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -88,6 +83,14 @@ namespace Group_Project_PRG282.Presentation_Layer
 
         private void btnViewAll_Click(object sender, EventArgs e)
         {
+            bindingSource.DataSource = students;
+            studentDataGrid.DataSource = bindingSource;
+        }
+
+        private void frmMain_Load_1(object sender, EventArgs e)
+        {
+            DataHandler datahandler = new DataHandler();
+            students = datahandler.GetStudents(datahandler.ConnectDatabase());
             bindingSource.DataSource = students;
             studentDataGrid.DataSource = bindingSource;
         }
