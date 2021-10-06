@@ -53,6 +53,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnMovePrevious = new System.Windows.Forms.Button();
             this.btnMoveFirst = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnViewAll = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -62,7 +63,6 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.searchBox = new System.Windows.Forms.TextBox();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.linkSwitch = new System.Windows.Forms.LinkLabel();
-            this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentImageBox)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -347,6 +347,17 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Operations";
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(1104, 64);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(232, 54);
+            this.btnExit.TabIndex = 22;
+            this.btnExit.Text = "EXIT";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // btnViewAll
             // 
             this.btnViewAll.Location = new System.Drawing.Point(846, 64);
@@ -451,22 +462,13 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.linkSwitch.Text = "Switch User";
             this.linkSwitch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSwitch_LinkClicked);
             // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(1104, 64);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(232, 54);
-            this.btnExit.TabIndex = 22;
-            this.btnExit.Text = "EXIT";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1981, 1239);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1981, 1251);
             this.Controls.Add(this.linkSwitch);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
