@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Group_Project_PRG282.DataAccesLayer;
+using Group_Project_PRG282.BusinessLogicLayer;
+using Group_Project_PRG282.Presentation_Layer;
+
 namespace Group_Project_PRG282.Presentation_Layer
 {
     public partial class frmAddStudents : Form
@@ -59,8 +63,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             }
 
             DataHandler dh = new DataHandler();
+            DatabaseOperations operations = new DatabaseOperations();
 
-            if (dh.InsertStudents(dh.ConnectDatabase(), addFullName.Text, addDatePicker.Text, gender, addStudPhone.Text, addStudAddress.Text) == true)
+            if (operations.InsertStudents(dh.ConnectDatabase(), addFullName.Text, addDatePicker.Text, gender, addStudPhone.Text, addStudAddress.Text) == true)
             {
                 MessageBox.Show("Student Added Succesfully");
             }

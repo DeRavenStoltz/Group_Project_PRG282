@@ -10,6 +10,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Group_Project_PRG282.DataAccesLayer;
+using Group_Project_PRG282.BusinessLogicLayer;
+using Group_Project_PRG282.Presentation_Layer;
+
 namespace Group_Project_PRG282.Presentation_Layer
 {
     
@@ -76,8 +80,8 @@ namespace Group_Project_PRG282.Presentation_Layer
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DataHandler dh = new DataHandler();
-            bindingSource.DataSource = dh.SearchStudent(students, searchBox.Text);
+            DatabaseOperations operations = new DatabaseOperations();
+            bindingSource.DataSource = operations.SearchStudent(students, searchBox.Text);
             studentDataGrid.DataSource = bindingSource;
 
         }

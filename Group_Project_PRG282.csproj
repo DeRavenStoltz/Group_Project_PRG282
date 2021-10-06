@@ -46,51 +46,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data Access Layer\FileHandler.cs" />
-    <Compile Include="Data Access Layer\DataHandler.cs" />
-    <Compile Include="Presentation Layer\frmAddStudents.cs">
+    <Compile Include="BusinessLogicLayer\DatabaseOperations.cs" />
+    <Compile Include="PresentationLayer\frmAddStudents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\frmAddStudents.Designer.cs">
+    <Compile Include="PresentationLayer\frmAddStudents.Designer.cs">
       <DependentUpon>frmAddStudents.cs</DependentUpon>
     </Compile>
     <Compile Include="BusinessLogicLayer\CheckLogin.cs" />
     <Compile Include="BusinessLogicLayer\RegisterUser.cs" />
-    <Compile Include="DataAccesLayer\DataHandler.cs" />
-    <Compile Include="DataAccesLayer\FileHandler.cs" />
-    <Compile Include="DataAccesLayer\User.cs" />
-    <Compile Include="Presentation Layer\ComponentController.cs" />
-    <Compile Include="Presentation Layer\frmLogin.cs">
+    <Compile Include="DataAccessLayer\DataHandler.cs" />
+    <Compile Include="DataAccessLayer\FileHandler.cs" />
+    <Compile Include="DataAccessLayer\User.cs" />
+    <Compile Include="PresentationLayer\ComponentController.cs" />
+    <Compile Include="PresentationLayer\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\frmLogin.Designer.cs">
+    <Compile Include="PresentationLayer\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\frmMain.cs">
+    <Compile Include="PresentationLayer\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\frmMain.Designer.cs">
+    <Compile Include="PresentationLayer\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\frmRegister.cs">
+    <Compile Include="PresentationLayer\frmRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\frmRegister.Designer.cs">
+    <Compile Include="PresentationLayer\frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
-    <EmbeddedResource Include="Presentation Layer\frmAddStudents.resx">
+    <EmbeddedResource Include="PresentationLayer\frmAddStudents.resx">
       <DependentUpon>frmAddStudents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\frmLogin.resx">
+    <EmbeddedResource Include="PresentationLayer\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\frmMain.resx">
+    <EmbeddedResource Include="PresentationLayer\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\frmRegister.resx">
+    <EmbeddedResource Include="PresentationLayer\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
