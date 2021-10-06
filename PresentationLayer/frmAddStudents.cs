@@ -42,12 +42,12 @@ namespace Group_Project_PRG282.Presentation_Layer
         {
             frmMain main = new frmMain();
             main.Show();
-            this.Hide();
+            Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
