@@ -21,6 +21,8 @@ namespace Group_Project_PRG282.Presentation_Layer
     {
         BindingSource bindingSource = new BindingSource();
         List<Student> students = new List<Student>();
+        DatabaseOperations operations = new DatabaseOperations();
+        DataHandler datahandler = new DataHandler();
         public frmMain()
         {
             InitializeComponent();
@@ -30,14 +32,18 @@ namespace Group_Project_PRG282.Presentation_Layer
             InitializeComponent();
             lblWelcome.Text = $"Welcome, {currentUser}";
         }
-
         private void btnCreate_Click(object sender, EventArgs e)
         {
             frmAddStudents addStudents = new frmAddStudents();
             addStudents.Show();
             Close();
         }
-
+        private void frmMain_Load_1(object sender, EventArgs e)
+        {
+            students = datahandler.GetStudents(datahandler.ConnectDatabase());
+            bindingSource.DataSource = students;
+            studentDataGrid.DataSource = bindingSource;
+        }
         private void studentDataGrid_SelectionChanged(object sender, EventArgs e)
         {
             Student selectedStudent = (Student)bindingSource.Current;
@@ -50,52 +56,35 @@ namespace Group_Project_PRG282.Presentation_Layer
                 lblDateOfBirth.Text = selectedStudent.DateOfBirth;
                 lblPhysicalAddress.Text = selectedStudent.StudentAddress;
                 lblFullNameTop.Text = selectedStudent.FullName;
-
             }
         }
-
         private void btnMoveFirst_Click(object sender, EventArgs e)
         {
             bindingSource.MoveFirst();
         }
-
         private void btnMovePrevious_Click(object sender, EventArgs e)
         {
             bindingSource.MovePrevious();
         }
-
         private void buttonMoveNext_Click(object sender, EventArgs e)
         {
             bindingSource.MoveNext();
         }
-
         private void btnMoveLast_Click(object sender, EventArgs e)
         {
             bindingSource.MoveLast();
         }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DatabaseOperations operations = new DatabaseOperations();
             bindingSource.DataSource = operations.SearchStudent(students, searchBox.Text);
             studentDataGrid.DataSource = bindingSource;
 
         }
-
         private void btnViewAll_Click(object sender, EventArgs e)
         {
             bindingSource.DataSource = students;
             studentDataGrid.DataSource = bindingSource;
         }
-
-        private void frmMain_Load_1(object sender, EventArgs e)
-        {
-            DataHandler datahandler = new DataHandler();
-            students = datahandler.GetStudents(datahandler.ConnectDatabase());
-            bindingSource.DataSource = students;
-            studentDataGrid.DataSource = bindingSource;
-        }
-
         private void linkSwitch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("Are you sure you want to switch users?", "Important", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -105,6 +94,14 @@ namespace Group_Project_PRG282.Presentation_Layer
                 login.Show();
                 this.Hide();
             }
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Student selectedStudent = (Student)bindingSource.Current;
+            operations.deleteStudent(datahandler.ConnectDatabase(), selectedStudent.StudentNumber);
+            students.Clear();
+            students = datahandler.GetStudents(datahandler.ConnectDatabase());
+            bindingSource.DataSource = students;
         }
     }
 }
