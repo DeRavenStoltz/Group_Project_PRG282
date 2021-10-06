@@ -26,8 +26,6 @@ namespace Group_Project_PRG282
         public frmLogin()
         {
             InitializeComponent();
-            
-
         }
 
         private void linkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -54,7 +52,7 @@ namespace Group_Project_PRG282
             frmMain main = new frmMain(txtusernameBoxLogin.Text);
             cc.clearFieldsLogIn(txtusernameBoxLogin,txtpasswordBoxLogin);
             main.Show();
-            this.Hide();
+            Hide();
         }
 
 
