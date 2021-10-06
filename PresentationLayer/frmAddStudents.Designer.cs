@@ -37,13 +37,11 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.rdioAddMale = new System.Windows.Forms.RadioButton();
             this.addDatePicker = new System.Windows.Forms.DateTimePicker();
             this.addFullName = new System.Windows.Forms.TextBox();
-            this.addStudNumber = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblUsername = new System.Windows.Forms.Label();
             this.ModuleDetails = new System.Windows.Forms.GroupBox();
             this.addStudModuleDes = new System.Windows.Forms.TextBox();
             this.addStudModuleName = new System.Windows.Forms.TextBox();
@@ -55,8 +53,12 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.picStudentUpload = new System.Windows.Forms.PictureBox();
+            this.btnUploadPhoto = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.ModuleDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picStudentUpload)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAddStudents
@@ -71,23 +73,24 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btnUploadPhoto);
+            this.groupBox1.Controls.Add(this.picStudentUpload);
             this.groupBox1.Controls.Add(this.addStudAddress);
             this.groupBox1.Controls.Add(this.addStudPhone);
             this.groupBox1.Controls.Add(this.rdioAddFemale);
             this.groupBox1.Controls.Add(this.rdioAddMale);
             this.groupBox1.Controls.Add(this.addDatePicker);
             this.groupBox1.Controls.Add(this.addFullName);
-            this.groupBox1.Controls.Add(this.addStudNumber);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.lblUsername);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(36, 108);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(352, 654);
+            this.groupBox1.Size = new System.Drawing.Size(352, 937);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Details";
@@ -95,7 +98,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // addStudAddress
             // 
             this.addStudAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudAddress.Location = new System.Drawing.Point(19, 587);
+            this.addStudAddress.Location = new System.Drawing.Point(23, 875);
             this.addStudAddress.Name = "addStudAddress";
             this.addStudAddress.Size = new System.Drawing.Size(303, 35);
             this.addStudAddress.TabIndex = 22;
@@ -103,7 +106,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // addStudPhone
             // 
             this.addStudPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudPhone.Location = new System.Drawing.Point(19, 485);
+            this.addStudPhone.Location = new System.Drawing.Point(23, 773);
             this.addStudPhone.Name = "addStudPhone";
             this.addStudPhone.Size = new System.Drawing.Size(303, 35);
             this.addStudPhone.TabIndex = 21;
@@ -111,7 +114,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // rdioAddFemale
             // 
             this.rdioAddFemale.AutoSize = true;
-            this.rdioAddFemale.Location = new System.Drawing.Point(205, 387);
+            this.rdioAddFemale.Location = new System.Drawing.Point(191, 678);
             this.rdioAddFemale.Name = "rdioAddFemale";
             this.rdioAddFemale.Size = new System.Drawing.Size(102, 29);
             this.rdioAddFemale.TabIndex = 20;
@@ -122,7 +125,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // rdioAddMale
             // 
             this.rdioAddMale.AutoSize = true;
-            this.rdioAddMale.Location = new System.Drawing.Point(43, 387);
+            this.rdioAddMale.Location = new System.Drawing.Point(47, 678);
             this.rdioAddMale.Name = "rdioAddMale";
             this.rdioAddMale.Size = new System.Drawing.Size(80, 29);
             this.rdioAddMale.TabIndex = 19;
@@ -132,7 +135,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             // addDatePicker
             // 
-            this.addDatePicker.Location = new System.Drawing.Point(19, 283);
+            this.addDatePicker.Location = new System.Drawing.Point(23, 571);
             this.addDatePicker.Name = "addDatePicker";
             this.addDatePicker.Size = new System.Drawing.Size(303, 30);
             this.addDatePicker.TabIndex = 18;
@@ -140,24 +143,16 @@ namespace Group_Project_PRG282.Presentation_Layer
             // addFullName
             // 
             this.addFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addFullName.Location = new System.Drawing.Point(19, 180);
+            this.addFullName.Location = new System.Drawing.Point(23, 468);
             this.addFullName.Name = "addFullName";
             this.addFullName.Size = new System.Drawing.Size(303, 35);
             this.addFullName.TabIndex = 16;
-            // 
-            // addStudNumber
-            // 
-            this.addStudNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudNumber.Location = new System.Drawing.Point(19, 79);
-            this.addStudNumber.Name = "addStudNumber";
-            this.addStudNumber.Size = new System.Drawing.Size(303, 35);
-            this.addStudNumber.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(14, 559);
+            this.label8.Location = new System.Drawing.Point(18, 847);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(179, 25);
             this.label8.TabIndex = 14;
@@ -167,7 +162,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(14, 457);
+            this.label10.Location = new System.Drawing.Point(18, 745);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 25);
             this.label10.TabIndex = 12;
@@ -177,7 +172,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(14, 350);
+            this.label12.Location = new System.Drawing.Point(18, 647);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(83, 25);
             this.label12.TabIndex = 10;
@@ -187,7 +182,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(14, 255);
+            this.label5.Location = new System.Drawing.Point(18, 543);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 25);
             this.label5.TabIndex = 6;
@@ -197,21 +192,11 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(14, 152);
+            this.label3.Location = new System.Drawing.Point(18, 440);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Full Name";
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblUsername.Location = new System.Drawing.Point(14, 51);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(168, 25);
-            this.lblUsername.TabIndex = 2;
-            this.lblUsername.Text = "Student Number";
             // 
             // ModuleDetails
             // 
@@ -323,11 +308,40 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // picStudentUpload
+            // 
+            this.picStudentUpload.Location = new System.Drawing.Point(23, 79);
+            this.picStudentUpload.Name = "picStudentUpload";
+            this.picStudentUpload.Size = new System.Drawing.Size(303, 288);
+            this.picStudentUpload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picStudentUpload.TabIndex = 23;
+            this.picStudentUpload.TabStop = false;
+            // 
+            // btnUploadPhoto
+            // 
+            this.btnUploadPhoto.Location = new System.Drawing.Point(23, 378);
+            this.btnUploadPhoto.Name = "btnUploadPhoto";
+            this.btnUploadPhoto.Size = new System.Drawing.Size(303, 42);
+            this.btnUploadPhoto.TabIndex = 28;
+            this.btnUploadPhoto.Text = "UPLOAD PHOTO";
+            this.btnUploadPhoto.UseVisualStyleBackColor = true;
+            this.btnUploadPhoto.Click += new System.EventHandler(this.btnUploadPhoto_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(18, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 25);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Student Picture";
+            // 
             // frmAddStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 778);
+            this.ClientSize = new System.Drawing.Size(808, 1096);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
@@ -342,6 +356,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.groupBox1.PerformLayout();
             this.ModuleDetails.ResumeLayout(false);
             this.ModuleDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picStudentUpload)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,14 +371,12 @@ namespace Group_Project_PRG282.Presentation_Layer
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.TextBox addStudAddress;
         private System.Windows.Forms.TextBox addStudPhone;
         private System.Windows.Forms.RadioButton rdioAddFemale;
         private System.Windows.Forms.RadioButton rdioAddMale;
         private System.Windows.Forms.DateTimePicker addDatePicker;
         private System.Windows.Forms.TextBox addFullName;
-        private System.Windows.Forms.TextBox addStudNumber;
         private System.Windows.Forms.GroupBox ModuleDetails;
         private System.Windows.Forms.TextBox addStudModuleDes;
         private System.Windows.Forms.TextBox addStudModuleName;
@@ -375,5 +388,8 @@ namespace Group_Project_PRG282.Presentation_Layer
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnUploadPhoto;
+        private System.Windows.Forms.PictureBox picStudentUpload;
     }
 }
