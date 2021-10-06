@@ -60,18 +60,5 @@ namespace Group_Project_PRG282
             return false;
         }
 
-        public void GetStudents()
-        {
-            try
-            {
-                
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
     }
 }

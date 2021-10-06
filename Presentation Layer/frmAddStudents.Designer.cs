@@ -31,19 +31,19 @@ namespace Group_Project_PRG282.Presentation_Layer
         {
             this.lblAddStudents = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.addStudAddress = new System.Windows.Forms.TextBox();
+            this.addStudPhone = new System.Windows.Forms.TextBox();
+            this.rdioAddFemale = new System.Windows.Forms.RadioButton();
+            this.rdioAddMale = new System.Windows.Forms.RadioButton();
+            this.addDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.addFullName = new System.Windows.Forms.TextBox();
+            this.addStudNumber = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.addStudNumber = new System.Windows.Forms.TextBox();
-            this.addFullName = new System.Windows.Forms.TextBox();
-            this.addDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.rdioAddMale = new System.Windows.Forms.RadioButton();
-            this.rdioAddFemale = new System.Windows.Forms.RadioButton();
-            this.addStudPhone = new System.Windows.Forms.TextBox();
-            this.addStudAddress = new System.Windows.Forms.TextBox();
             this.ModuleDetails = new System.Windows.Forms.GroupBox();
             this.addStudModuleDes = new System.Windows.Forms.TextBox();
             this.addStudModuleName = new System.Windows.Forms.TextBox();
@@ -63,9 +63,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.lblAddStudents.AutoSize = true;
             this.lblAddStudents.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddStudents.Location = new System.Drawing.Point(26, 31);
+            this.lblAddStudents.Location = new System.Drawing.Point(23, 25);
             this.lblAddStudents.Name = "lblAddStudents";
-            this.lblAddStudents.Size = new System.Drawing.Size(332, 56);
+            this.lblAddStudents.Size = new System.Drawing.Size(277, 47);
             this.lblAddStudents.TabIndex = 7;
             this.lblAddStudents.Text = "ADD STUDENT";
             // 
@@ -85,20 +85,90 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lblUsername);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(36, 108);
+            this.groupBox1.Location = new System.Drawing.Point(32, 86);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(352, 654);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(313, 523);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Details";
+            // 
+            // addStudAddress
+            // 
+            this.addStudAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addStudAddress.Location = new System.Drawing.Point(17, 470);
+            this.addStudAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addStudAddress.Name = "addStudAddress";
+            this.addStudAddress.Size = new System.Drawing.Size(270, 30);
+            this.addStudAddress.TabIndex = 22;
+            // 
+            // addStudPhone
+            // 
+            this.addStudPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addStudPhone.Location = new System.Drawing.Point(17, 388);
+            this.addStudPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addStudPhone.Name = "addStudPhone";
+            this.addStudPhone.Size = new System.Drawing.Size(270, 30);
+            this.addStudPhone.TabIndex = 21;
+            // 
+            // rdioAddFemale
+            // 
+            this.rdioAddFemale.AutoSize = true;
+            this.rdioAddFemale.Location = new System.Drawing.Point(182, 310);
+            this.rdioAddFemale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdioAddFemale.Name = "rdioAddFemale";
+            this.rdioAddFemale.Size = new System.Drawing.Size(85, 24);
+            this.rdioAddFemale.TabIndex = 20;
+            this.rdioAddFemale.TabStop = true;
+            this.rdioAddFemale.Text = "Female";
+            this.rdioAddFemale.UseVisualStyleBackColor = true;
+            // 
+            // rdioAddMale
+            // 
+            this.rdioAddMale.AutoSize = true;
+            this.rdioAddMale.Location = new System.Drawing.Point(38, 310);
+            this.rdioAddMale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdioAddMale.Name = "rdioAddMale";
+            this.rdioAddMale.Size = new System.Drawing.Size(66, 24);
+            this.rdioAddMale.TabIndex = 19;
+            this.rdioAddMale.TabStop = true;
+            this.rdioAddMale.Text = "Male";
+            this.rdioAddMale.UseVisualStyleBackColor = true;
+            // 
+            // addDatePicker
+            // 
+            this.addDatePicker.Location = new System.Drawing.Point(17, 226);
+            this.addDatePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addDatePicker.Name = "addDatePicker";
+            this.addDatePicker.Size = new System.Drawing.Size(270, 26);
+            this.addDatePicker.TabIndex = 18;
+            // 
+            // addFullName
+            // 
+            this.addFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addFullName.Location = new System.Drawing.Point(17, 144);
+            this.addFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addFullName.Name = "addFullName";
+            this.addFullName.Size = new System.Drawing.Size(270, 30);
+            this.addFullName.TabIndex = 16;
+            // 
+            // addStudNumber
+            // 
+            this.addStudNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addStudNumber.Location = new System.Drawing.Point(17, 63);
+            this.addStudNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addStudNumber.Name = "addStudNumber";
+            this.addStudNumber.Size = new System.Drawing.Size(270, 30);
+            this.addStudNumber.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(14, 559);
+            this.label8.Location = new System.Drawing.Point(12, 447);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(179, 25);
+            this.label8.Size = new System.Drawing.Size(155, 20);
             this.label8.TabIndex = 14;
             this.label8.Text = "Physical Address";
             // 
@@ -106,9 +176,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(14, 457);
+            this.label10.Location = new System.Drawing.Point(12, 366);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 25);
+            this.label10.Size = new System.Drawing.Size(61, 20);
             this.label10.TabIndex = 12;
             this.label10.Text = "Phone";
             // 
@@ -116,9 +186,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(14, 350);
+            this.label12.Location = new System.Drawing.Point(12, 280);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 25);
+            this.label12.Size = new System.Drawing.Size(70, 20);
             this.label12.TabIndex = 10;
             this.label12.Text = "Gender";
             // 
@@ -126,9 +196,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(14, 255);
+            this.label5.Location = new System.Drawing.Point(12, 204);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 25);
+            this.label5.Size = new System.Drawing.Size(118, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Date of Birth";
             // 
@@ -136,9 +206,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(14, 152);
+            this.label3.Location = new System.Drawing.Point(12, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 25);
+            this.label3.Size = new System.Drawing.Size(94, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Full Name";
             // 
@@ -146,72 +216,11 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblUsername.Location = new System.Drawing.Point(14, 51);
+            this.lblUsername.Location = new System.Drawing.Point(12, 41);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(168, 25);
+            this.lblUsername.Size = new System.Drawing.Size(144, 20);
             this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "Student Number";
-            // 
-            // addStudNumber
-            // 
-            this.addStudNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudNumber.Location = new System.Drawing.Point(19, 79);
-            this.addStudNumber.Name = "addStudNumber";
-            this.addStudNumber.Size = new System.Drawing.Size(303, 35);
-            this.addStudNumber.TabIndex = 15;
-            // 
-            // addFullName
-            // 
-            this.addFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addFullName.Location = new System.Drawing.Point(19, 180);
-            this.addFullName.Name = "addFullName";
-            this.addFullName.Size = new System.Drawing.Size(303, 35);
-            this.addFullName.TabIndex = 16;
-            // 
-            // addDatePicker
-            // 
-            this.addDatePicker.Location = new System.Drawing.Point(19, 283);
-            this.addDatePicker.Name = "addDatePicker";
-            this.addDatePicker.Size = new System.Drawing.Size(303, 30);
-            this.addDatePicker.TabIndex = 18;
-            // 
-            // rdioAddMale
-            // 
-            this.rdioAddMale.AutoSize = true;
-            this.rdioAddMale.Location = new System.Drawing.Point(43, 387);
-            this.rdioAddMale.Name = "rdioAddMale";
-            this.rdioAddMale.Size = new System.Drawing.Size(80, 29);
-            this.rdioAddMale.TabIndex = 19;
-            this.rdioAddMale.TabStop = true;
-            this.rdioAddMale.Text = "Male";
-            this.rdioAddMale.UseVisualStyleBackColor = true;
-            // 
-            // rdioAddFemale
-            // 
-            this.rdioAddFemale.AutoSize = true;
-            this.rdioAddFemale.Location = new System.Drawing.Point(205, 387);
-            this.rdioAddFemale.Name = "rdioAddFemale";
-            this.rdioAddFemale.Size = new System.Drawing.Size(102, 29);
-            this.rdioAddFemale.TabIndex = 20;
-            this.rdioAddFemale.TabStop = true;
-            this.rdioAddFemale.Text = "Female";
-            this.rdioAddFemale.UseVisualStyleBackColor = true;
-            // 
-            // addStudPhone
-            // 
-            this.addStudPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudPhone.Location = new System.Drawing.Point(19, 485);
-            this.addStudPhone.Name = "addStudPhone";
-            this.addStudPhone.Size = new System.Drawing.Size(303, 35);
-            this.addStudPhone.TabIndex = 21;
-            // 
-            // addStudAddress
-            // 
-            this.addStudAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudAddress.Location = new System.Drawing.Point(19, 587);
-            this.addStudAddress.Name = "addStudAddress";
-            this.addStudAddress.Size = new System.Drawing.Size(303, 35);
-            this.addStudAddress.TabIndex = 22;
             // 
             // ModuleDetails
             // 
@@ -222,9 +231,11 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.ModuleDetails.Controls.Add(this.label7);
             this.ModuleDetails.Controls.Add(this.label9);
             this.ModuleDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.ModuleDetails.Location = new System.Drawing.Point(415, 108);
+            this.ModuleDetails.Location = new System.Drawing.Point(369, 86);
+            this.ModuleDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ModuleDetails.Name = "ModuleDetails";
-            this.ModuleDetails.Size = new System.Drawing.Size(352, 353);
+            this.ModuleDetails.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ModuleDetails.Size = new System.Drawing.Size(313, 282);
             this.ModuleDetails.TabIndex = 23;
             this.ModuleDetails.TabStop = false;
             this.ModuleDetails.Text = "Student Modules";
@@ -232,34 +243,37 @@ namespace Group_Project_PRG282.Presentation_Layer
             // addStudModuleDes
             // 
             this.addStudModuleDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudModuleDes.Location = new System.Drawing.Point(19, 283);
+            this.addStudModuleDes.Location = new System.Drawing.Point(17, 226);
+            this.addStudModuleDes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addStudModuleDes.Name = "addStudModuleDes";
-            this.addStudModuleDes.Size = new System.Drawing.Size(303, 35);
+            this.addStudModuleDes.Size = new System.Drawing.Size(270, 30);
             this.addStudModuleDes.TabIndex = 21;
             // 
             // addStudModuleName
             // 
             this.addStudModuleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudModuleName.Location = new System.Drawing.Point(19, 180);
+            this.addStudModuleName.Location = new System.Drawing.Point(17, 144);
+            this.addStudModuleName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addStudModuleName.Name = "addStudModuleName";
-            this.addStudModuleName.Size = new System.Drawing.Size(303, 35);
+            this.addStudModuleName.Size = new System.Drawing.Size(270, 30);
             this.addStudModuleName.TabIndex = 16;
             // 
             // addStudCode
             // 
             this.addStudCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudCode.Location = new System.Drawing.Point(19, 79);
+            this.addStudCode.Location = new System.Drawing.Point(17, 63);
+            this.addStudCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addStudCode.Name = "addStudCode";
-            this.addStudCode.Size = new System.Drawing.Size(303, 35);
+            this.addStudCode.Size = new System.Drawing.Size(270, 30);
             this.addStudCode.TabIndex = 15;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(14, 255);
+            this.label2.Location = new System.Drawing.Point(12, 204);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 25);
+            this.label2.Size = new System.Drawing.Size(172, 20);
             this.label2.TabIndex = 12;
             this.label2.Text = "Module Description";
             // 
@@ -267,9 +281,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(14, 152);
+            this.label7.Location = new System.Drawing.Point(12, 122);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 25);
+            this.label7.Size = new System.Drawing.Size(123, 20);
             this.label7.TabIndex = 4;
             this.label7.Text = "Module Name";
             // 
@@ -277,26 +291,28 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(14, 51);
+            this.label9.Location = new System.Drawing.Point(12, 41);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(141, 25);
+            this.label9.Size = new System.Drawing.Size(118, 20);
             this.label9.TabIndex = 2;
             this.label9.Text = "Module Code";
             // 
             // btnAddStudent
             // 
-            this.btnAddStudent.Location = new System.Drawing.Point(415, 482);
+            this.btnAddStudent.Location = new System.Drawing.Point(369, 386);
+            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(352, 54);
+            this.btnAddStudent.Size = new System.Drawing.Size(313, 43);
             this.btnAddStudent.TabIndex = 24;
             this.btnAddStudent.Text = "ADD STUDENT";
             this.btnAddStudent.UseVisualStyleBackColor = true;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(415, 548);
+            this.btnClear.Location = new System.Drawing.Point(369, 438);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(352, 54);
+            this.btnClear.Size = new System.Drawing.Size(313, 43);
             this.btnClear.TabIndex = 25;
             this.btnClear.Text = "CLEAR ALL";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -304,9 +320,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(415, 618);
+            this.btnBack.Location = new System.Drawing.Point(369, 494);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(352, 54);
+            this.btnBack.Size = new System.Drawing.Size(313, 43);
             this.btnBack.TabIndex = 26;
             this.btnBack.Text = "BACK TO MAIN";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -314,9 +331,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(415, 688);
+            this.btnExit.Location = new System.Drawing.Point(369, 550);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(352, 54);
+            this.btnExit.Size = new System.Drawing.Size(313, 43);
             this.btnExit.TabIndex = 27;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -324,9 +342,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             // frmAddStudents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 778);
+            this.ClientSize = new System.Drawing.Size(853, 696);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
@@ -334,6 +352,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.Controls.Add(this.ModuleDetails);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblAddStudents);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAddStudents";
             this.Text = "frmAddStudents";
             this.Load += new System.EventHandler(this.frmAddStudents_Load);
