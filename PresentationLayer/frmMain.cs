@@ -111,5 +111,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             students = datahandler.GetStudents(datahandler.ConnectDatabase());
             bindingSource.DataSource = students;
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
