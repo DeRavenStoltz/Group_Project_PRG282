@@ -6,26 +6,51 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using System.IO;
+using System.Drawing;
 
 namespace Group_Project_PRG282.BusinessLogicLayer
 {
     class DatabaseOperations
     {
-        public bool InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress)
+
+       // public bool InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress)
+
+        public byte[] UploadPhoto()
         {
-            string query = @"INSERT INTO tblStudents(studentFullName, studentDOB, studentGender, studentPhone, studentAddress) VALUES(@fullName, @dateOfBirth, @studentGender, @studentPhone, @studentAddress)";
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                byte[] bytes = null;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string imageFileName = openFileDialog.FileName;
+                    bytes = File.ReadAllBytes(imageFileName); 
+                    return bytes;
+                }
+                return bytes;
+            }
+            
+            
+        }
+
+        public bool InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes)
+
+        {
+            string query = @"INSERT INTO tblStudents(studentFullName, studentDOB, studentGender, studentPhone, studentAddress, studentImage) VALUES(@fullName, @dateOfBirth, @studentGender, @studentPhone, @studentAddress, @studentImage)";
 
             SqlParameter fullname = new SqlParameter("@fullName", SqlDbType.VarChar);
             SqlParameter dateofbirth = new SqlParameter("@dateOfBirth", SqlDbType.VarChar);
             SqlParameter gender = new SqlParameter("@studentGender", SqlDbType.VarChar);
             SqlParameter phone = new SqlParameter("@studentPhone", SqlDbType.VarChar);
             SqlParameter address = new SqlParameter("@studentAddress", SqlDbType.VarChar);
+            SqlParameter photo = new SqlParameter("@studentImage", SqlDbType.Binary);
 
             fullname.Value = fullName.ToString();
             dateofbirth.Value = dateOfBirth.ToString();
             gender.Value = studentGender.ToString();
             phone.Value = studentPhone.ToString();
             address.Value = studentAddress.ToString();
+            photo.Value = imageBytes;
 
             connection.Open();
 
@@ -36,6 +61,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             insertCommand.Parameters.Add(gender);
             insertCommand.Parameters.Add(phone);
             insertCommand.Parameters.Add(address);
+            insertCommand.Parameters.Add(photo);
 
             insertCommand.ExecuteNonQuery();
 

@@ -34,7 +34,8 @@ namespace Group_Project_PRG282.DataAccesLayer
             {
                 while (reader.Read())
                 {
-                    students.Add(new Student(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5)));
+                    byte[] byteData = (byte[])reader[6];
+                    students.Add(new Student(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), byteData));
                 }
             }
 
