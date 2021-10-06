@@ -27,7 +27,8 @@ namespace Group_Project_PRG282.Presentation_Layer
         }
         public frmMain(string currentUser)
         {
-
+            InitializeComponent();
+            lblWelcome.Text = $"Welcome, {currentUser}";
         }
 
         private void btnCreate_Click(object sender, EventArgs e)

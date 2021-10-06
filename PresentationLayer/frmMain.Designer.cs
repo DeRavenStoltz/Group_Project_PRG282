@@ -406,7 +406,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblWelcome.Location = new System.Drawing.Point(0, 0);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
+            this.lblWelcome.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.lblWelcome.Size = new System.Drawing.Size(1865, 104);
             this.lblWelcome.TabIndex = 16;
             this.lblWelcome.Text = "\"UserWelcome\"";
