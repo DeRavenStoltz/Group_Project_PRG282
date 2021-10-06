@@ -23,8 +23,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             InitializeComponent();
             connection = new SqlConnection("Server=(local); Initial Catalog=StudentSystem; Integrated Security=true");
         }
-
-        private void frmMain_Load(object sender, EventArgs e)
+        public frmMain(string currentUser)
         {
             DataHandler datahandler = new DataHandler();
             students = datahandler.GetStudents(datahandler.ConnectDatabase());

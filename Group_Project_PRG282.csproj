@@ -54,6 +54,12 @@
     <Compile Include="Presentation Layer\frmAddStudents.Designer.cs">
       <DependentUpon>frmAddStudents.cs</DependentUpon>
     </Compile>
+    <Compile Include="BusinessLogicLayer\CheckLogin.cs" />
+    <Compile Include="BusinessLogicLayer\RegisterUser.cs" />
+    <Compile Include="DataAccesLayer\DataHandler.cs" />
+    <Compile Include="DataAccesLayer\FileHandler.cs" />
+    <Compile Include="DataAccesLayer\User.cs" />
+    <Compile Include="Presentation Layer\ComponentController.cs" />
     <Compile Include="Presentation Layer\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
