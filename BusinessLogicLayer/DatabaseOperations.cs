@@ -54,11 +54,11 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
             return searchedStudents;
         }
-        public void deleteStudent(SqlConnection connection,int ID)
+        public void deleteStudent(SqlConnection connection, int ID, string fullName)
         {
             connection.Open();
             DialogResult userInput;
-            userInput = MessageBox.Show($"Are you sure you want to delete studentNumber {ID}", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            userInput = MessageBox.Show($"Are you sure you want to delete student, {fullName}?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             string delString = $"DELETE FROM tblStudents WHERE studentNumber = {ID} ";
 
             if (userInput == DialogResult.Yes)

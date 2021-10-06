@@ -98,7 +98,7 @@ namespace Group_Project_PRG282.Presentation_Layer
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Student selectedStudent = (Student)bindingSource.Current;
-            operations.deleteStudent(datahandler.ConnectDatabase(), selectedStudent.StudentNumber);
+            operations.deleteStudent(datahandler.ConnectDatabase(), selectedStudent.StudentNumber, selectedStudent.FullName);
             students.Clear();
             students = datahandler.GetStudents(datahandler.ConnectDatabase());
             bindingSource.DataSource = students;
