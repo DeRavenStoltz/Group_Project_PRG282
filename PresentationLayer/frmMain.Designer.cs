@@ -89,17 +89,17 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.groupBox1.Controls.Add(this.lblGender);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.lblFullNameTop);
-            this.groupBox1.Controls.Add(this.studentImageBox);
             this.groupBox1.Controls.Add(this.lblDateOfBirth);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.lblFullName);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lblStudNumber);
             this.groupBox1.Controls.Add(this.lblUsername);
+            this.groupBox1.Controls.Add(this.studentImageBox);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(36, 248);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(526, 736);
+            this.groupBox1.Size = new System.Drawing.Size(526, 925);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Details";
@@ -109,7 +109,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblPhysicalAddress.AutoSize = true;
             this.lblPhysicalAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblPhysicalAddress.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblPhysicalAddress.Location = new System.Drawing.Point(14, 682);
+            this.lblPhysicalAddress.Location = new System.Drawing.Point(15, 872);
             this.lblPhysicalAddress.Name = "lblPhysicalAddress";
             this.lblPhysicalAddress.Size = new System.Drawing.Size(172, 25);
             this.lblPhysicalAddress.TabIndex = 15;
@@ -119,7 +119,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(14, 645);
+            this.label8.Location = new System.Drawing.Point(15, 835);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(179, 25);
             this.label8.TabIndex = 14;
@@ -130,7 +130,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblPhoneNumber.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(239, 598);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(240, 788);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(152, 25);
             this.lblPhoneNumber.TabIndex = 13;
@@ -140,7 +140,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(14, 598);
+            this.label10.Location = new System.Drawing.Point(15, 788);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 25);
             this.label10.TabIndex = 12;
@@ -151,7 +151,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblGender.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblGender.Location = new System.Drawing.Point(239, 550);
+            this.lblGender.Location = new System.Drawing.Point(240, 740);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(91, 25);
             this.lblGender.TabIndex = 11;
@@ -161,7 +161,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(14, 549);
+            this.label12.Location = new System.Drawing.Point(15, 739);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(83, 25);
             this.label12.TabIndex = 10;
@@ -183,7 +183,8 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.studentImageBox.Location = new System.Drawing.Point(20, 85);
             this.studentImageBox.Name = "studentImageBox";
-            this.studentImageBox.Size = new System.Drawing.Size(482, 299);
+            this.studentImageBox.Size = new System.Drawing.Size(480, 480);
+            this.studentImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.studentImageBox.TabIndex = 8;
             this.studentImageBox.TabStop = false;
             // 
@@ -192,7 +193,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblDateOfBirth.AutoSize = true;
             this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblDateOfBirth.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblDateOfBirth.Location = new System.Drawing.Point(239, 506);
+            this.lblDateOfBirth.Location = new System.Drawing.Point(240, 696);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
             this.lblDateOfBirth.Size = new System.Drawing.Size(127, 25);
             this.lblDateOfBirth.TabIndex = 7;
@@ -202,7 +203,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(14, 506);
+            this.label5.Location = new System.Drawing.Point(15, 696);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 25);
             this.label5.TabIndex = 6;
@@ -213,7 +214,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblFullName.AutoSize = true;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblFullName.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblFullName.Location = new System.Drawing.Point(239, 460);
+            this.lblFullName.Location = new System.Drawing.Point(240, 650);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(109, 25);
             this.lblFullName.TabIndex = 5;
@@ -223,7 +224,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(14, 460);
+            this.label3.Location = new System.Drawing.Point(15, 650);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 25);
             this.label3.TabIndex = 4;
@@ -234,7 +235,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblStudNumber.AutoSize = true;
             this.lblStudNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblStudNumber.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblStudNumber.Location = new System.Drawing.Point(239, 412);
+            this.lblStudNumber.Location = new System.Drawing.Point(240, 602);
             this.lblStudNumber.Name = "lblStudNumber";
             this.lblStudNumber.Size = new System.Drawing.Size(163, 25);
             this.lblStudNumber.TabIndex = 3;
@@ -244,7 +245,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lblUsername.Location = new System.Drawing.Point(14, 412);
+            this.lblUsername.Location = new System.Drawing.Point(15, 602);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(168, 25);
             this.lblUsername.TabIndex = 2;
@@ -260,7 +261,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox2.Location = new System.Drawing.Point(588, 116);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1255, 691);
+            this.groupBox2.Size = new System.Drawing.Size(1255, 879);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Students";
@@ -274,13 +275,13 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.studentDataGrid.RowHeadersWidth = 62;
             this.studentDataGrid.RowTemplate.Height = 28;
             this.studentDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.studentDataGrid.Size = new System.Drawing.Size(1207, 559);
+            this.studentDataGrid.Size = new System.Drawing.Size(1207, 731);
             this.studentDataGrid.TabIndex = 17;
             this.studentDataGrid.SelectionChanged += new System.EventHandler(this.studentDataGrid_SelectionChanged);
             // 
             // btnMoveLast
             // 
-            this.btnMoveLast.Location = new System.Drawing.Point(1062, 623);
+            this.btnMoveLast.Location = new System.Drawing.Point(1061, 803);
             this.btnMoveLast.Name = "btnMoveLast";
             this.btnMoveLast.Size = new System.Drawing.Size(167, 54);
             this.btnMoveLast.TabIndex = 16;
@@ -290,7 +291,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             // buttonMoveNext
             // 
-            this.buttonMoveNext.Location = new System.Drawing.Point(889, 623);
+            this.buttonMoveNext.Location = new System.Drawing.Point(888, 803);
             this.buttonMoveNext.Name = "buttonMoveNext";
             this.buttonMoveNext.Size = new System.Drawing.Size(167, 54);
             this.buttonMoveNext.TabIndex = 15;
@@ -300,7 +301,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             // btnMovePrevious
             // 
-            this.btnMovePrevious.Location = new System.Drawing.Point(195, 619);
+            this.btnMovePrevious.Location = new System.Drawing.Point(194, 799);
             this.btnMovePrevious.Name = "btnMovePrevious";
             this.btnMovePrevious.Size = new System.Drawing.Size(167, 54);
             this.btnMovePrevious.TabIndex = 14;
@@ -310,7 +311,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             // btnMoveFirst
             // 
-            this.btnMoveFirst.Location = new System.Drawing.Point(22, 619);
+            this.btnMoveFirst.Location = new System.Drawing.Point(21, 799);
             this.btnMoveFirst.Name = "btnMoveFirst";
             this.btnMoveFirst.Size = new System.Drawing.Size(167, 54);
             this.btnMoveFirst.TabIndex = 13;
@@ -325,7 +326,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Controls.Add(this.btnCreate);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox3.Location = new System.Drawing.Point(588, 826);
+            this.groupBox3.Location = new System.Drawing.Point(588, 1015);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1255, 158);
             this.groupBox3.TabIndex = 9;
@@ -431,7 +432,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1865, 1009);
+            this.ClientSize = new System.Drawing.Size(1865, 1190);
             this.Controls.Add(this.linkSwitch);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);

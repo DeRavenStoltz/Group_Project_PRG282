@@ -40,6 +40,7 @@ namespace Group_Project_PRG282.Presentation_Layer
 
         private void studentDataGrid_SelectionChanged(object sender, EventArgs e)
         {
+            studentDataGrid.Columns[6].Visible = false;
             Student selectedStudent = (Student)bindingSource.Current;
             if (selectedStudent != null)
             {
@@ -50,6 +51,10 @@ namespace Group_Project_PRG282.Presentation_Layer
                 lblDateOfBirth.Text = selectedStudent.DateOfBirth;
                 lblPhysicalAddress.Text = selectedStudent.StudentAddress;
                 lblFullNameTop.Text = selectedStudent.FullName;
+
+                MemoryStream memoryStream = new MemoryStream(selectedStudent.Photo);
+                Image image = Image.FromStream(memoryStream);
+                studentImageBox.Image = image;
 
             }
         }
@@ -98,8 +103,8 @@ namespace Group_Project_PRG282.Presentation_Layer
 
         private void linkSwitch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Are you sure you want to switch users?", "Important", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (true)
+            DialogResult userResult = MessageBox.Show("Are you sure you want to switch users?", "Important", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (userResult == DialogResult.Yes)
             {
                 frmLogin login = new frmLogin();
                 login.Show();

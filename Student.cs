@@ -14,8 +14,14 @@ namespace Group_Project_PRG282
         private string studentGender;
         private string studentPhone;
         private string studentAddress;
+        private byte[] photo;
 
-        public Student(int studentNumber, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress)
+        public Student()
+        {
+            
+        }
+
+        public Student(int studentNumber, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] photo)
         {
             this.studentNumber = studentNumber;
             this.fullName = fullName;
@@ -23,6 +29,7 @@ namespace Group_Project_PRG282
             this.studentGender = studentGender;
             this.studentPhone = studentPhone;
             this.studentAddress = studentAddress;
+            this.photo = photo;
         }
 
         public int StudentNumber { get => studentNumber; set => studentNumber = value; }
@@ -31,5 +38,6 @@ namespace Group_Project_PRG282
         public string StudentGender { get => studentGender; set => studentGender = value; }
         public string StudentPhone { get => studentPhone; set => studentPhone = value; }
         public string StudentAddress { get => studentAddress; set => studentAddress = value; }
+        public byte[] Photo { get => photo; set => photo = value; }
     }
 }
