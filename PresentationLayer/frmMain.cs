@@ -95,5 +95,16 @@ namespace Group_Project_PRG282.Presentation_Layer
             bindingSource.DataSource = students;
             studentDataGrid.DataSource = bindingSource;
         }
+
+        private void linkSwitch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Are you sure you want to switch users?", "Important", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (true)
+            {
+                frmLogin login = new frmLogin();
+                login.Show();
+                this.Hide();
+            }
+        }
     }
 }

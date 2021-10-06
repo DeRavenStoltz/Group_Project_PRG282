@@ -61,6 +61,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnSearch = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.linkSwitch = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentImageBox)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -376,14 +377,14 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox4.Location = new System.Drawing.Point(36, 115);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(374, 126);
+            this.groupBox4.Size = new System.Drawing.Size(523, 126);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search Student";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(219, 55);
+            this.btnSearch.Location = new System.Drawing.Point(370, 56);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(132, 35);
             this.btnSearch.TabIndex = 12;
@@ -396,12 +397,11 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.searchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.searchBox.Location = new System.Drawing.Point(20, 55);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(181, 35);
+            this.searchBox.Size = new System.Drawing.Size(328, 35);
             this.searchBox.TabIndex = 11;
             // 
             // lblWelcome
             // 
-            this.lblWelcome.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblWelcome.Location = new System.Drawing.Point(0, 0);
@@ -412,11 +412,27 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblWelcome.Text = "\"UserWelcome\"";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // linkSwitch
+            // 
+            this.linkSwitch.ActiveLinkColor = System.Drawing.Color.DarkCyan;
+            this.linkSwitch.AutoSize = true;
+            this.linkSwitch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.linkSwitch.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkSwitch.LinkColor = System.Drawing.SystemColors.Highlight;
+            this.linkSwitch.Location = new System.Drawing.Point(1709, 64);
+            this.linkSwitch.Name = "linkSwitch";
+            this.linkSwitch.Size = new System.Drawing.Size(116, 25);
+            this.linkSwitch.TabIndex = 17;
+            this.linkSwitch.TabStop = true;
+            this.linkSwitch.Text = "Switch User";
+            this.linkSwitch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSwitch_LinkClicked);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1865, 1009);
+            this.Controls.Add(this.linkSwitch);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -472,6 +488,6 @@ namespace Group_Project_PRG282.Presentation_Layer
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Button btnViewAll;
-
+        private System.Windows.Forms.LinkLabel linkSwitch;
     }
 }
