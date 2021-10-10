@@ -71,13 +71,35 @@ namespace Group_Project_PRG282.BusinessLogicLayer
         public List<Student> SearchStudent(List<Student> students, string search)
         {
             List<Student> searchedStudents = new List<Student>();
-            foreach (Student stud in students)
+            if (search=="")
             {
-                if (stud.FullName.Contains(search))
+                searchedStudents = students;
+            }
+            else
+            {
+                foreach (Student stud in students)
                 {
-                    searchedStudents.Add(stud);
+                    //if (stud.FullName.Contains(search))
+                    //{
+                    //    searchedStudents.Add(stud);
+                    //}
+                    try
+                    {
+                        if (stud.StudentNumber == int.Parse(search))
+                        {
+                            searchedStudents.Add(stud);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Please enter valid student number");
+                        return students;
+                        
+                    }
+
                 }
             }
+           
             return searchedStudents;
         }
         public void deleteStudent(SqlConnection connection, int ID, string fullName)

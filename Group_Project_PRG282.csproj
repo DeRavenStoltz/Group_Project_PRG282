@@ -71,6 +71,18 @@
     <Compile Include="PresentationLayer\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\frmModules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmModules.Designer.cs">
+      <DependentUpon>frmModules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmNavigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmNavigation.Designer.cs">
+      <DependentUpon>frmNavigation.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\frmRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +100,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmModules.resx">
+      <DependentUpon>frmModules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmNavigation.resx">
+      <DependentUpon>frmNavigation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
