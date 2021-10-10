@@ -112,6 +112,17 @@ namespace Group_Project_PRG282.PresentationLayer
             }
             source.ResetBindings(true);
             dgvModules.Refresh();
+            dgvModules.DataSource = source;
+        }
+
+        private void btnCreate_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible==true)
+            {
+                source.ResetBindings(true);
+                dgvModules.Refresh();
+                dgvModules.DataSource = source;
+            }
         }
     }
 }

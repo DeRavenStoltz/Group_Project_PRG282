@@ -182,6 +182,7 @@ namespace Group_Project_PRG282.PresentationLayer
             this.btnCreate.TabIndex = 18;
             this.btnCreate.Text = "ADD MODULE";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.VisibleChanged += new System.EventHandler(this.btnCreate_VisibleChanged);
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // groupBox2
