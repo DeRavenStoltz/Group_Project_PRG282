@@ -19,6 +19,8 @@ namespace Group_Project_PRG282.PresentationLayer
         DataHandler dh = new DataHandler();
         List<Module> lmodule = new List<Module>();
         DatabaseOperations operations = new DatabaseOperations();
+
+
         public frmModules(string currentUser)
         {
             InitializeComponent();
@@ -31,10 +33,8 @@ namespace Group_Project_PRG282.PresentationLayer
         }
 
         private void frmModules_Load(object sender, EventArgs e)
-        {
-            lmodule= dh.GetModules(dh.ConnectDatabase());
-            source.DataSource = lmodule;
-            dgvModules.DataSource = source;
+        {    
+            loadDataGrid(); 
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -44,7 +44,7 @@ namespace Group_Project_PRG282.PresentationLayer
             {
                 frmLogin login = new frmLogin();
                 login.Show();
-                this.Hide();
+                Close();
             }
         }
 
@@ -62,6 +62,7 @@ namespace Group_Project_PRG282.PresentationLayer
         private void btnCreate_Click(object sender, EventArgs e)
         {
             frmAddModule add = new frmAddModule(this);
+            add.moduleAdded += loadDataGrid; 
             add.Show();
             Hide();
         }
@@ -111,18 +112,24 @@ namespace Group_Project_PRG282.PresentationLayer
                 operations.deleteModule(dh.ConnectDatabase(), mod.ModuleID, mod.ModuleName);
             }
             source.ResetBindings(true);
-            dgvModules.Refresh();
+            loadDataGrid(); 
+        }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            frmUpdateModules frmUpdate = new frmUpdateModules(this, lblModuleCode.Text, lblModuleName.Text, lblModuleDescription.Text);
+            frmUpdate.updateSuccess += loadDataGrid; 
+            frmUpdate.Show();
+            Hide();
+        }
+
+        public void loadDataGrid()
+        {
+            dgvModules.DataSource = null;
+            lmodule = dh.GetModules(dh.ConnectDatabase());
+            source.DataSource = lmodule;
             dgvModules.DataSource = source;
         }
 
-        private void btnCreate_VisibleChanged(object sender, EventArgs e)
-        {
-            if (this.Visible==true)
-            {
-                source.ResetBindings(true);
-                dgvModules.Refresh();
-                dgvModules.DataSource = source;
-            }
-        }
+        
     }
 }

@@ -172,6 +172,7 @@ namespace Group_Project_PRG282.PresentationLayer
             this.btnUpdate.TabIndex = 19;
             this.btnUpdate.Text = "UPDATE MODULE";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCreate
             // 

@@ -12,8 +12,12 @@ using Group_Project_PRG282.DataAccesLayer;
 
 namespace Group_Project_PRG282.PresentationLayer
 {
+    public delegate void operationSuccess(); 
+
     public partial class frmAddModule : Form
     {
+        public event operationSuccess moduleAdded; 
+
         DataHandler dh = new DataHandler();
         DatabaseOperations op = new DatabaseOperations();
         frmModules frm;
@@ -21,6 +25,11 @@ namespace Group_Project_PRG282.PresentationLayer
         {
             InitializeComponent();
             frm = frmmod;
+        }
+
+        public frmAddModule()
+        {
+            InitializeComponent(); 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -35,6 +44,10 @@ namespace Group_Project_PRG282.PresentationLayer
             if (op.InsertModules(dh.ConnectDatabase(), txtModuleID.Text, txtModuleName.Text, txtModuleDescription.Text))
             {
                 MessageBox.Show("Insert Completed");
+                if (moduleAdded != null)
+                {
+                    moduleAdded();
+                }
             }
             else MessageBox.Show("Insert Failed");
             txtModuleDescription.Clear();
