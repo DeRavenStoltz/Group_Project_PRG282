@@ -343,10 +343,12 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             // btnExit
             // 
+
             this.btnExit.Location = new System.Drawing.Point(981, 51);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(206, 43);
+
             this.btnExit.TabIndex = 22;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -462,7 +464,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+
             this.ClientSize = new System.Drawing.Size(1834, 1055);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+
             this.Controls.Add(this.linkSwitch);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
