@@ -85,6 +85,7 @@ namespace Group_Project_PRG282.PresentationLayer
             this.ClientSize = new System.Drawing.Size(290, 255);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmNavigation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNavigation";
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

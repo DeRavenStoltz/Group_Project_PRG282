@@ -172,6 +172,7 @@ namespace Group_Project_PRG282.PresentationLayer
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblAddStudents);
             this.Name = "frmAddModule";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddModule";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
