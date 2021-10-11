@@ -128,8 +128,9 @@ namespace Group_Project_PRG282.Presentation_Layer
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            frmUpdateStudent frm = new frmUpdateStudent();
-            frm.Show();
+            Student selectedStudent = (Student)bindingSource.Current;
+            frmUpdateStudent newForm = new frmUpdateStudent(selectedStudent.Photo, selectedStudent.StudentNumber, selectedStudent.FullName, selectedStudent.DateOfBirth, selectedStudent.StudentGender, selectedStudent.StudentPhone, selectedStudent.StudentAddress);
+            newForm.Show();
             Close();
         }
     }

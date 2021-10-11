@@ -82,6 +82,7 @@ namespace Group_Project_PRG282.PresentationLayer
         {
             frmMain main = new frmMain();
             main.Show();
+            Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
