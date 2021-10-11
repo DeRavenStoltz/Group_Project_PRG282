@@ -374,10 +374,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             // btnViewAll
             // 
-            this.btnViewAll.Location = new System.Drawing.Point(564, 42);
+            this.btnViewAll.Location = new System.Drawing.Point(557, 42);
             this.btnViewAll.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnViewAll.Name = "btnViewAll";
-            this.btnViewAll.Size = new System.Drawing.Size(155, 35);
+            this.btnViewAll.Size = new System.Drawing.Size(168, 35);
             this.btnViewAll.TabIndex = 21;
             this.btnViewAll.Text = "VIEW ALL STUDENTS";
             this.btnViewAll.UseVisualStyleBackColor = true;
@@ -485,7 +485,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1316, 749);
+            this.ClientSize = new System.Drawing.Size(1338, 820);
             this.Controls.Add(this.linkSwitch);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);

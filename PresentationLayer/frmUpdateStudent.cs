@@ -133,12 +133,6 @@ namespace Group_Project_PRG282.PresentationLayer
 
         private void btnUploadPhoto_Click(object sender, EventArgs e)
         {
-            //DatabaseOperations operations = new DatabaseOperations();
-            //data = operations.UploadPhoto();
-            //MemoryStream memoryStream = new MemoryStream(data);
-            //Image image = Image.FromStream(memoryStream);
-            //picStudentUpload.Image = image;
-
             DatabaseOperations operations = new DatabaseOperations();
             bytes = operations.UploadPhoto();
             MemoryStream memoryStream = new MemoryStream(bytes);

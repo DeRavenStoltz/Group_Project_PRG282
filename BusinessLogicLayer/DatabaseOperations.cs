@@ -13,7 +13,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 
         public byte[] UploadPhoto()
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Images|*.jpg;*.png;*.jpeg", ValidateNames = true, Multiselect = false })
             {
                 byte[] bytes = null;
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -62,7 +62,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 
                 //StudentModules
 
-                query = @"Insert into StudetnModule(moduleCode,studentNumber) Values(@modcode,@studnum)";
+                query = @"Insert into StudentModule(moduleCode,studentNumber) Values(@modcode,@studnum)";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlParameter modcode = new SqlParameter("@modcode", SqlDbType.VarChar);
                 SqlParameter studnum = new SqlParameter("@studnum", SqlDbType.Int);
@@ -101,7 +101,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             List<string> lCodes = new List<string>();
             try
             {
-                string query = $"Select moduleCode from StudetnModule where studentNumber={studNumber}";
+                string query = $"Select moduleCode from StudentModule where studentNumber={studNumber}";
                 connection.Open();
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -124,22 +124,23 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
             return lCodes;
         }
-        public bool InsertModules(SqlConnection connection, string modID, string ModName, string ModDescr)
+        public bool InsertModules(SqlConnection connection, string modID, string ModName, string ModDescr,string link)
 
         {
             try
             {
-                string query = @"INSERT INTO tblModules VALUES(@ModuleID, @ModuleName, @ModuleDescription)";
+                string query = @"INSERT INTO tblModules VALUES(@ModuleID, @ModuleName, @ModuleDescription, @ModuleLink)";
 
                 SqlParameter modid = new SqlParameter("@ModuleID", SqlDbType.VarChar);
                 SqlParameter modname = new SqlParameter("@ModuleName", SqlDbType.VarChar);
                 SqlParameter moddescr = new SqlParameter("@ModuleDescription", SqlDbType.VarChar);
+                SqlParameter modlink = new SqlParameter("@ModuleLink", SqlDbType.VarChar);
 
 
                 modid.Value = modID.ToString();
                 modname.Value = ModName.ToString();
                 moddescr.Value = ModDescr.ToString();
-
+                modlink.Value = link;
 
                 connection.Open();
 
@@ -148,6 +149,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                 insertCommand.Parameters.Add(modid);
                 insertCommand.Parameters.Add(modname);
                 insertCommand.Parameters.Add(moddescr);
+                insertCommand.Parameters.Add(modlink);
 
                 insertCommand.ExecuteNonQuery();
                
@@ -250,7 +252,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
         {
             connection.Open();
             DialogResult userInput;
-            userInput = MessageBox.Show($"Are you sure you want to delete the modlule, {ModName}?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            userInput = MessageBox.Show($"Are you sure you want to delete the module, {ModName}?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             string delString = $"DELETE FROM tblModules WHERE ModuleCode = '{ID}' ";
 
             if (userInput == DialogResult.Yes)
@@ -262,10 +264,10 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             connection.Close();
         }
 
-        public void updateModule(SqlConnection connection, string ID, string ModName, string Description)
+        public void updateModule(SqlConnection connection, string ID, string ModName, string Description, string link)
         {
             connection.Open();
-            string query = $@"UPDATE tblModules SET moduleName = '{ModName}', moduleDescription = '{Description}' WHERE moduleCode = '{ID}'";
+            string query = $@"UPDATE tblModules SET moduleName = '{ModName}', moduleDescription = '{Description}',  WHERE moduleCode = '{ID}'";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
             connection.Close();
@@ -311,7 +313,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
         {
             try
             {
-                string query = @"Insert into StudetnModule(moduleCode,studentNumber) Values(@modcode,@studnum)";
+                string query = @"Insert into StudentModule(moduleCode,studentNumber) Values(@modcode,@studnum)";
                 connection.Open();
                 SqlCommand cmd = new SqlCommand(query, connection);
                 SqlParameter modcode = new SqlParameter("@modcode", SqlDbType.VarChar);
@@ -328,7 +330,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                     cmd.ExecuteNonQuery();
                 }
 
-                query = @"Delete from StudetnModule where moduleCode = @modcode and studentNumber = @studnum";
+                query = @"Delete from StudentModule where moduleCode = @modcode and studentNumber = @studnum";
 
                 cmd = new SqlCommand(query, connection);
                 modcode = new SqlParameter("@modcode", SqlDbType.VarChar);

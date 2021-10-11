@@ -101,6 +101,7 @@ namespace Group_Project_PRG282.PresentationLayer
                 lblModuleCode.Text = mod.ModuleID;
                 lblModuleDescription.Text = mod.ModuleDescription;
                 lblModuleName.Text = mod.ModuleName;
+                lblLink.Text = mod.ModuleLink;
             }
         }
 
@@ -116,7 +117,7 @@ namespace Group_Project_PRG282.PresentationLayer
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            frmUpdateModules frmUpdate = new frmUpdateModules(this, lblModuleCode.Text, lblModuleName.Text, lblModuleDescription.Text);
+            frmUpdateModules frmUpdate = new frmUpdateModules(this, lblModuleCode.Text, lblModuleName.Text, lblModuleDescription.Text,lblLink.Text);
             frmUpdate.updateSuccess += loadDataGrid; 
             frmUpdate.Show();
             Hide();

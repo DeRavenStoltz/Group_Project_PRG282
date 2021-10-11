@@ -41,7 +41,7 @@ namespace Group_Project_PRG282.PresentationLayer
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (op.InsertModules(dh.ConnectDatabase(), txtModuleID.Text, txtModuleName.Text, txtModuleDescription.Text))
+            if (op.InsertModules(dh.ConnectDatabase(), txtModuleID.Text, txtModuleName.Text, txtModuleDescription.Text,txtLink.Text))
             {
                 MessageBox.Show("Insert Completed");
                 if (moduleAdded != null)
@@ -55,6 +55,11 @@ namespace Group_Project_PRG282.PresentationLayer
             txtModuleName.Clear();
             frm.Show();
             Close();
+        }
+
+        private void frmAddModule_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

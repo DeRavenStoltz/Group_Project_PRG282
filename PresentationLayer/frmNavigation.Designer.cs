@@ -87,6 +87,7 @@ namespace Group_Project_PRG282.PresentationLayer
             this.Name = "frmNavigation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNavigation";
+            this.Load += new System.EventHandler(this.frmNavigation_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
