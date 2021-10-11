@@ -26,7 +26,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
         }
 
-        public bool InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes)
+        public bool InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes, List<Module> lAddedModules)
 
         {
             try
@@ -60,6 +60,23 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 
                 insertCommand.ExecuteNonQuery();
 
+                //StudentModules
+
+                query = @"Insert into StudetnModule(moduleCode,studentNumber) Values(@modcode,@studnum)";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlParameter modcode = new SqlParameter("@modcode", SqlDbType.VarChar);
+                SqlParameter studnum = new SqlParameter("@studnum", SqlDbType.Int);
+
+                foreach  (Module mod in lAddedModules)
+                {
+                    cmd.Parameters.Clear();
+                    modcode.Value = mod.ModuleID;
+                    studnum.Value = NewestStudentID(connection);
+                    cmd.Parameters.Add(modcode);
+                    cmd.Parameters.Add(studnum);
+
+                    cmd.ExecuteNonQuery();
+                }
                 connection.Close();
                 return true;
             }
@@ -69,6 +86,43 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                 return false;
             }
            
+        }
+        public int NewestStudentID(SqlConnection connection)
+        {
+            int ID;
+            string query = "Select Max(studentNumber) from tblStudents";
+            SqlCommand cmd = new SqlCommand(query,connection);
+            ID = (int)cmd.ExecuteScalar();
+            return ID;
+        }
+
+        public List<string> studentModules(int studNumber,SqlConnection connection)//returns all modules for a specific student
+        {
+            List<string> lCodes = new List<string>();
+            try
+            {
+                string query = $"Select moduleCode from StudetnModule where studentNumber={studNumber}";
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        lCodes.Add(reader.GetString(0));
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                connection.Close();
+                
+            }
+            return lCodes;
         }
         public bool InsertModules(SqlConnection connection, string modID, string ModName, string ModDescr)
 
@@ -251,6 +305,53 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 
             connection.Close();
 
+        }
+
+        public void UpdateStudentModules(List<string> ldel, List<string> ladd,int ID, SqlConnection connection)
+        {
+            try
+            {
+                string query = @"Insert into StudetnModule(moduleCode,studentNumber) Values(@modcode,@studnum)";
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlParameter modcode = new SqlParameter("@modcode", SqlDbType.VarChar);
+                SqlParameter studnum = new SqlParameter("@studnum", SqlDbType.Int);
+
+                foreach (string mod in ladd)
+                {
+                    cmd.Parameters.Clear();
+                    modcode.Value = mod;
+                    studnum.Value = ID;
+                    cmd.Parameters.Add(modcode);
+                    cmd.Parameters.Add(studnum);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                query = @"Delete from StudetnModule where moduleCode = @modcode and studentNumber = @studnum";
+
+                cmd = new SqlCommand(query, connection);
+                modcode = new SqlParameter("@modcode", SqlDbType.VarChar);
+                studnum = new SqlParameter("@studnum", SqlDbType.Int);
+
+                foreach (string mod in ldel)
+                {
+                    cmd.Parameters.Clear();
+                    modcode.Value = mod;
+                    studnum.Value = ID;
+                    cmd.Parameters.Add(modcode);
+                    cmd.Parameters.Add(studnum);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.Message);
+            }
+            
+            connection.Close();
         }
     }
 }

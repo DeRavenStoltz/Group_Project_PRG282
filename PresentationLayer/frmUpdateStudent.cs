@@ -14,7 +14,9 @@ namespace Group_Project_PRG282.PresentationLayer
         private List<Student> students = new List<Student>();
         private DatabaseOperations operations = new DatabaseOperations();
         private DataHandler datahandler = new DataHandler();
-
+        ComponentController cc = new ComponentController();
+        List<Module> lmod = new List<Module>();//All modules
+        List<string> lcurrentModules = new List<string>();//Modules for selected student
         //byte[] data;
         private byte[] bytes;
 
@@ -43,11 +45,19 @@ namespace Group_Project_PRG282.PresentationLayer
             txtPhone.Text = phone;
             txtAddress.Text = address;
             TxtStudentID.Text = id.ToString();
+            lcurrentModules = operations.studentModules(id,datahandler.ConnectDatabase());
         }
 
         private void UpdateStudent_Load(object sender, EventArgs e)
         {
+            foreach (var item in lcurrentModules)
+            {
+                lbxModules.Items.Add(item);
+            }          
             students = datahandler.GetStudents(datahandler.ConnectDatabase());
+            txtFullName.Focus();
+            lmod = datahandler.GetModules(datahandler.ConnectDatabase());
+            cc.fillUpdateCBX(cbxModule, lbxModules, lmod);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -57,6 +67,25 @@ namespace Group_Project_PRG282.PresentationLayer
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
+            List<string> ladd = new List<string>();//added modules
+            List<string> ldel = new List<string>();//removed modules
+            foreach (string code in lbxModules.Items)
+            {
+                if (!lcurrentModules.Contains(code))
+                {
+                    ladd.Add(code);
+                }
+            }
+
+            foreach (string code in lcurrentModules)
+            {
+                if (!lbxModules.Items.Contains(code))
+                {
+                    ldel.Add(code);
+                }
+            }    
+                
+            
             string studentGender = "";
             if (rdbMale.Checked)
             {
@@ -70,6 +99,7 @@ namespace Group_Project_PRG282.PresentationLayer
             try
             {
                 operations.UpdateStudentInfo(datahandler.ConnectDatabase(), TxtStudentID.Text, txtFullName.Text, dtpDatePicker.Text, studentGender, txtPhone.Text, txtAddress.Text, bytes);
+                operations.UpdateStudentModules(ldel,ladd,int.Parse(TxtStudentID.Text),datahandler.ConnectDatabase());
                 MessageBox.Show("Information successfully updated");
             }
             catch (Exception ex)
@@ -92,12 +122,12 @@ namespace Group_Project_PRG282.PresentationLayer
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            lmod = datahandler.GetModules(datahandler.ConnectDatabase());
+            lbxModules.Items.Clear();
+            cc.fillCBXModule(cbxModule);
             txtFullName.Clear();
             txtPhone.Clear();
             txtAddress.Clear();
-            addStudCode.Clear();
-            addStudModuleName.Clear();
-            addStudModuleDes.Clear();
             txtFullName.Focus();
         }
 
@@ -114,6 +144,16 @@ namespace Group_Project_PRG282.PresentationLayer
             MemoryStream memoryStream = new MemoryStream(bytes);
             Image image = Image.FromStream(memoryStream);
             picStudentUpload.Image = image;
+        }
+
+        private void btnAddModule_Click(object sender, EventArgs e)
+        {
+            cc.AddModuleLBX(lbxModules, cbxModule);
+        }
+
+        private void btnRemoveModule_Click(object sender, EventArgs e)
+        {
+            cc.RemoveModuleLBX(lbxModules, cbxModule);
         }
     }
 }

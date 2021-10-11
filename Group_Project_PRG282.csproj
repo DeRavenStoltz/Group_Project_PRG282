@@ -77,7 +77,7 @@
     <Compile Include="DataAccessLayer\DataHandler.cs" />
     <Compile Include="DataAccessLayer\FileHandler.cs" />
     <Compile Include="DataAccessLayer\User.cs" />
-    <Compile Include="PresentationLayer\ComponentController.cs" />
+    <Compile Include="BusinessLogicLayer\ComponentController.cs" />
     <Compile Include="PresentationLayer\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
