@@ -11,7 +11,9 @@ namespace Group_Project_PRG282.DataAccesLayer
 
         public SqlConnection ConnectDatabase()
         {
-            SqlConnection connection = new SqlConnection(@"Server=LAPTOP-S4VFC76G\SQLEXPRESS02; Initial Catalog=StudentSystem; Integrated Security=true");
+
+            SqlConnection connection = new SqlConnection(@"Server=.; Initial Catalog=StudentSystem; Integrated Security=true");
+
 
             return connection;
         }
@@ -37,5 +39,37 @@ namespace Group_Project_PRG282.DataAccesLayer
 
             return students;
         }
+
+        public List<Module> GetModules(SqlConnection connection)
+        {
+            List<Module> modules = new List<Module>();
+            try
+            {
+                connection.Open();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return modules;
+                
+            }
+            
+
+            SqlCommand cmd = new SqlCommand(@"SELECT * FROM tblModules", connection);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {        
+                    modules.Add(new Module(reader.GetString(0),reader.GetString(1),reader.GetString(2)));
+                }
+            }
+            connection.Close();
+            return modules;
+        }
+
+
     }
 }

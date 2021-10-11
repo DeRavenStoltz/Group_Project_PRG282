@@ -10,8 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Threading;
 using Group_Project_PRG282.BusinessLogicLayer;
-using Group_Project_PRG282.DataAccesLayer; 
-
+using Group_Project_PRG282.DataAccesLayer;
+using Group_Project_PRG282.PresentationLayer;
 using Group_Project_PRG282.Presentation_Layer;
 
 namespace Group_Project_PRG282
@@ -49,9 +49,10 @@ namespace Group_Project_PRG282
 
         public void loginSuccessful()
         {
-            frmMain main = new frmMain(txtusernameBoxLogin.Text);
+            //frmMain main = new frmMain(txtusernameBoxLogin.Text);
+            frmNavigation navigation = new frmNavigation(txtusernameBoxLogin.Text);
             cc.clearFieldsLogIn(txtusernameBoxLogin,txtpasswordBoxLogin);
-            main.Show();
+            navigation.Show();
             Hide();
         }
 

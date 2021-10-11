@@ -28,50 +28,151 @@ namespace Group_Project_PRG282.BusinessLogicLayer
         public bool InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes)
 
         {
-            string query = @"INSERT INTO tblStudents(studentFullName, studentDOB, studentGender, studentPhone, studentAddress, studentImage) VALUES(@fullName, @dateOfBirth, @studentGender, @studentPhone, @studentAddress, @studentImage)";
+            try
+            {
+                string query = @"INSERT INTO tblStudents(studentFullName, studentDOB, studentGender, studentPhone, studentAddress, studentImage) VALUES(@fullName, @dateOfBirth, @studentGender, @studentPhone, @studentAddress, @studentImage)";
 
-            SqlParameter fullname = new SqlParameter("@fullName", SqlDbType.VarChar);
-            SqlParameter dateofbirth = new SqlParameter("@dateOfBirth", SqlDbType.VarChar);
-            SqlParameter gender = new SqlParameter("@studentGender", SqlDbType.VarChar);
-            SqlParameter phone = new SqlParameter("@studentPhone", SqlDbType.VarChar);
-            SqlParameter address = new SqlParameter("@studentAddress", SqlDbType.VarChar);
-            SqlParameter photo = new SqlParameter("@studentImage", SqlDbType.Binary);
+                SqlParameter fullname = new SqlParameter("@fullName", SqlDbType.VarChar);
+                SqlParameter dateofbirth = new SqlParameter("@dateOfBirth", SqlDbType.VarChar);
+                SqlParameter gender = new SqlParameter("@studentGender", SqlDbType.VarChar);
+                SqlParameter phone = new SqlParameter("@studentPhone", SqlDbType.VarChar);
+                SqlParameter address = new SqlParameter("@studentAddress", SqlDbType.VarChar);
+                SqlParameter photo = new SqlParameter("@studentImage", SqlDbType.Binary);
 
-            fullname.Value = fullName.ToString();
-            dateofbirth.Value = dateOfBirth.ToString();
-            gender.Value = studentGender.ToString();
-            phone.Value = studentPhone.ToString();
-            address.Value = studentAddress.ToString();
-            photo.Value = imageBytes;
+                fullname.Value = fullName.ToString();
+                dateofbirth.Value = dateOfBirth.ToString();
+                gender.Value = studentGender.ToString();
+                phone.Value = studentPhone.ToString();
+                address.Value = studentAddress.ToString();
+                photo.Value = imageBytes;
 
-            connection.Open();
+                connection.Open();
 
-            SqlCommand insertCommand = new SqlCommand(query, connection);
+                SqlCommand insertCommand = new SqlCommand(query, connection);
 
-            insertCommand.Parameters.Add(fullname);
-            insertCommand.Parameters.Add(dateofbirth);
-            insertCommand.Parameters.Add(gender);
-            insertCommand.Parameters.Add(phone);
-            insertCommand.Parameters.Add(address);
-            insertCommand.Parameters.Add(photo);
+                insertCommand.Parameters.Add(fullname);
+                insertCommand.Parameters.Add(dateofbirth);
+                insertCommand.Parameters.Add(gender);
+                insertCommand.Parameters.Add(phone);
+                insertCommand.Parameters.Add(address);
+                insertCommand.Parameters.Add(photo);
 
-            insertCommand.ExecuteNonQuery();
+                insertCommand.ExecuteNonQuery();
 
-            connection.Close();
-            return true;
+                connection.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+           
+        }
+        public bool InsertModules(SqlConnection connection, string modID, string ModName, string ModDescr)
+
+        {
+            try
+            {
+                string query = @"INSERT INTO tblModules VALUES(@ModuleID, @ModuleName, @ModuleDescription)";
+
+                SqlParameter modid = new SqlParameter("@ModuleID", SqlDbType.VarChar);
+                SqlParameter modname = new SqlParameter("@ModuleName", SqlDbType.VarChar);
+                SqlParameter moddescr = new SqlParameter("@ModuleDescription", SqlDbType.VarChar);
+
+
+                modid.Value = modID.ToString();
+                modname.Value = ModName.ToString();
+                moddescr.Value = ModDescr.ToString();
+
+
+                connection.Open();
+
+                SqlCommand insertCommand = new SqlCommand(query, connection);
+
+                insertCommand.Parameters.Add(modid);
+                insertCommand.Parameters.Add(modname);
+                insertCommand.Parameters.Add(moddescr);
+
+                insertCommand.ExecuteNonQuery();
+               
+                connection.Close();
+                
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
+            }
+            
         }
 
         public List<Student> SearchStudent(List<Student> students, string search)
         {
             List<Student> searchedStudents = new List<Student>();
-            foreach (Student stud in students)
+            if (search=="")
             {
-                if (stud.FullName.Contains(search))
+                searchedStudents = students;
+            }
+            else
+            {
+                foreach (Student stud in students)
                 {
-                    searchedStudents.Add(stud);
+                    //if (stud.FullName.Contains(search))
+                    //{
+                    //    searchedStudents.Add(stud);
+                    //}
+                    try
+                    {
+                        if (stud.StudentNumber == int.Parse(search))
+                        {
+                            searchedStudents.Add(stud);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Please enter valid student number");
+                        return students;
+                        
+                    }
+
                 }
             }
+           
             return searchedStudents;
+        }
+
+        public List<Module> SearchModule(List<Module> modules, string search)
+        {
+            List<Module> searchedModule = new List<Module>();
+            if (search == "")
+            {
+                searchedModule = modules;
+            }
+            else
+            {
+                foreach (Module mod in modules)
+                {
+                    
+                    try
+                    {
+                        if (mod.ModuleID == search)
+                        {
+                            searchedModule.Add(mod);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Please enter valid ModuleCode");
+                        return modules;
+
+                    }
+
+                }
+            }
+
+            return searchedModule;
         }
 
         public void deleteStudent(SqlConnection connection, int ID, string fullName)
@@ -88,6 +189,31 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
             connection.Close();
         }
+
+
+        public void deleteModule(SqlConnection connection, string ID, string ModName)
+        {
+            connection.Open();
+            DialogResult userInput;
+            userInput = MessageBox.Show($"Are you sure you want to delete the modlule, {ModName}?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            string delString = $"DELETE FROM tblModules WHERE ModuleCode = '{ID}' ";
+
+            if (userInput == DialogResult.Yes)
+            {
+                SqlCommand com = new SqlCommand(delString, connection);
+                com.ExecuteNonQuery();
+                MessageBox.Show("Operation Completed");
+            }
+            connection.Close();
+        }
+
+        public void updateModule (SqlConnection connection, string ID, string ModName, string Description)
+        {
+            connection.Open(); 
+            string query = $@"UPDATE tblModules SET moduleName = '{ModName}', moduleDescription = '{Description}' WHERE moduleCode = '{ID}'";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.ExecuteNonQuery();
+            connection.Close(); 
 
         public void UpdateStudentInfo(SqlConnection connection, string id, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes)
         {
@@ -122,6 +248,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             updateCommand.ExecuteNonQuery();
 
             connection.Close();
+
         }
     }
 }

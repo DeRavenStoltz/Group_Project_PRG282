@@ -9,7 +9,12 @@ namespace Group_Project_PRG282.Presentation_Layer
 {
     public partial class frmAddStudents : Form
     {
-        private byte[] bytes;
+
+        DataHandler dh = new DataHandler();
+        DatabaseOperations operations = new DatabaseOperations();
+        ComponentController cc = new ComponentController();
+        List<Module> lmod = new List<Module>();
+        byte[] bytes;
 
         public frmAddStudents()
         {
@@ -21,15 +26,13 @@ namespace Group_Project_PRG282.Presentation_Layer
             addFullName.Clear();
             addStudPhone.Clear();
             addStudAddress.Clear();
-            addStudCode.Clear();
-            addStudModuleName.Clear();
-            addStudModuleDes.Clear();
             addFullName.Focus();
         }
 
         private void frmAddStudents_Load(object sender, EventArgs e)
         {
             addFullName.Focus();
+            cc.fillCBXModule(cbxModule);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -56,8 +59,7 @@ namespace Group_Project_PRG282.Presentation_Layer
                 gender = rdioAddFemale.Text;
             }
 
-            DataHandler dh = new DataHandler();
-            DatabaseOperations operations = new DatabaseOperations();
+           
 
             if (operations.InsertStudents(dh.ConnectDatabase(), addFullName.Text, addDatePicker.Text, gender, addStudPhone.Text, addStudAddress.Text, bytes) == true)
             {
@@ -67,6 +69,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             {
                 MessageBox.Show("There was an error, please try again");
             }
+            
         }
 
         private void btnUploadPhoto_Click(object sender, EventArgs e)
@@ -76,6 +79,12 @@ namespace Group_Project_PRG282.Presentation_Layer
             MemoryStream memoryStream = new MemoryStream(bytes);
             Image image = Image.FromStream(memoryStream);
             picStudentUpload.Image = image;
+        }
+
+        private void btnAddModule_Click(object sender, EventArgs e)
+        {
+            
+            lmod.Add(operations.SearchModule(dh.GetModules(dh.ConnectDatabase()),cbxModule.Text)[0]);
         }
     }
 }
