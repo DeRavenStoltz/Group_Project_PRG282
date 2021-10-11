@@ -65,7 +65,7 @@ namespace Group_Project_PRG282.DataAccesLayer
             {
                 while (reader.Read())
                 {        
-                    modules.Add(new Module(reader.GetString(0),reader.GetString(1),reader.GetString(2)));
+                    modules.Add(new Module(reader.GetString(0),reader.GetString(1),reader.GetString(2),reader.GetString(3)));
                 }
             }
             connection.Close();

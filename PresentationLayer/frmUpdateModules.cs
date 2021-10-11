@@ -28,13 +28,14 @@ namespace Group_Project_PRG282.BusinessLogicLayer
         {
             InitializeComponent();
         }
-        public frmUpdateModules(frmModules frmmod, string ID, string Name, string Description)
+        public frmUpdateModules(frmModules frmmod, string ID, string Name, string Description, string link)
         {
             InitializeComponent();
             frm = frmmod;
             txtCode.Text = ID;
             txtModuleName.Text = Name;
-            txtDescription.Text = Description; 
+            txtDescription.Text = Description;
+            txtLink.Text = link;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -45,7 +46,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            dbo.updateModule(dh.ConnectDatabase(), txtCode.Text, txtModuleName.Text, txtDescription.Text);
+            dbo.updateModule(dh.ConnectDatabase(), txtCode.Text, txtModuleName.Text, txtDescription.Text,txtLink.Text);
             if (updateSuccess != null)
             {
                 updateSuccess(); 

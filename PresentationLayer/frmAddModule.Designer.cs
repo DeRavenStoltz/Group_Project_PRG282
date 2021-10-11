@@ -40,11 +40,15 @@ namespace Group_Project_PRG282.PresentationLayer
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.txtLink = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtLink);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtModuleDescription);
             this.groupBox1.Controls.Add(this.txtModuleName);
             this.groupBox1.Controls.Add(this.txtModuleID);
@@ -56,7 +60,7 @@ namespace Group_Project_PRG282.PresentationLayer
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(235, 217);
+            this.groupBox1.Size = new System.Drawing.Size(235, 260);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Module Details";
@@ -134,7 +138,7 @@ namespace Group_Project_PRG282.PresentationLayer
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(18, 300);
+            this.btnAdd.Location = new System.Drawing.Point(16, 339);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 11;
@@ -144,7 +148,7 @@ namespace Group_Project_PRG282.PresentationLayer
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(99, 300);
+            this.btnClear.Location = new System.Drawing.Point(97, 339);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 12;
@@ -153,7 +157,7 @@ namespace Group_Project_PRG282.PresentationLayer
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(178, 300);
+            this.btnCancel.Location = new System.Drawing.Point(176, 339);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 13;
@@ -161,11 +165,31 @@ namespace Group_Project_PRG282.PresentationLayer
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // txtLink
+            // 
+            this.txtLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtLink.Location = new System.Drawing.Point(10, 221);
+            this.txtLink.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLink.Name = "txtLink";
+            this.txtLink.Size = new System.Drawing.Size(203, 26);
+            this.txtLink.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(7, 203);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Module Link";
+            // 
             // frmAddModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 361);
+            this.ClientSize = new System.Drawing.Size(280, 433);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
@@ -174,6 +198,7 @@ namespace Group_Project_PRG282.PresentationLayer
             this.Name = "frmAddModule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddModule";
+            this.Load += new System.EventHandler(this.frmAddModule_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -194,5 +219,7 @@ namespace Group_Project_PRG282.PresentationLayer
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox txtLink;
+        private System.Windows.Forms.Label label1;
     }
 }

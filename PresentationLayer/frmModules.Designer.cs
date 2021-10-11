@@ -57,6 +57,8 @@ namespace Group_Project_PRG282.PresentationLayer
             this.lblWelcomeUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblLink = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -183,7 +185,6 @@ namespace Group_Project_PRG282.PresentationLayer
             this.btnCreate.TabIndex = 18;
             this.btnCreate.Text = "ADD MODULE";
             this.btnCreate.UseVisualStyleBackColor = true;
-         //   this.btnCreate.VisibleChanged += new System.EventHandler(this.btnCreate_VisibleChanged);
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // groupBox2
@@ -263,6 +264,8 @@ namespace Group_Project_PRG282.PresentationLayer
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblLink);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lblModuleDescription);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.lblModuleName);
@@ -274,7 +277,7 @@ namespace Group_Project_PRG282.PresentationLayer
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.groupBox1.Size = new System.Drawing.Size(329, 150);
+            this.groupBox1.Size = new System.Drawing.Size(329, 171);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Module Details";
@@ -412,6 +415,29 @@ namespace Group_Project_PRG282.PresentationLayer
             this.linkLabel1.Text = "Switch User";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // lblLink
+            // 
+            this.lblLink.AutoSize = true;
+            this.lblLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblLink.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblLink.Location = new System.Drawing.Point(178, 140);
+            this.lblLink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLink.Name = "lblLink";
+            this.lblLink.Size = new System.Drawing.Size(90, 17);
+            this.lblLink.TabIndex = 9;
+            this.lblLink.Text = "\"ModuleLink\"";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(9, 140);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Module Link";
+            // 
             // frmModules
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,5 +499,7 @@ namespace Group_Project_PRG282.PresentationLayer
         private System.Windows.Forms.Label lblWelcomeUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label lblLink;
+        private System.Windows.Forms.Label label4;
     }
 }

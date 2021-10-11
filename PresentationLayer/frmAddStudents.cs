@@ -24,6 +24,9 @@ namespace Group_Project_PRG282.Presentation_Layer
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            lmod = dh.GetModules(dh.ConnectDatabase());
+            cc.fillCBXModule(cbxModule);
+            lbxModules.Items.Clear();
             addFullName.Clear();
             addStudPhone.Clear();
             addStudAddress.Clear();
@@ -32,6 +35,7 @@ namespace Group_Project_PRG282.Presentation_Layer
 
         private void frmAddStudents_Load(object sender, EventArgs e)
         {
+            lmod = dh.GetModules(dh.ConnectDatabase());
             addFullName.Focus();
             cc.fillCBXModule(cbxModule);
         }
@@ -50,6 +54,14 @@ namespace Group_Project_PRG282.Presentation_Layer
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
+            List<Module> AddedModules = new List<Module>();
+            foreach (Module mod in lmod)
+            {
+                if (lbxModules.Items.Contains(mod.ModuleID))
+                {
+                    AddedModules.Add(mod);
+                }
+            }
             string gender;
             if (rdioAddMale.Checked)
             {
@@ -62,7 +74,7 @@ namespace Group_Project_PRG282.Presentation_Layer
 
            
 
-            if (operations.InsertStudents(dh.ConnectDatabase(), addFullName.Text, addDatePicker.Text, gender, addStudPhone.Text, addStudAddress.Text, bytes) == true)
+            if (operations.InsertStudents(dh.ConnectDatabase(), addFullName.Text, addDatePicker.Text, gender, addStudPhone.Text, addStudAddress.Text, bytes,AddedModules) == true)
             {
                 MessageBox.Show("Student Added Succesfully");
             }
@@ -84,8 +96,12 @@ namespace Group_Project_PRG282.Presentation_Layer
 
         private void btnAddModule_Click(object sender, EventArgs e)
         {
-            
-            lmod.Add(operations.SearchModule(dh.GetModules(dh.ConnectDatabase()),cbxModule.Text)[0]);
+            cc.AddModuleLBX(lbxModules, cbxModule); 
+        }
+
+        private void btnRemoveModule_Click(object sender, EventArgs e)
+        {
+            cc.RemoveModuleLBX(lbxModules, cbxModule);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 
         public byte[] UploadPhoto()
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Images|*.jpg;*.png;*.jpeg", ValidateNames = true, Multiselect = false })
             {
                 byte[] bytes = null;
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -26,7 +26,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
         }
 
-        public bool InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes)
+        public bool InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes, List<Module> lAddedModules)
 
         {
             try
@@ -60,6 +60,23 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 
                 insertCommand.ExecuteNonQuery();
 
+                //StudentModules
+
+                query = @"Insert into StudentModule(moduleCode,studentNumber) Values(@modcode,@studnum)";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlParameter modcode = new SqlParameter("@modcode", SqlDbType.VarChar);
+                SqlParameter studnum = new SqlParameter("@studnum", SqlDbType.Int);
+
+                foreach  (Module mod in lAddedModules)
+                {
+                    cmd.Parameters.Clear();
+                    modcode.Value = mod.ModuleID;
+                    studnum.Value = NewestStudentID(connection);
+                    cmd.Parameters.Add(modcode);
+                    cmd.Parameters.Add(studnum);
+
+                    cmd.ExecuteNonQuery();
+                }
                 connection.Close();
                 return true;
             }
@@ -70,22 +87,60 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
            
         }
-        public bool InsertModules(SqlConnection connection, string modID, string ModName, string ModDescr)
+        public int NewestStudentID(SqlConnection connection)
+        {
+            int ID;
+            string query = "Select Max(studentNumber) from tblStudents";
+            SqlCommand cmd = new SqlCommand(query,connection);
+            ID = (int)cmd.ExecuteScalar();
+            return ID;
+        }
+
+        public List<string> studentModules(int studNumber,SqlConnection connection)//returns all modules for a specific student
+        {
+            List<string> lCodes = new List<string>();
+            try
+            {
+                string query = $"Select moduleCode from StudentModule where studentNumber={studNumber}";
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        lCodes.Add(reader.GetString(0));
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                connection.Close();
+                
+            }
+            return lCodes;
+        }
+        public bool InsertModules(SqlConnection connection, string modID, string ModName, string ModDescr,string link)
 
         {
             try
             {
-                string query = @"INSERT INTO tblModules VALUES(@ModuleID, @ModuleName, @ModuleDescription)";
+                string query = @"INSERT INTO tblModules VALUES(@ModuleID, @ModuleName, @ModuleDescription, @ModuleLink)";
 
                 SqlParameter modid = new SqlParameter("@ModuleID", SqlDbType.VarChar);
                 SqlParameter modname = new SqlParameter("@ModuleName", SqlDbType.VarChar);
                 SqlParameter moddescr = new SqlParameter("@ModuleDescription", SqlDbType.VarChar);
+                SqlParameter modlink = new SqlParameter("@ModuleLink", SqlDbType.VarChar);
 
 
                 modid.Value = modID.ToString();
                 modname.Value = ModName.ToString();
                 moddescr.Value = ModDescr.ToString();
-
+                modlink.Value = link;
 
                 connection.Open();
 
@@ -94,6 +149,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                 insertCommand.Parameters.Add(modid);
                 insertCommand.Parameters.Add(modname);
                 insertCommand.Parameters.Add(moddescr);
+                insertCommand.Parameters.Add(modlink);
 
                 insertCommand.ExecuteNonQuery();
                
@@ -196,7 +252,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
         {
             connection.Open();
             DialogResult userInput;
-            userInput = MessageBox.Show($"Are you sure you want to delete the modlule, {ModName}?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            userInput = MessageBox.Show($"Are you sure you want to delete the module, {ModName}?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             string delString = $"DELETE FROM tblModules WHERE ModuleCode = '{ID}' ";
 
             if (userInput == DialogResult.Yes)
@@ -208,10 +264,10 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             connection.Close();
         }
 
-        public void updateModule(SqlConnection connection, string ID, string ModName, string Description)
+        public void updateModule(SqlConnection connection, string ID, string ModName, string Description, string link)
         {
             connection.Open();
-            string query = $@"UPDATE tblModules SET moduleName = '{ModName}', moduleDescription = '{Description}' WHERE moduleCode = '{ID}'";
+            string query = $@"UPDATE tblModules SET moduleName = '{ModName}', moduleDescription = '{Description}',  WHERE moduleCode = '{ID}'";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
             connection.Close();
@@ -251,6 +307,53 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 
             connection.Close();
 
+        }
+
+        public void UpdateStudentModules(List<string> ldel, List<string> ladd,int ID, SqlConnection connection)
+        {
+            try
+            {
+                string query = @"Insert into StudentModule(moduleCode,studentNumber) Values(@modcode,@studnum)";
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlParameter modcode = new SqlParameter("@modcode", SqlDbType.VarChar);
+                SqlParameter studnum = new SqlParameter("@studnum", SqlDbType.Int);
+
+                foreach (string mod in ladd)
+                {
+                    cmd.Parameters.Clear();
+                    modcode.Value = mod;
+                    studnum.Value = ID;
+                    cmd.Parameters.Add(modcode);
+                    cmd.Parameters.Add(studnum);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                query = @"Delete from StudentModule where moduleCode = @modcode and studentNumber = @studnum";
+
+                cmd = new SqlCommand(query, connection);
+                modcode = new SqlParameter("@modcode", SqlDbType.VarChar);
+                studnum = new SqlParameter("@studnum", SqlDbType.Int);
+
+                foreach (string mod in ldel)
+                {
+                    cmd.Parameters.Clear();
+                    modcode.Value = mod;
+                    studnum.Value = ID;
+                    cmd.Parameters.Add(modcode);
+                    cmd.Parameters.Add(studnum);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.Message);
+            }
+            
+            connection.Close();
         }
     }
 }
