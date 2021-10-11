@@ -119,7 +119,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmAddModule.resx">
       <DependentUpon>frmAddModule.cs</DependentUpon>
-
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmUpdateStudent.resx">
       <DependentUpon>frmUpdateStudent.cs</DependentUpon>
 
@@ -155,6 +155,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+     
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
