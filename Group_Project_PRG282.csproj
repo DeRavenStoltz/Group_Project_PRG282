@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="PresentationLayer\frmAddModule.Designer.cs">
       <DependentUpon>frmAddModule.cs</DependentUpon>
+     </Compile>
 
     <Compile Include="PresentationLayer\frmUpdateStudent.cs">
       <SubType>Form</SubType>
