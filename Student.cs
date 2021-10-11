@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Group_Project_PRG282
+﻿namespace Group_Project_PRG282
 {
-    class Student
+    internal class Student
     {
         private int studentNumber;
         private string fullName;
@@ -18,7 +12,6 @@ namespace Group_Project_PRG282
 
         public Student()
         {
-            
         }
 
         public Student(int studentNumber, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] photo)

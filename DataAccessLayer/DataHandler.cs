@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Windows.Forms;
-using System.Data;
 
 namespace Group_Project_PRG282.DataAccesLayer
 {
-    class DataHandler
+    internal class DataHandler
     {
-        public DataHandler() { }
+        public DataHandler()
+        {
+        }
 
         public SqlConnection ConnectDatabase()
         {
+
             SqlConnection connection = new SqlConnection(@"Server=.; Initial Catalog=StudentSystem; Integrated Security=true");
+
 
             return connection;
         }
@@ -41,6 +39,7 @@ namespace Group_Project_PRG282.DataAccesLayer
 
             return students;
         }
+
         public List<Module> GetModules(SqlConnection connection)
         {
             List<Module> modules = new List<Module>();
@@ -70,6 +69,7 @@ namespace Group_Project_PRG282.DataAccesLayer
             connection.Close();
             return modules;
         }
+
 
     }
 }

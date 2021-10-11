@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-
+﻿using Group_Project_PRG282.BusinessLogicLayer;
 using Group_Project_PRG282.DataAccesLayer;
-using Group_Project_PRG282.BusinessLogicLayer;
-using Group_Project_PRG282.Presentation_Layer;
+using System;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Group_Project_PRG282.Presentation_Layer
 {
     public partial class frmAddStudents : Form
     {
+
         DataHandler dh = new DataHandler();
         DatabaseOperations operations = new DatabaseOperations();
         ComponentController cc = new ComponentController();
         List<Module> lmod = new List<Module>();
         byte[] bytes;
+
         public frmAddStudents()
         {
             InitializeComponent();
