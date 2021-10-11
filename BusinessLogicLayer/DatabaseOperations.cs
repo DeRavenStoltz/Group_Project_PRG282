@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Windows.Forms;
+using System;
 
 namespace Group_Project_PRG282.BusinessLogicLayer
 {
@@ -207,15 +208,16 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             connection.Close();
         }
 
-        public void updateModule (SqlConnection connection, string ID, string ModName, string Description)
+        public void updateModule(SqlConnection connection, string ID, string ModName, string Description)
         {
-            connection.Open(); 
+            connection.Open();
             string query = $@"UPDATE tblModules SET moduleName = '{ModName}', moduleDescription = '{Description}' WHERE moduleCode = '{ID}'";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
-            connection.Close(); 
+            connection.Close();
+        }
 
-        public void UpdateStudentInfo(SqlConnection connection, string id, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes)
+            public void UpdateStudentInfo(SqlConnection connection, string id, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes)
         {
             string query = "UPDATE tblStudents set studentFullName = @fullName, studentDOB= @dateOfBirth, studentGender = @studentGender,studentPhone= @studentPhone ,studentAddress= @studentAddress,studentImage = @studentImage WHERE studentNumber = @id";
 

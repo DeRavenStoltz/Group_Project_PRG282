@@ -60,6 +60,9 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             Close(); 
         }
 
-        
+        private void frmUpdateModules_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

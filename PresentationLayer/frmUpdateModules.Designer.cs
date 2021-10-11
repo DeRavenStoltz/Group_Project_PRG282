@@ -153,6 +153,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             this.Name = "frmUpdateModules";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUpdateModules";
+            this.Load += new System.EventHandler(this.frmUpdateModules_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

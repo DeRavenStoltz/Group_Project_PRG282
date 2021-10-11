@@ -294,21 +294,21 @@ namespace Group_Project_PRG282.Presentation_Layer
 
             // addStudModuleDes
             // 
-            this.addStudModuleDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudModuleDes.Location = new System.Drawing.Point(17, 226);
-            this.addStudModuleDes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.addStudModuleDes.Name = "addStudModuleDes";
-            this.addStudModuleDes.Size = new System.Drawing.Size(270, 30);
-            this.addStudModuleDes.TabIndex = 21;
+            //this.addStudModuleDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            //this.addStudModuleDes.Location = new System.Drawing.Point(17, 226);
+            //this.addStudModuleDes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            //this.addStudModuleDes.Name = "addStudModuleDes";
+            //this.addStudModuleDes.Size = new System.Drawing.Size(270, 30);
+            //this.addStudModuleDes.TabIndex = 21;
             // 
             // addStudModuleName
             // 
-            this.addStudModuleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudModuleName.Location = new System.Drawing.Point(17, 144);
-            this.addStudModuleName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.addStudModuleName.Name = "addStudModuleName";
-            this.addStudModuleName.Size = new System.Drawing.Size(270, 30);
-            this.addStudModuleName.TabIndex = 16;
+            //this.addStudModuleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            //this.addStudModuleName.Location = new System.Drawing.Point(17, 144);
+            //this.addStudModuleName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            //this.addStudModuleName.Name = "addStudModuleName";
+            //this.addStudModuleName.Size = new System.Drawing.Size(270, 30);
+            //this.addStudModuleName.TabIndex = 16;
 
             // 
             this.btnAddModule.Location = new System.Drawing.Point(112, 53);
@@ -320,12 +320,12 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnAddModule.Click += new System.EventHandler(this.btnAddModule_Click);
             // 
 
-            this.addStudCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addStudCode.Location = new System.Drawing.Point(17, 63);
-            this.addStudCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.addStudCode.Name = "addStudCode";
-            this.addStudCode.Size = new System.Drawing.Size(270, 30);
-            this.addStudCode.TabIndex = 15;
+            //this.addStudCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            //this.addStudCode.Location = new System.Drawing.Point(17, 63);
+            //this.addStudCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            //this.addStudCode.Name = "addStudCode";
+            //this.addStudCode.Size = new System.Drawing.Size(270, 30);
+            //this.addStudCode.TabIndex = 15;
 
             // 
             this.lbxModules.FormattingEnabled = true;

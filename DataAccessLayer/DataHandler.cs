@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data.SqlClient;
+using System;
+using System.Windows.Forms;
 
 namespace Group_Project_PRG282.DataAccesLayer
 {
@@ -12,7 +14,7 @@ namespace Group_Project_PRG282.DataAccesLayer
         public SqlConnection ConnectDatabase()
         {
 
-            SqlConnection connection = new SqlConnection(@"Server=.; Initial Catalog=StudentSystem; Integrated Security=true");
+            SqlConnection connection = new SqlConnection(@"Server=DESKTOP-IHTCUHK\SQLEXPRESS; Initial Catalog=StudentSystem; Integrated Security=true");
 
 
             return connection;

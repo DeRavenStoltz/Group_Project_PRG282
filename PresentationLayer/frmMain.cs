@@ -125,5 +125,12 @@ namespace Group_Project_PRG282.Presentation_Layer
             newForm.Show();
             Close();
         }
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            frmUpdateStudent frm = new frmUpdateStudent();
+            frm.Show();
+            Close();
+        }
     }
 }
