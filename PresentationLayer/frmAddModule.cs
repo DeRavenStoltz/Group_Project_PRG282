@@ -61,5 +61,22 @@ namespace Group_Project_PRG282.PresentationLayer
         {
 
         }
+
+        private void txtLink_TextChanged(object sender, EventArgs e)
+        {
+            if (txtLink.Text.Contains("https://") || txtLink.Text.Contains("www."))
+            {
+                if (txtLink.Text.Contains(".com"))
+                {
+                    redCross.Visible = false;
+                    greenTick.Visible = true;
+                }
+                else
+                {
+                    redCross.Visible = true;
+                    greenTick.Visible = false;
+                }
+            }
+        }
     }
 }
