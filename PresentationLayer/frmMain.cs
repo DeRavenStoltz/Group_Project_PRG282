@@ -20,12 +20,8 @@ namespace Group_Project_PRG282.Presentation_Layer
         public frmMain()
         {
             InitializeComponent();
-        }
+            lblWelcome.Text = $"{User.LoggedInUser[0].Username}";
 
-        public frmMain(string currentUser)
-        {
-            InitializeComponent();
-            lblWelcome.Text = $"{currentUser}";
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -147,6 +143,13 @@ namespace Group_Project_PRG282.Presentation_Layer
             {
                 lbModules.Items.Add(module); 
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmNavigation frmNav = new frmNavigation();
+            frmNav.Show();
+            Close(); 
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Group_Project_PRG282.DataAccesLayer;
 using Group_Project_PRG282.BusinessLogicLayer;
-using Group_Project_PRG282.Presentation_Layer;
+
 
 namespace Group_Project_PRG282.PresentationLayer
 {
@@ -24,12 +24,12 @@ namespace Group_Project_PRG282.PresentationLayer
         public frmModules(string currentUser)
         {
             InitializeComponent();
-            lblWelcomeUser.Text = $"{currentUser}";
+            lblWelcomeUser.Text = $"{User.LoggedInUser[0].Username}";
         }
         public frmModules()
         {
             InitializeComponent();
-            
+            lblWelcomeUser.Text = $"{User.LoggedInUser[0].Username}";
         }
 
         private void frmModules_Load(object sender, EventArgs e)
@@ -129,6 +129,13 @@ namespace Group_Project_PRG282.PresentationLayer
             lmodule = dh.GetModules(dh.ConnectDatabase());
             source.DataSource = lmodule;
             dgvModules.DataSource = source;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmNavigation frmNav = new frmNavigation();
+            frmNav.Show();
+            Close(); 
         }
     }
 }

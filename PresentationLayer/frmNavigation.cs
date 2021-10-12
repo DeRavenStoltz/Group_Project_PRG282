@@ -16,12 +16,6 @@ namespace Group_Project_PRG282.PresentationLayer
 {
     public partial class frmNavigation : Form
     {
-        string user;
-        public frmNavigation(string username)
-        {
-            InitializeComponent();
-            user = username;
-        }
         public frmNavigation()
         {
             InitializeComponent();
@@ -29,16 +23,16 @@ namespace Group_Project_PRG282.PresentationLayer
         }
         private void btnStudents_Click(object sender, EventArgs e)
         {
-            frmMain frm = new frmMain(user);
+            frmMain frm = new frmMain();
             frm.Show();
-            Hide();
+            Close();
         }
 
         private void btnModules_Click(object sender, EventArgs e)
         {
-            frmModules modules = new frmModules(user);
+            frmModules modules = new frmModules();
             modules.Show();
-            this.Hide();
+            Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

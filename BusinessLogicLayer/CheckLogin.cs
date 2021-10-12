@@ -41,6 +41,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                 }
                 else
                 {
+                    User.LoggedInUser.Add(user);
                     if (loginSuccess != null)
                     {
                         loginSuccess.Invoke();

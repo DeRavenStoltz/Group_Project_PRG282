@@ -31,19 +31,17 @@ namespace Group_Project_PRG282
         private void btnLogin_Click(object sender, EventArgs e)
         {
             cl.checkLogin(txtusernameBoxLogin.Text, txtpasswordBoxLogin.Text, usersInSystem);
-            
         }
 
         private void btnClearLogin_Click(object sender, EventArgs e)
         {
-            cc.clearFieldsLogIn(txtusernameBoxLogin,txtpasswordBoxLogin); 
+            cc.clearFieldsLogIn(txtusernameBoxLogin,txtpasswordBoxLogin);
         }
 
 
         public void loginSuccessful()
         {
-            //frmMain main = new frmMain(txtusernameBoxLogin.Text);
-            frmNavigation navigation = new frmNavigation(txtusernameBoxLogin.Text);
+            frmNavigation navigation = new frmNavigation();
             cc.clearFieldsLogIn(txtusernameBoxLogin,txtpasswordBoxLogin);
             navigation.Show();
             Hide();
