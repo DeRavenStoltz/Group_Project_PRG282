@@ -57,11 +57,6 @@ namespace Group_Project_PRG282.PresentationLayer
             Close();
         }
 
-        private void frmAddModule_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtLink_TextChanged(object sender, EventArgs e)
         {
             if (txtLink.Text.Contains("https://") || txtLink.Text.Contains("www."))
@@ -77,6 +72,11 @@ namespace Group_Project_PRG282.PresentationLayer
                     greenTick.Visible = false;
                 }
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
         }
     }
 }

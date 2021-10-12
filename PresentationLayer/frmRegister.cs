@@ -3,6 +3,8 @@ using Group_Project_PRG282.DataAccesLayer;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Drawing;
+
 
 namespace Group_Project_PRG282
 {
@@ -48,6 +50,29 @@ namespace Group_Project_PRG282
             frmLogin loginForm = new frmLogin();
             loginForm.Show();
             Close();
+        }
+
+        private void txtFocus_Enter(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            var parent = textBox.Parent;
+
+            textBox.BackColor = Color.White;
+            parent.BackColor = Color.White;
+        }
+
+        private void txtFocus_Leave(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            var parent = textBox.Parent;
+
+            textBox.BackColor = SystemColors.Control;
+            parent.BackColor = SystemColors.Control;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
         }
     }
 }

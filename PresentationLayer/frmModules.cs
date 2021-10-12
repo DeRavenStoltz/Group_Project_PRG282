@@ -24,7 +24,7 @@ namespace Group_Project_PRG282.PresentationLayer
         public frmModules(string currentUser)
         {
             InitializeComponent();
-            lblWelcomeUser.Text = $"Welcome, {currentUser}";
+            lblWelcomeUser.Text = $"{currentUser}";
         }
         public frmModules()
         {
@@ -130,7 +130,5 @@ namespace Group_Project_PRG282.PresentationLayer
             source.DataSource = lmodule;
             dgvModules.DataSource = source;
         }
-
-        
     }
 }

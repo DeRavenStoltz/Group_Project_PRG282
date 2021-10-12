@@ -117,7 +117,7 @@ namespace Group_Project_PRG282.PresentationLayer
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit(); 
         }
 
         private void btnClear_Click(object sender, EventArgs e)

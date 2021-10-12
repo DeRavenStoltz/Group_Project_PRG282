@@ -42,6 +42,24 @@ namespace Group_Project_PRG282.DataAccesLayer
             return students;
         }
 
+        public List<string> getStudentModule(SqlConnection connection, int ID)
+        {
+            List<string> modules = new List<string>();
+
+            connection.Open();
+
+            SqlCommand cmd = new SqlCommand($@"SELECT M.moduleName FROM tblStudents AS S INNER JOIN StudentModule AS SM ON S.studentNumber = SM.studentNumber INNER JOIN tblModules AS M ON M.moduleCode = SM.moduleCode WHERE S.studentNumber = {ID}", connection);
+            SqlDataReader reader = cmd.ExecuteReader(); 
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    modules.Add(reader.GetString(0));
+                }
+            }
+            return modules; 
+        }
+
         public List<Module> GetModules(SqlConnection connection)
         {
             List<Module> modules = new List<Module>();
