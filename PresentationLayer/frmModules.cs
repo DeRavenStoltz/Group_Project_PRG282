@@ -42,6 +42,7 @@ namespace Group_Project_PRG282.PresentationLayer
             DialogResult userResult = MessageBox.Show("Are you sure you want to switch users?", "Important", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (userResult == DialogResult.Yes)
             {
+                User.LoggedInUser.Clear();
                 frmLogin login = new frmLogin();
                 login.Show();
                 Close();

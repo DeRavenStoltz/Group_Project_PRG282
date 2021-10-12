@@ -237,7 +237,8 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             connection.Open();
             DialogResult userInput;
             userInput = MessageBox.Show($"Are you sure you want to delete student, {fullName}?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            string delString = $"DELETE FROM tblStudents WHERE studentNumber = {ID} ";
+            string delString = $"DELETE FROM StudentModule WHERE studentNumber = {ID} " +
+                $"DELETE FROM tblStudents WHERE studentNumber = {ID} ";
 
             if (userInput == DialogResult.Yes)
             {
@@ -253,7 +254,8 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             connection.Open();
             DialogResult userInput;
             userInput = MessageBox.Show($"Are you sure you want to delete the module, {ModName}?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            string delString = $"DELETE FROM tblModules WHERE ModuleCode = '{ID}' ";
+            string delString = $"DELETE FROM StudentModule WHERE moduleCode = '{ID}' " +
+                $"DELETE FROM tblModules WHERE ModuleCode = '{ID}' ";
 
             if (userInput == DialogResult.Yes)
             {
