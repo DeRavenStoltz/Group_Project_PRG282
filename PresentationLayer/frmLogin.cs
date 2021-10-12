@@ -1,14 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Threading;
 using Group_Project_PRG282.BusinessLogicLayer;
 using Group_Project_PRG282.DataAccesLayer;
 using Group_Project_PRG282.PresentationLayer;
@@ -61,6 +54,40 @@ namespace Group_Project_PRG282
         {
             cl.loginSuccess += loginSuccessful;
             usersInSystem = db.getUsers();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
+        }
+
+        private void txtFocus_Enter(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            var parent = textBox.Parent;
+
+            textBox.BackColor = Color.White;
+            parent.BackColor = Color.White;
+        }
+
+        private void txtFocus_Leave(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            var parent = textBox.Parent;
+
+            textBox.BackColor = SystemColors.Control;
+            parent.BackColor = SystemColors.Control;
+        }
+
+        private void passwordPicture_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtpasswordBoxLogin.UseSystemPasswordChar = false;
+        }
+
+        private void passwordPicture_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtpasswordBoxLogin.UseSystemPasswordChar = true;
+
         }
     }
 }

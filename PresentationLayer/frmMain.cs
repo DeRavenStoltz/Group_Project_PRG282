@@ -15,6 +15,7 @@ namespace Group_Project_PRG282.Presentation_Layer
         private List<Student> students = new List<Student>();
         private DatabaseOperations operations = new DatabaseOperations();
         private DataHandler datahandler = new DataHandler();
+        private List<string> studentModules = new List<string>();
 
         public frmMain()
         {
@@ -24,7 +25,7 @@ namespace Group_Project_PRG282.Presentation_Layer
         public frmMain(string currentUser)
         {
             InitializeComponent();
-            lblWelcome.Text = $"Welcome, {currentUser}";
+            lblWelcome.Text = $"{currentUser}";
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -58,7 +59,11 @@ namespace Group_Project_PRG282.Presentation_Layer
                 MemoryStream memoryStream = new MemoryStream(selectedStudent.Photo);
                 Image image = Image.FromStream(memoryStream);
                 studentImageBox.Image = image;
+
+                populateModules(selectedStudent.StudentNumber);
+
             }
+
         }
 
         private void btnMoveFirst_Click(object sender, EventArgs e)
@@ -132,6 +137,16 @@ namespace Group_Project_PRG282.Presentation_Layer
             frmUpdateStudent newForm = new frmUpdateStudent(selectedStudent.Photo, selectedStudent.StudentNumber, selectedStudent.FullName, selectedStudent.DateOfBirth, selectedStudent.StudentGender, selectedStudent.StudentPhone, selectedStudent.StudentAddress);
             newForm.Show();
             Close();
+        }
+
+        public void populateModules(int ID)
+        {
+            studentModules = datahandler.getStudentModule(datahandler.ConnectDatabase(), ID);
+            lbModules.Items.Clear();
+            foreach (var module in studentModules)
+            {
+                lbModules.Items.Add(module); 
+            }
         }
     }
 }

@@ -49,7 +49,7 @@ namespace Group_Project_PRG282.Presentation_Layer
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit(); 
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
