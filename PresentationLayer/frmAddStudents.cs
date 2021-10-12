@@ -25,6 +25,7 @@ namespace Group_Project_PRG282.Presentation_Layer
         private void btnClear_Click(object sender, EventArgs e)
         {
             lmod = dh.GetModules(dh.ConnectDatabase());
+            cbxModule.Items.Clear();
             cc.fillCBXModule(cbxModule);
             lbxModules.Items.Clear();
             addFullName.Clear();
@@ -77,6 +78,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             if (operations.InsertStudents(dh.ConnectDatabase(), addFullName.Text, addDatePicker.Text, gender, addStudPhone.Text, addStudAddress.Text, bytes,AddedModules) == true)
             {
                 MessageBox.Show("Student Added Succesfully");
+                frmMain main = new frmMain();
+                main.Show();
+                Close();
             }
             else
             {

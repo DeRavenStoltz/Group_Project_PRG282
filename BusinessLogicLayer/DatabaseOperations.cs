@@ -267,7 +267,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
         public void updateModule(SqlConnection connection, string ID, string ModName, string Description, string link)
         {
             connection.Open();
-            string query = $@"UPDATE tblModules SET moduleName = '{ModName}', moduleDescription = '{Description}',  WHERE moduleCode = '{ID}'";
+            string query = $@"UPDATE tblModules SET moduleName = '{ModName}', moduleDescription = '{Description}'  WHERE moduleCode = '{ID}'";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
             connection.Close();
