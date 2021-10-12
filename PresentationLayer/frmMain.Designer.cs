@@ -170,13 +170,12 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             // lblDateOfBirth
             // 
-            this.lblDateOfBirth.AutoSize = true;
-            this.lblDateOfBirth.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblDateOfBirth.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblDateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblDateOfBirth.Location = new System.Drawing.Point(167, 105);
+            this.lblDateOfBirth.Location = new System.Drawing.Point(167, 107);
             this.lblDateOfBirth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
-            this.lblDateOfBirth.Size = new System.Drawing.Size(113, 21);
+            this.lblDateOfBirth.Size = new System.Drawing.Size(113, 39);
             this.lblDateOfBirth.TabIndex = 7;
             this.lblDateOfBirth.Text = "\"DateOfBirth\"";
             // 
