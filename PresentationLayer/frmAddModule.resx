@@ -1627,4 +1627,13 @@
         P4QQQugT3NxXwZ3wEXg+/h6vw+ejJYtTrz+EqeVf/uX/A5Cf+kq134LQAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="EPModuleID.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="EPModuleName.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>157, 17</value>
+  </metadata>
+  <metadata name="EPModuleDecription.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>323, 17</value>
+  </metadata>
 </root>

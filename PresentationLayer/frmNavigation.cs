@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Group_Project_PRG282.Presentation_Layer;
+using System;
 using System.Windows.Forms;
-using Group_Project_PRG282.BusinessLogicLayer;
-using Group_Project_PRG282.DataAccesLayer;
-
-using Group_Project_PRG282.Presentation_Layer;
 
 namespace Group_Project_PRG282.PresentationLayer
 {
@@ -19,8 +9,8 @@ namespace Group_Project_PRG282.PresentationLayer
         public frmNavigation()
         {
             InitializeComponent();
-            
         }
+
         private void btnStudents_Click(object sender, EventArgs e)
         {
             frmMain frm = new frmMain();
@@ -42,7 +32,6 @@ namespace Group_Project_PRG282.PresentationLayer
 
         private void frmNavigation_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

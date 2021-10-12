@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Group_Project_PRG282
+﻿namespace Group_Project_PRG282
 {
-    class Module
+    internal class Module
     {
-        string moduleID;
-        string moduleName, moduleDescription,moduleLink;
+        private string moduleID;
+        private string moduleName, moduleDescription, moduleLink;
+
         public Module()
         {
         }
 
-        public Module(string moduleID, string moduleName, string moduleDescription,string moduleLink)
+        public Module(string moduleID, string moduleName, string moduleDescription, string moduleLink)
         {
             this.ModuleID = moduleID;
             this.ModuleName = moduleName;

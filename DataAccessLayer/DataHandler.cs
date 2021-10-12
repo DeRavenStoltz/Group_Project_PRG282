@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
-using System;
 using System.Windows.Forms;
 
 namespace Group_Project_PRG282.DataAccesLayer
@@ -13,9 +13,7 @@ namespace Group_Project_PRG282.DataAccesLayer
 
         public SqlConnection ConnectDatabase()
         {
-
-            SqlConnection connection = new SqlConnection(@"Server=.;Initial Catalog=StudentSystem; Initial Catalog=StudentSystem; Integrated Security=true");
-
+            SqlConnection connection = new SqlConnection(@"Server=LAPTOP-S4VFC76G\SQLEXPRESS02;Initial Catalog=StudentSystem; Initial Catalog=StudentSystem; Integrated Security=true");
 
             return connection;
         }
@@ -49,7 +47,7 @@ namespace Group_Project_PRG282.DataAccesLayer
             connection.Open();
 
             SqlCommand cmd = new SqlCommand($@"SELECT M.moduleName FROM tblStudents AS S INNER JOIN StudentModule AS SM ON S.studentNumber = SM.studentNumber INNER JOIN tblModules AS M ON M.moduleCode = SM.moduleCode WHERE S.studentNumber = {ID}", connection);
-            SqlDataReader reader = cmd.ExecuteReader(); 
+            SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
                 while (reader.Read())
@@ -57,7 +55,7 @@ namespace Group_Project_PRG282.DataAccesLayer
                     modules.Add(reader.GetString(0));
                 }
             }
-            return modules; 
+            return modules;
         }
 
         public List<Module> GetModules(SqlConnection connection)
@@ -71,9 +69,7 @@ namespace Group_Project_PRG282.DataAccesLayer
             {
                 MessageBox.Show(e.Message);
                 return modules;
-                
             }
-            
 
             SqlCommand cmd = new SqlCommand(@"SELECT * FROM tblModules", connection);
 
@@ -82,14 +78,47 @@ namespace Group_Project_PRG282.DataAccesLayer
             if (reader.HasRows)
             {
                 while (reader.Read())
-                {        
-                    modules.Add(new Module(reader.GetString(0),reader.GetString(1),reader.GetString(2),reader.GetString(3)));
+                {
+                    modules.Add(new Module(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3)));
                 }
             }
             connection.Close();
             return modules;
         }
 
+        public bool JustString(string name)
+        {
+            string[] Fullname = name.Split(' ');
 
+            foreach (char item in Fullname[0])
+            {
+                if (char.IsLetter(item))
+                {
+                    foreach (char next in Fullname[1])
+                    {
+                        if (char.IsLetter(next))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool checkNumber(string number)
+        {
+            if (number.Length == 10)
+            {
+                foreach (char item in number)
+                {
+                    if (char.IsNumber(item))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
     }
 }

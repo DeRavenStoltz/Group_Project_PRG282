@@ -21,7 +21,6 @@ namespace Group_Project_PRG282.Presentation_Layer
         {
             InitializeComponent();
             lblWelcome.Text = $"{User.LoggedInUser[0].Username}";
-
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -57,9 +56,7 @@ namespace Group_Project_PRG282.Presentation_Layer
                 studentImageBox.Image = image;
 
                 populateModules(selectedStudent.StudentNumber);
-
             }
-
         }
 
         private void btnMoveFirst_Click(object sender, EventArgs e)
@@ -141,7 +138,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             lbModules.Items.Clear();
             foreach (var module in studentModules)
             {
-                lbModules.Items.Add(module); 
+                lbModules.Items.Add(module);
             }
         }
 
@@ -149,7 +146,7 @@ namespace Group_Project_PRG282.Presentation_Layer
         {
             frmNavigation frmNav = new frmNavigation();
             frmNav.Show();
-            Close(); 
+            Close();
         }
     }
 }

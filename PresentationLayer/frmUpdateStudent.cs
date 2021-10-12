@@ -14,9 +14,10 @@ namespace Group_Project_PRG282.PresentationLayer
         private List<Student> students = new List<Student>();
         private DatabaseOperations operations = new DatabaseOperations();
         private DataHandler datahandler = new DataHandler();
-        ComponentController cc = new ComponentController();
-        List<Module> lmod = new List<Module>();//All modules
-        List<string> lcurrentModules = new List<string>();//Modules for selected student
+        private ComponentController cc = new ComponentController();
+        private List<Module> lmod = new List<Module>();//All modules
+        private List<string> lcurrentModules = new List<string>();//Modules for selected student
+
         //byte[] data;
         private byte[] bytes;
 
@@ -45,7 +46,7 @@ namespace Group_Project_PRG282.PresentationLayer
             txtPhone.Text = phone;
             txtAddress.Text = address;
             TxtStudentID.Text = id.ToString();
-            lcurrentModules = operations.studentModules(id,datahandler.ConnectDatabase());
+            lcurrentModules = operations.studentModules(id, datahandler.ConnectDatabase());
         }
 
         private void UpdateStudent_Load(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace Group_Project_PRG282.PresentationLayer
             foreach (var item in lcurrentModules)
             {
                 lbxModules.Items.Add(item);
-            }          
+            }
             students = datahandler.GetStudents(datahandler.ConnectDatabase());
             txtFullName.Focus();
             lmod = datahandler.GetModules(datahandler.ConnectDatabase());
@@ -83,9 +84,8 @@ namespace Group_Project_PRG282.PresentationLayer
                 {
                     ldel.Add(code);
                 }
-            }    
-                
-            
+            }
+
             string studentGender = "";
             if (rdbMale.Checked)
             {
@@ -99,7 +99,7 @@ namespace Group_Project_PRG282.PresentationLayer
             try
             {
                 operations.UpdateStudentInfo(datahandler.ConnectDatabase(), TxtStudentID.Text, txtFullName.Text, dtpDatePicker.Text, studentGender, txtPhone.Text, txtAddress.Text, bytes);
-                operations.UpdateStudentModules(ldel,ladd,int.Parse(TxtStudentID.Text),datahandler.ConnectDatabase());
+                operations.UpdateStudentModules(ldel, ladd, int.Parse(TxtStudentID.Text), datahandler.ConnectDatabase());
                 MessageBox.Show("Information successfully updated");
             }
             catch (Exception ex)
@@ -117,7 +117,7 @@ namespace Group_Project_PRG282.PresentationLayer
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
+            Application.Exit();
         }
 
         private void btnClear_Click(object sender, EventArgs e)

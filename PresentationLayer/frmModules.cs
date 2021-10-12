@@ -1,31 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Group_Project_PRG282.BusinessLogicLayer;
 using Group_Project_PRG282.DataAccesLayer;
-using Group_Project_PRG282.BusinessLogicLayer;
-
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace Group_Project_PRG282.PresentationLayer
 {
     public partial class frmModules : Form
     {
-        BindingSource source = new BindingSource();
-        DataHandler dh = new DataHandler();
-        List<Module> lmodule = new List<Module>();
-        DatabaseOperations operations = new DatabaseOperations();
-
+        private BindingSource source = new BindingSource();
+        private DataHandler dh = new DataHandler();
+        private List<Module> lmodule = new List<Module>();
+        private DatabaseOperations operations = new DatabaseOperations();
 
         public frmModules(string currentUser)
         {
             InitializeComponent();
             lblWelcomeUser.Text = $"{User.LoggedInUser[0].Username}";
         }
+
         public frmModules()
         {
             InitializeComponent();
@@ -33,8 +26,8 @@ namespace Group_Project_PRG282.PresentationLayer
         }
 
         private void frmModules_Load(object sender, EventArgs e)
-        {    
-            loadDataGrid(); 
+        {
+            loadDataGrid();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -62,14 +55,14 @@ namespace Group_Project_PRG282.PresentationLayer
         private void btnCreate_Click(object sender, EventArgs e)
         {
             frmAddModule add = new frmAddModule(this);
-            add.moduleAdded += loadDataGrid; 
+            add.moduleAdded += loadDataGrid;
             add.Show();
             Hide();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-           source.DataSource= operations.SearchModule(lmodule,txtsearchBox.Text);
+            source.DataSource = operations.SearchModule(lmodule, txtsearchBox.Text);
             dgvModules.DataSource = source;
         }
 
@@ -96,7 +89,7 @@ namespace Group_Project_PRG282.PresentationLayer
         private void dgvModules_SelectionChanged(object sender, EventArgs e)
         {
             Module mod = source.Current as Module;
-            if (mod!=null)
+            if (mod != null)
             {
                 lblModuleCode.Text = mod.ModuleID;
                 lblModuleDescription.Text = mod.ModuleDescription;
@@ -108,17 +101,18 @@ namespace Group_Project_PRG282.PresentationLayer
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Module mod = source.Current as Module;
-            if (mod!=null)
+            if (mod != null)
             {
                 operations.deleteModule(dh.ConnectDatabase(), mod.ModuleID, mod.ModuleName);
             }
             source.ResetBindings(true);
-            loadDataGrid(); 
+            loadDataGrid();
         }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            frmUpdateModules frmUpdate = new frmUpdateModules(this, lblModuleCode.Text, lblModuleName.Text, lblModuleDescription.Text,lblLink.Text);
-            frmUpdate.updateSuccess += loadDataGrid; 
+            frmUpdateModules frmUpdate = new frmUpdateModules(this, lblModuleCode.Text, lblModuleName.Text, lblModuleDescription.Text, lblLink.Text);
+            frmUpdate.updateSuccess += loadDataGrid;
             frmUpdate.Show();
             Hide();
         }
@@ -135,7 +129,7 @@ namespace Group_Project_PRG282.PresentationLayer
         {
             frmNavigation frmNav = new frmNavigation();
             frmNav.Show();
-            Close(); 
+            Close();
         }
     }
 }

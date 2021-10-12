@@ -2,9 +2,8 @@
 using Group_Project_PRG282.DataAccesLayer;
 using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using System.Drawing;
-
+using System.Windows.Forms;
 
 namespace Group_Project_PRG282
 {
@@ -72,7 +71,7 @@ namespace Group_Project_PRG282
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
+            Application.Exit();
         }
     }
 }

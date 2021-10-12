@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Windows.Forms;
-using System;
 
 namespace Group_Project_PRG282.BusinessLogicLayer
 {
@@ -26,7 +26,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
         }
 
-        public bool InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes, List<Module> lAddedModules)
+        public void InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes, List<Module> lAddedModules)
 
         {
             try
@@ -67,7 +67,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                 SqlParameter modcode = new SqlParameter("@modcode", SqlDbType.VarChar);
                 SqlParameter studnum = new SqlParameter("@studnum", SqlDbType.Int);
 
-                foreach  (Module mod in lAddedModules)
+                foreach (Module mod in lAddedModules)
                 {
                     cmd.Parameters.Clear();
                     modcode.Value = mod.ModuleID;
@@ -78,25 +78,23 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                     cmd.ExecuteNonQuery();
                 }
                 connection.Close();
-                return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                return false;
+                MessageBox.Show("Error! Something went wrong", ex.Message);
             }
-           
         }
+
         public int NewestStudentID(SqlConnection connection)
         {
             int ID;
             string query = "Select Max(studentNumber) from tblStudents";
-            SqlCommand cmd = new SqlCommand(query,connection);
+            SqlCommand cmd = new SqlCommand(query, connection);
             ID = (int)cmd.ExecuteScalar();
             return ID;
         }
 
-        public List<string> studentModules(int studNumber,SqlConnection connection)//returns all modules for a specific student
+        public List<string> studentModules(int studNumber, SqlConnection connection)//returns all modules for a specific student
         {
             List<string> lCodes = new List<string>();
             try
@@ -120,11 +118,11 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             finally
             {
                 connection.Close();
-                
             }
             return lCodes;
         }
-        public bool InsertModules(SqlConnection connection, string modID, string ModName, string ModDescr,string link)
+
+        public bool InsertModules(SqlConnection connection, string modID, string ModName, string ModDescr, string link)
 
         {
             try
@@ -135,7 +133,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                 SqlParameter modname = new SqlParameter("@ModuleName", SqlDbType.VarChar);
                 SqlParameter moddescr = new SqlParameter("@ModuleDescription", SqlDbType.VarChar);
                 SqlParameter modlink = new SqlParameter("@ModuleLink", SqlDbType.VarChar);
-
 
                 modid.Value = modID.ToString();
                 modname.Value = ModName.ToString();
@@ -152,9 +149,9 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                 insertCommand.Parameters.Add(modlink);
 
                 insertCommand.ExecuteNonQuery();
-               
+
                 connection.Close();
-                
+
                 return true;
             }
             catch (Exception e)
@@ -162,13 +159,12 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                 MessageBox.Show(e.Message);
                 return false;
             }
-            
         }
 
         public List<Student> SearchStudent(List<Student> students, string search)
         {
             List<Student> searchedStudents = new List<Student>();
-            if (search=="")
+            if (search == "")
             {
                 searchedStudents = students;
             }
@@ -191,12 +187,10 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                     {
                         MessageBox.Show("Please enter valid student number");
                         return students;
-                        
                     }
-
                 }
             }
-           
+
             return searchedStudents;
         }
 
@@ -211,7 +205,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             {
                 foreach (Module mod in modules)
                 {
-                    
                     try
                     {
                         if (mod.ModuleID == search)
@@ -223,9 +216,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                     {
                         MessageBox.Show("Please enter valid ModuleCode");
                         return modules;
-
                     }
-
                 }
             }
 
@@ -246,7 +237,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
             connection.Close();
         }
-
 
         public void deleteModule(SqlConnection connection, string ID, string ModName)
         {
@@ -273,7 +263,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             connection.Close();
         }
 
-            public void UpdateStudentInfo(SqlConnection connection, string id, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes)
+        public void UpdateStudentInfo(SqlConnection connection, string id, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes)
         {
             string query = "UPDATE tblStudents set studentFullName = @fullName, studentDOB= @dateOfBirth, studentGender = @studentGender,studentPhone= @studentPhone ,studentAddress= @studentAddress,studentImage = @studentImage WHERE studentNumber = @id";
 
@@ -306,10 +296,9 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             updateCommand.ExecuteNonQuery();
 
             connection.Close();
-
         }
 
-        public void UpdateStudentModules(List<string> ldel, List<string> ladd,int ID, SqlConnection connection)
+        public void UpdateStudentModules(List<string> ldel, List<string> ladd, int ID, SqlConnection connection)
         {
             try
             {
@@ -349,10 +338,9 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
             catch (Exception e)
             {
-
                 MessageBox.Show(e.Message);
             }
-            
+
             connection.Close();
         }
     }

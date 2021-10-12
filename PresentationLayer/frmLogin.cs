@@ -1,20 +1,20 @@
-﻿using System;
+﻿using Group_Project_PRG282.BusinessLogicLayer;
+using Group_Project_PRG282.DataAccesLayer;
+using Group_Project_PRG282.Presentation_Layer;
+using Group_Project_PRG282.PresentationLayer;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using Group_Project_PRG282.BusinessLogicLayer;
-using Group_Project_PRG282.DataAccesLayer;
-using Group_Project_PRG282.PresentationLayer;
-using Group_Project_PRG282.Presentation_Layer;
 
 namespace Group_Project_PRG282
 {
     public partial class frmLogin : Form
     {
-        FileHandler db = new FileHandler();
-        ComponentController cc = new ComponentController();
-        CheckLogin cl = new CheckLogin();
-        List<string> usersInSystem = new List<string>();
+        private FileHandler db = new FileHandler();
+        private ComponentController cc = new ComponentController();
+        private CheckLogin cl = new CheckLogin();
+        private List<string> usersInSystem = new List<string>();
 
         public frmLogin()
         {
@@ -35,18 +35,16 @@ namespace Group_Project_PRG282
 
         private void btnClearLogin_Click(object sender, EventArgs e)
         {
-            cc.clearFieldsLogIn(txtusernameBoxLogin,txtpasswordBoxLogin);
+            cc.clearFieldsLogIn(txtusernameBoxLogin, txtpasswordBoxLogin);
         }
-
 
         public void loginSuccessful()
         {
             frmNavigation navigation = new frmNavigation();
-            cc.clearFieldsLogIn(txtusernameBoxLogin,txtpasswordBoxLogin);
+            cc.clearFieldsLogIn(txtusernameBoxLogin, txtpasswordBoxLogin);
             navigation.Show();
             Hide();
         }
-
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
@@ -57,7 +55,7 @@ namespace Group_Project_PRG282
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
+            Application.Exit();
         }
 
         private void txtFocus_Enter(object sender, EventArgs e)
@@ -86,7 +84,6 @@ namespace Group_Project_PRG282
         private void passwordPicture_MouseUp(object sender, MouseEventArgs e)
         {
             txtpasswordBoxLogin.UseSystemPasswordChar = true;
-
         }
     }
 }
