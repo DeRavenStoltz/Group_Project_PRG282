@@ -67,10 +67,9 @@
             this.linkLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.linkLogin.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLogin.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.linkLogin.Location = new System.Drawing.Point(732, 613);
-            this.linkLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLogin.Location = new System.Drawing.Point(977, 925);
             this.linkLogin.Name = "linkLogin";
-            this.linkLogin.Size = new System.Drawing.Size(90, 19);
+            this.linkLogin.Size = new System.Drawing.Size(133, 28);
             this.linkLogin.TabIndex = 17;
             this.linkLogin.TabStop = true;
             this.linkLogin.Text = "Login here";
@@ -80,10 +79,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(571, 613);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(735, 925);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 19);
+            this.label1.Size = new System.Drawing.Size(242, 28);
             this.label1.TabIndex = 16;
             this.label1.Text = "Already registered?";
             // 
@@ -95,10 +93,9 @@
             this.btnClearLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearLogin.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnClearLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.btnClearLogin.Location = new System.Drawing.Point(421, 519);
-            this.btnClearLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClearLogin.Location = new System.Drawing.Point(632, 798);
             this.btnClearLogin.Name = "btnClearLogin";
-            this.btnClearLogin.Size = new System.Drawing.Size(203, 64);
+            this.btnClearLogin.Size = new System.Drawing.Size(304, 98);
             this.btnClearLogin.TabIndex = 15;
             this.btnClearLogin.Text = "CLEAR";
             this.btnClearLogin.UseVisualStyleBackColor = true;
@@ -109,10 +106,9 @@
             this.lblRegister.AutoSize = true;
             this.lblRegister.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold);
             this.lblRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblRegister.Location = new System.Drawing.Point(367, 104);
-            this.lblRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRegister.Location = new System.Drawing.Point(624, 173);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(467, 77);
+            this.lblRegister.Size = new System.Drawing.Size(701, 112);
             this.lblRegister.TabIndex = 14;
             this.lblRegister.Text = "REGISTER USER";
             // 
@@ -120,12 +116,11 @@
             // 
             this.txtPassword.BackColor = System.Drawing.SystemColors.Control;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 18F);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.txtPassword.Location = new System.Drawing.Point(145, 10);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Location = new System.Drawing.Point(229, 11);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(378, 26);
+            this.txtPassword.Size = new System.Drawing.Size(567, 45);
             this.txtPassword.TabIndex = 13;
             this.txtPassword.Enter += new System.EventHandler(this.txtFocus_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtFocus_Leave);
@@ -135,10 +130,9 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblPassword.Location = new System.Drawing.Point(416, 403);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPassword.Location = new System.Drawing.Point(624, 620);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(121, 28);
+            this.lblPassword.Size = new System.Drawing.Size(183, 43);
             this.lblPassword.TabIndex = 12;
             this.lblPassword.Text = "Password";
             // 
@@ -146,11 +140,12 @@
             // 
             this.txtUsername.BackColor = System.Drawing.SystemColors.Control;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 18F);
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.txtUsername.Location = new System.Drawing.Point(144, 8);
+            this.txtUsername.Location = new System.Drawing.Point(227, 12);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(378, 26);
+            this.txtUsername.Size = new System.Drawing.Size(567, 45);
             this.txtUsername.TabIndex = 11;
             this.txtUsername.Enter += new System.EventHandler(this.txtFocus_Enter);
             this.txtUsername.Leave += new System.EventHandler(this.txtFocus_Leave);
@@ -160,10 +155,9 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblUsername.Location = new System.Drawing.Point(416, 310);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsername.Location = new System.Drawing.Point(624, 477);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(140, 28);
+            this.lblUsername.Size = new System.Drawing.Size(211, 43);
             this.lblUsername.TabIndex = 10;
             this.lblUsername.Text = "User Name";
             // 
@@ -174,10 +168,9 @@
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(636, 519);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegister.Location = new System.Drawing.Point(954, 798);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(203, 64);
+            this.btnRegister.Size = new System.Drawing.Size(304, 98);
             this.btnRegister.TabIndex = 9;
             this.btnRegister.Text = "REGISTER";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -192,26 +185,29 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(979, 58);
+            this.panel1.Size = new System.Drawing.Size(1468, 89);
             this.panel1.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(76, 17);
+            this.label2.Location = new System.Drawing.Point(114, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 25);
+            this.label2.Size = new System.Drawing.Size(294, 38);
             this.label2.TabIndex = 22;
             this.label2.Text = "BELGIUM CAMPUS";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 49);
+            this.pictureBox1.Size = new System.Drawing.Size(105, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
@@ -223,9 +219,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(933, 8);
+            this.button1.Location = new System.Drawing.Point(1400, 12);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.Size = new System.Drawing.Size(60, 62);
             this.button1.TabIndex = 20;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
@@ -237,17 +234,19 @@
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 58);
+            this.panel2.Location = new System.Drawing.Point(0, 89);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(317, 610);
+            this.panel2.Size = new System.Drawing.Size(476, 939);
             this.panel2.TabIndex = 19;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(18, 336);
+            this.pictureBox3.Location = new System.Drawing.Point(27, 517);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(298, 40);
+            this.pictureBox3.Size = new System.Drawing.Size(447, 62);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
@@ -255,9 +254,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-27, 127);
+            this.pictureBox2.Location = new System.Drawing.Point(-40, 195);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(389, 240);
+            this.pictureBox2.Size = new System.Drawing.Size(584, 369);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -266,17 +266,19 @@
             // 
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.txtUsername);
-            this.panel3.Location = new System.Drawing.Point(317, 341);
+            this.panel3.Location = new System.Drawing.Point(476, 525);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(662, 45);
+            this.panel3.Size = new System.Drawing.Size(993, 69);
             this.panel3.TabIndex = 20;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(104, 8);
+            this.pictureBox4.Location = new System.Drawing.Point(156, 12);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.Size = new System.Drawing.Size(45, 46);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 21;
             this.pictureBox4.TabStop = false;
@@ -285,17 +287,19 @@
             // 
             this.panel4.Controls.Add(this.pictureBox5);
             this.panel4.Controls.Add(this.txtPassword);
-            this.panel4.Location = new System.Drawing.Point(316, 434);
+            this.panel4.Location = new System.Drawing.Point(474, 668);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(662, 45);
+            this.panel4.Size = new System.Drawing.Size(993, 69);
             this.panel4.TabIndex = 20;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(105, 7);
+            this.pictureBox5.Location = new System.Drawing.Point(158, 11);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.Size = new System.Drawing.Size(45, 46);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 21;
             this.pictureBox5.TabStop = false;
@@ -303,10 +307,10 @@
             // Register
             // 
             this.AcceptButton = this.btnRegister;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClearLogin;
-            this.ClientSize = new System.Drawing.Size(979, 668);
+            this.ClientSize = new System.Drawing.Size(1468, 1028);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -319,7 +323,6 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnRegister);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

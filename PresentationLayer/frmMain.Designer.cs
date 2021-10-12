@@ -80,10 +80,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblLogin.Location = new System.Drawing.Point(16, 81);
-            this.lblLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogin.Location = new System.Drawing.Point(24, 125);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(306, 44);
+            this.lblLogin.Size = new System.Drawing.Size(462, 66);
             this.lblLogin.TabIndex = 6;
             this.lblLogin.Text = "STUDENT SYSTEM";
             // 
@@ -92,9 +91,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblPhysicalAddress.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblPhysicalAddress.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblPhysicalAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblPhysicalAddress.Location = new System.Drawing.Point(0, 245);
+            this.lblPhysicalAddress.Location = new System.Drawing.Point(0, 377);
+            this.lblPhysicalAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhysicalAddress.Name = "lblPhysicalAddress";
-            this.lblPhysicalAddress.Size = new System.Drawing.Size(329, 78);
+            this.lblPhysicalAddress.Size = new System.Drawing.Size(494, 120);
             this.lblPhysicalAddress.TabIndex = 15;
             this.lblPhysicalAddress.Text = "\"PhysicalAddress\"";
             this.lblPhysicalAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,10 +103,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(1, 237);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(2, 365);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 19);
+            this.label8.Size = new System.Drawing.Size(209, 28);
             this.label8.TabIndex = 14;
             this.label8.Text = "Physical Address";
             // 
@@ -115,10 +114,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblPhoneNumber.Location = new System.Drawing.Point(167, 189);
-            this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(250, 291);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(132, 21);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(199, 30);
             this.lblPhoneNumber.TabIndex = 13;
             this.lblPhoneNumber.Text = "\"PhoneNumber\"";
             // 
@@ -126,10 +124,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(2, 191);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(3, 294);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 19);
+            this.label10.Size = new System.Drawing.Size(83, 28);
             this.label10.TabIndex = 12;
             this.label10.Text = "Phone";
             // 
@@ -138,10 +135,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblGender.Location = new System.Drawing.Point(167, 152);
-            this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGender.Location = new System.Drawing.Point(250, 234);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(80, 21);
+            this.lblGender.Size = new System.Drawing.Size(118, 30);
             this.lblGender.TabIndex = 11;
             this.lblGender.Text = "\"Gender\"";
             // 
@@ -149,10 +145,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(3, 148);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(4, 228);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 19);
+            this.label12.Size = new System.Drawing.Size(100, 28);
             this.label12.TabIndex = 10;
             this.label12.Text = "Gender";
             // 
@@ -160,10 +155,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.lblFullNameTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullNameTop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblFullNameTop.Location = new System.Drawing.Point(21, 176);
-            this.lblFullNameTop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFullNameTop.Location = new System.Drawing.Point(32, 271);
             this.lblFullNameTop.Name = "lblFullNameTop";
-            this.lblFullNameTop.Size = new System.Drawing.Size(332, 61);
+            this.lblFullNameTop.Size = new System.Drawing.Size(498, 94);
             this.lblFullNameTop.TabIndex = 9;
             this.lblFullNameTop.Text = "\"FullName\"";
             this.lblFullNameTop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,10 +166,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.lblDateOfBirth.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblDateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblDateOfBirth.Location = new System.Drawing.Point(167, 107);
-            this.lblDateOfBirth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDateOfBirth.Location = new System.Drawing.Point(250, 165);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
-            this.lblDateOfBirth.Size = new System.Drawing.Size(162, 39);
+            this.lblDateOfBirth.Size = new System.Drawing.Size(243, 60);
             this.lblDateOfBirth.TabIndex = 7;
             this.lblDateOfBirth.Text = "\"DateOfBirth\"";
             // 
@@ -183,10 +176,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(2, 107);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(3, 165);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 19);
+            this.label5.Size = new System.Drawing.Size(152, 28);
             this.label5.TabIndex = 6;
             this.label5.Text = "Date of Birth";
             // 
@@ -195,10 +187,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblFullName.AutoSize = true;
             this.lblFullName.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblFullName.Location = new System.Drawing.Point(167, 60);
-            this.lblFullName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFullName.Location = new System.Drawing.Point(250, 92);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(92, 21);
+            this.lblFullName.Size = new System.Drawing.Size(140, 30);
             this.lblFullName.TabIndex = 5;
             this.lblFullName.Text = "\"FullName\"";
             // 
@@ -206,10 +197,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(2, 62);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(3, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 19);
+            this.label3.Size = new System.Drawing.Size(129, 28);
             this.label3.TabIndex = 4;
             this.label3.Text = "Full Name";
             // 
@@ -218,10 +208,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblStudNumber.AutoSize = true;
             this.lblStudNumber.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStudNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblStudNumber.Location = new System.Drawing.Point(167, 19);
-            this.lblStudNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStudNumber.Location = new System.Drawing.Point(250, 29);
             this.lblStudNumber.Name = "lblStudNumber";
-            this.lblStudNumber.Size = new System.Drawing.Size(146, 21);
+            this.lblStudNumber.Size = new System.Drawing.Size(213, 30);
             this.lblStudNumber.TabIndex = 3;
             this.lblStudNumber.Text = "\"StudentNumber\"";
             // 
@@ -229,19 +218,18 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lblUsername.Location = new System.Drawing.Point(1, 22);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsername.Location = new System.Drawing.Point(2, 34);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(134, 19);
+            this.lblUsername.Size = new System.Drawing.Size(198, 28);
             this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "Student Number";
             // 
             // studentImageBox
             // 
-            this.studentImageBox.Location = new System.Drawing.Point(58, 238);
-            this.studentImageBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.studentImageBox.Location = new System.Drawing.Point(87, 366);
+            this.studentImageBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.studentImageBox.Name = "studentImageBox";
-            this.studentImageBox.Size = new System.Drawing.Size(255, 225);
+            this.studentImageBox.Size = new System.Drawing.Size(382, 346);
             this.studentImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.studentImageBox.TabIndex = 8;
             this.studentImageBox.TabStop = false;
@@ -250,14 +238,14 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.studentDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.studentDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.studentDataGrid.Location = new System.Drawing.Point(369, 176);
-            this.studentDataGrid.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.studentDataGrid.Location = new System.Drawing.Point(554, 271);
+            this.studentDataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.studentDataGrid.Name = "studentDataGrid";
             this.studentDataGrid.ReadOnly = true;
             this.studentDataGrid.RowHeadersWidth = 62;
             this.studentDataGrid.RowTemplate.Height = 28;
             this.studentDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.studentDataGrid.Size = new System.Drawing.Size(681, 465);
+            this.studentDataGrid.Size = new System.Drawing.Size(1022, 715);
             this.studentDataGrid.TabIndex = 17;
             this.studentDataGrid.SelectionChanged += new System.EventHandler(this.studentDataGrid_SelectionChanged);
             // 
@@ -269,10 +257,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnMoveLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMoveLast.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnMoveLast.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.btnMoveLast.Location = new System.Drawing.Point(939, 650);
-            this.btnMoveLast.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMoveLast.Location = new System.Drawing.Point(1408, 1000);
+            this.btnMoveLast.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnMoveLast.Name = "btnMoveLast";
-            this.btnMoveLast.Size = new System.Drawing.Size(111, 35);
+            this.btnMoveLast.Size = new System.Drawing.Size(166, 54);
             this.btnMoveLast.TabIndex = 16;
             this.btnMoveLast.Text = ">>";
             this.btnMoveLast.UseVisualStyleBackColor = false;
@@ -286,10 +274,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.buttonMoveNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMoveNext.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.buttonMoveNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.buttonMoveNext.Location = new System.Drawing.Point(824, 650);
-            this.buttonMoveNext.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buttonMoveNext.Location = new System.Drawing.Point(1236, 1000);
+            this.buttonMoveNext.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.buttonMoveNext.Name = "buttonMoveNext";
-            this.buttonMoveNext.Size = new System.Drawing.Size(111, 35);
+            this.buttonMoveNext.Size = new System.Drawing.Size(166, 54);
             this.buttonMoveNext.TabIndex = 15;
             this.buttonMoveNext.Text = ">";
             this.buttonMoveNext.UseVisualStyleBackColor = false;
@@ -303,10 +291,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnMovePrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMovePrevious.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnMovePrevious.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.btnMovePrevious.Location = new System.Drawing.Point(484, 649);
-            this.btnMovePrevious.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMovePrevious.Location = new System.Drawing.Point(726, 998);
+            this.btnMovePrevious.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnMovePrevious.Name = "btnMovePrevious";
-            this.btnMovePrevious.Size = new System.Drawing.Size(111, 35);
+            this.btnMovePrevious.Size = new System.Drawing.Size(166, 54);
             this.btnMovePrevious.TabIndex = 14;
             this.btnMovePrevious.Text = "<";
             this.btnMovePrevious.UseVisualStyleBackColor = false;
@@ -320,10 +308,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnMoveFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMoveFirst.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnMoveFirst.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.btnMoveFirst.Location = new System.Drawing.Point(369, 649);
-            this.btnMoveFirst.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMoveFirst.Location = new System.Drawing.Point(554, 998);
+            this.btnMoveFirst.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnMoveFirst.Name = "btnMoveFirst";
-            this.btnMoveFirst.Size = new System.Drawing.Size(111, 35);
+            this.btnMoveFirst.Size = new System.Drawing.Size(166, 54);
             this.btnMoveFirst.TabIndex = 13;
             this.btnMoveFirst.Text = "<<";
             this.btnMoveFirst.UseVisualStyleBackColor = false;
@@ -336,10 +324,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1300, 10);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnExit.Location = new System.Drawing.Point(1950, 15);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(40, 40);
+            this.btnExit.Size = new System.Drawing.Size(60, 62);
             this.btnExit.TabIndex = 22;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -352,10 +340,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewAll.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnViewAll.ForeColor = System.Drawing.Color.White;
-            this.btnViewAll.Location = new System.Drawing.Point(895, 742);
-            this.btnViewAll.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnViewAll.Location = new System.Drawing.Point(1342, 1142);
+            this.btnViewAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewAll.Name = "btnViewAll";
-            this.btnViewAll.Size = new System.Drawing.Size(155, 35);
+            this.btnViewAll.Size = new System.Drawing.Size(232, 54);
             this.btnViewAll.TabIndex = 21;
             this.btnViewAll.Text = "VIEW ALL ";
             this.btnViewAll.UseVisualStyleBackColor = false;
@@ -368,10 +356,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(722, 742);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnDelete.Location = new System.Drawing.Point(1083, 1142);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(155, 35);
+            this.btnDelete.Size = new System.Drawing.Size(232, 54);
             this.btnDelete.TabIndex = 20;
             this.btnDelete.Text = "DELETE STUDENT";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -384,10 +372,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(544, 742);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnUpdate.Location = new System.Drawing.Point(816, 1142);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(155, 35);
+            this.btnUpdate.Size = new System.Drawing.Size(232, 54);
             this.btnUpdate.TabIndex = 19;
             this.btnUpdate.Text = "UPDATE STUDENT";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -400,10 +388,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(369, 742);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnCreate.Location = new System.Drawing.Point(554, 1142);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(155, 35);
+            this.btnCreate.Size = new System.Drawing.Size(232, 54);
             this.btnCreate.TabIndex = 18;
             this.btnCreate.Text = "ADD STUDENT";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -413,11 +401,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.lblWelcome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblWelcome.Location = new System.Drawing.Point(1201, 52);
-            this.lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWelcome.Location = new System.Drawing.Point(1798, 81);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.lblWelcome.Size = new System.Drawing.Size(150, 36);
+            this.lblWelcome.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.lblWelcome.Size = new System.Drawing.Size(225, 55);
             this.lblWelcome.TabIndex = 16;
             this.lblWelcome.Text = "\"UserWelcome\"";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -429,10 +416,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.linkSwitch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.linkSwitch.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkSwitch.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.linkSwitch.Location = new System.Drawing.Point(1169, 88);
-            this.linkSwitch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkSwitch.Location = new System.Drawing.Point(1674, 125);
             this.linkSwitch.Name = "linkSwitch";
-            this.linkSwitch.Size = new System.Drawing.Size(93, 19);
+            this.linkSwitch.Size = new System.Drawing.Size(141, 28);
             this.linkSwitch.TabIndex = 17;
             this.linkSwitch.TabStop = true;
             this.linkSwitch.Text = "Switch User";
@@ -447,16 +433,18 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1351, 58);
+            this.panel1.Size = new System.Drawing.Size(2026, 89);
             this.panel1.TabIndex = 18;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 49);
+            this.pictureBox1.Size = new System.Drawing.Size(105, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
@@ -466,20 +454,19 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(75, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(112, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 25);
+            this.label1.Size = new System.Drawing.Size(294, 38);
             this.label1.TabIndex = 6;
             this.label1.Text = "BELGIUM CAMPUS";
             // 
             // searchBox
             // 
             this.searchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.searchBox.Location = new System.Drawing.Point(24, 144);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.searchBox.Location = new System.Drawing.Point(36, 222);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(203, 26);
+            this.searchBox.Size = new System.Drawing.Size(302, 35);
             this.searchBox.TabIndex = 11;
             // 
             // btnSearch
@@ -488,10 +475,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(231, 140);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnSearch.Location = new System.Drawing.Point(346, 215);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(122, 35);
+            this.btnSearch.Size = new System.Drawing.Size(183, 54);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -511,27 +498,31 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.panel2.Controls.Add(this.lblFullName);
             this.panel2.Controls.Add(this.lblStudNumber);
             this.panel2.Controls.Add(this.lblDateOfBirth);
-            this.panel2.Location = new System.Drawing.Point(24, 467);
+            this.panel2.Location = new System.Drawing.Point(36, 718);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(329, 323);
+            this.panel2.Size = new System.Drawing.Size(494, 497);
             this.panel2.TabIndex = 22;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(1116, 61);
+            this.label2.Location = new System.Drawing.Point(1674, 94);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 19);
+            this.label2.Size = new System.Drawing.Size(123, 28);
             this.label2.TabIndex = 23;
             this.label2.Text = "Welcome";
             // 
             // lbModules
             // 
             this.lbModules.FormattingEnabled = true;
-            this.lbModules.Location = new System.Drawing.Point(1079, 179);
+            this.lbModules.ItemHeight = 20;
+            this.lbModules.Location = new System.Drawing.Point(1618, 275);
+            this.lbModules.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lbModules.Name = "lbModules";
-            this.lbModules.Size = new System.Drawing.Size(195, 459);
+            this.lbModules.Size = new System.Drawing.Size(290, 704);
             this.lbModules.TabIndex = 24;
             // 
             // label4
@@ -539,9 +530,10 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.label4.Location = new System.Drawing.Point(370, 156);
+            this.label4.Location = new System.Drawing.Point(555, 240);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 19);
+            this.label4.Size = new System.Drawing.Size(147, 28);
             this.label4.TabIndex = 25;
             this.label4.Text = "Student Info";
             // 
@@ -550,19 +542,20 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.label6.Location = new System.Drawing.Point(1075, 157);
+            this.label6.Location = new System.Drawing.Point(1612, 242);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 19);
+            this.label6.Size = new System.Drawing.Size(203, 28);
             this.label6.TabIndex = 25;
             this.label6.Text = "Student Modules";
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1351, 837);
+            this.ClientSize = new System.Drawing.Size(2026, 1288);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbModules);
@@ -586,7 +579,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnCreate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
