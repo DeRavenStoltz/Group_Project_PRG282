@@ -138,7 +138,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.lblGender.Location = new System.Drawing.Point(167, 146);
+            this.lblGender.Location = new System.Drawing.Point(167, 152);
             this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(80, 21);
@@ -175,7 +175,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lblDateOfBirth.Location = new System.Drawing.Point(167, 107);
             this.lblDateOfBirth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
-            this.lblDateOfBirth.Size = new System.Drawing.Size(113, 39);
+            this.lblDateOfBirth.Size = new System.Drawing.Size(162, 39);
             this.lblDateOfBirth.TabIndex = 7;
             this.lblDateOfBirth.Text = "\"DateOfBirth\"";
             // 
