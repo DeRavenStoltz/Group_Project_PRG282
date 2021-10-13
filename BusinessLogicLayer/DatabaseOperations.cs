@@ -9,8 +9,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 {
     internal class DatabaseOperations
     {
-        // public bool InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress)
-
         public byte[] UploadPhoto()
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Images|*.jpg;*.png;*.jpeg", ValidateNames = true, Multiselect = false })
@@ -165,10 +163,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             {
                 foreach (Student stud in students)
                 {
-                    //if (stud.FullName.Contains(search))
-                    //{
-                    //    searchedStudents.Add(stud);
-                    //}
                     try
                     {
                         if (stud.StudentNumber == int.Parse(search))
@@ -333,93 +327,3 @@ namespace Group_Project_PRG282.BusinessLogicLayer
         }
     }
 }
-
-//string newquery = $"UPDATE tblStudents SET studentFullName = '{fullName}',studentDOB = '{dateOfBirth}', studentGender = '{studentGender}', studentPhone = '{studentPhone}', studentAddress =  '{studentAddress}',studentImage= '"{}"' WHERE studentNumber =  {id} ";
-
-//SqlParameter photo = new SqlParameter("@studentImage", SqlDbType.Binary);
-//photo.Value = imageBytes;
-//connection.Open();
-//SqlCommand insertCommand = new SqlCommand(newquery, connection);
-//insertCommand.Parameters.Add(photo);
-//insertCommand.ExecuteNonQuery();
-//connection.Close();
-//==============================================================================================
-//string binary = Convert.ToString(imageBytes[20]);
-//string newquery = $"UPDATE tblStudents SET studentFullName = '{fullName}',studentDOB = '{dateOfBirth}', studentGender = '{studentGender}', studentPhone = '{studentPhone}', studentAddress =  '{studentAddress}',studentImage = {binary}  WHERE studentNumber =  {id} ";
-////SqlParameter photo = new SqlParameter("@studentImage", SqlDbType.Binary);
-////photo.Value = imageBytes;
-//connection.Open();
-//SqlCommand insertCommand = new SqlCommand(newquery, connection);
-////insertCommand.Parameters.Add(photo);
-//insertCommand.ExecuteNonQuery();
-//connection.Close();
-// ==============================
-//MemoryStream memoryStream = new MemoryStream(imageBytes);
-//Image image = Image.FromStream(memoryStream);
-//==============================
-//string query = "UPDATE tblStudents set studentFullName='" + fullName + "', studentDOB='" + dateOfBirth + "', studentGender='" + studentGender + "',studentPhone='" + studentPhone + "',studentAddress='" + studentAddress + "',@studentImage WHERE studentNumber ='" + id + "'";
-//string query = "UPDATE tblStudents set studentFullName = @fullName, studentDOB= @dateOfBirth, studentGender = @studentGender,studentPhone= @studentPhone ,studentAddress= @studentAddress ,studentImage = @studentImage WHERE studentNumber = @id";
-//SqlParameter StudentID = new SqlParameter("@fullName", SqlDbType.Int);
-//SqlParameter fullname = new SqlParameter("@fullName", SqlDbType.VarChar);
-//SqlParameter dateofbirth = new SqlParameter("@dateOfBirth", SqlDbType.VarChar);
-//SqlParameter gender = new SqlParameter("@studentGender", SqlDbType.VarChar);
-//SqlParameter phone = new SqlParameter("@studentPhone", SqlDbType.VarChar);
-//SqlParameter address = new SqlParameter("@studentAddress", SqlDbType.VarChar);
-//SqlParameter photo = new SqlParameter("@studentImage", SqlDbType.Binary);
-
-//StudentID.Value =int.Parse(StudentID);
-//fullname.Value = fullName.ToString();
-//dateofbirth.Value = dateOfBirth.ToString();
-//gender.Value = studentGender.ToString();
-//phone.Value = studentPhone.ToString();
-//address.Value = studentAddress.ToString();
-//photo.Value = imageBytes;
-
-//connection.Open();
-
-//SqlCommand insertCommand = new SqlCommand(query, connection);
-
-//insertCommand.Parameters.Add(StudentID);
-//insertCommand.Parameters.Add(fullname);
-//insertCommand.Parameters.Add(dateofbirth);
-//insertCommand.Parameters.Add(gender);
-//insertCommand.Parameters.Add(phone);
-//insertCommand.Parameters.Add(address);
-//insertCommand.Parameters.Add(photo);
-
-//insertCommand.ExecuteNonQuery();
-
-//connection.Close();
-//=======================================================
-//string query = "UPDATE tblStudents set studentFullName='" + fullName + "', studentDOB='" + dateOfBirth + "', studentGender='" + studentGender + "',studentPhone='" + studentPhone + "',studentAddress='" + studentAddress + "',@studentImage WHERE studentNumber ='" + id + "'";
-//SqlParameter StudentID = new SqlParameter("@fullName", SqlDbType.Int);
-//SqlParameter fullname = new SqlParameter("@fullName", SqlDbType.VarChar);
-//SqlParameter dateofbirth = new SqlParameter("@dateOfBirth", SqlDbType.VarChar);
-//SqlParameter gender = new SqlParameter("@studentGender", SqlDbType.VarChar);
-//SqlParameter phone = new SqlParameter("@studentPhone", SqlDbType.VarChar);
-//SqlParameter address = new SqlParameter("@studentAddress", SqlDbType.VarChar);
-//SqlParameter photo = new SqlParameter("@studentImage", SqlDbType.Binary);
-
-//StudentID.Value =int.Parse(StudentID);
-//fullname.Value = fullName.ToString();
-//dateofbirth.Value = dateOfBirth.ToString();
-//gender.Value = studentGender.ToString();
-//phone.Value = studentPhone.ToString();
-//address.Value = studentAddress.ToString();
-//photo.Value = imageBytes;
-
-//connection.Open();
-
-//SqlCommand insertCommand = new SqlCommand(query, connection);
-
-//insertCommand.Parameters.Add(StudentID);
-//insertCommand.Parameters.Add(fullname);
-//insertCommand.Parameters.Add(dateofbirth);
-//insertCommand.Parameters.Add(gender);
-//insertCommand.Parameters.Add(phone);
-//insertCommand.Parameters.Add(address);
-//insertCommand.Parameters.Add(photo);
-
-//insertCommand.ExecuteNonQuery();
-
-//connection.Close();
