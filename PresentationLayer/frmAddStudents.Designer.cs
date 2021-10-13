@@ -29,6 +29,7 @@ namespace Group_Project_PRG282.Presentation_Layer
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddStudents));
             this.lblAddStudents = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,6 +62,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.EPFullName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.EPStudnetPhone = new System.Windows.Forms.ErrorProvider(this.components);
+            this.EPStudentAddress = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picStudentUpload)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,6 +72,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EPFullName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPStudnetPhone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPStudentAddress)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAddStudents
@@ -101,7 +108,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnUploadPhoto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnUploadPhoto.ForeColor = System.Drawing.Color.White;
             this.btnUploadPhoto.Location = new System.Drawing.Point(33, 196);
-            this.btnUploadPhoto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUploadPhoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUploadPhoto.Name = "btnUploadPhoto";
             this.btnUploadPhoto.Size = new System.Drawing.Size(167, 35);
             this.btnUploadPhoto.TabIndex = 28;
@@ -112,7 +119,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // picStudentUpload
             // 
             this.picStudentUpload.Location = new System.Drawing.Point(18, 22);
-            this.picStudentUpload.Margin = new System.Windows.Forms.Padding(2);
+            this.picStudentUpload.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picStudentUpload.Name = "picStudentUpload";
             this.picStudentUpload.Size = new System.Drawing.Size(195, 170);
             this.picStudentUpload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -123,26 +130,28 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.addStudAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.addStudAddress.Location = new System.Drawing.Point(18, 484);
-            this.addStudAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.addStudAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addStudAddress.Name = "addStudAddress";
             this.addStudAddress.Size = new System.Drawing.Size(195, 23);
             this.addStudAddress.TabIndex = 22;
+            this.addStudAddress.Validating += new System.ComponentModel.CancelEventHandler(this.addStudAddress_Validating);
             // 
             // addStudPhone
             // 
             this.addStudPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.addStudPhone.Location = new System.Drawing.Point(18, 422);
-            this.addStudPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.addStudPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addStudPhone.Name = "addStudPhone";
             this.addStudPhone.Size = new System.Drawing.Size(195, 23);
             this.addStudPhone.TabIndex = 21;
+            this.addStudPhone.Validating += new System.ComponentModel.CancelEventHandler(this.addStudPhone_Validating);
             // 
             // rdioAddFemale
             // 
             this.rdioAddFemale.AutoSize = true;
             this.rdioAddFemale.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdioAddFemale.Location = new System.Drawing.Point(79, 371);
-            this.rdioAddFemale.Margin = new System.Windows.Forms.Padding(2);
+            this.rdioAddFemale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdioAddFemale.Name = "rdioAddFemale";
             this.rdioAddFemale.Size = new System.Drawing.Size(73, 21);
             this.rdioAddFemale.TabIndex = 20;
@@ -155,7 +164,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.rdioAddMale.AutoSize = true;
             this.rdioAddMale.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdioAddMale.Location = new System.Drawing.Point(18, 371);
-            this.rdioAddMale.Margin = new System.Windows.Forms.Padding(2);
+            this.rdioAddMale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdioAddMale.Name = "rdioAddMale";
             this.rdioAddMale.Size = new System.Drawing.Size(57, 21);
             this.rdioAddMale.TabIndex = 19;
@@ -167,7 +176,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.addDatePicker.Font = new System.Drawing.Font("Century Gothic", 8F);
             this.addDatePicker.Location = new System.Drawing.Point(18, 311);
-            this.addDatePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.addDatePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addDatePicker.Name = "addDatePicker";
             this.addDatePicker.Size = new System.Drawing.Size(195, 21);
             this.addDatePicker.TabIndex = 18;
@@ -176,10 +185,11 @@ namespace Group_Project_PRG282.Presentation_Layer
             // 
             this.addFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.addFullName.Location = new System.Drawing.Point(18, 258);
-            this.addFullName.Margin = new System.Windows.Forms.Padding(2);
+            this.addFullName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addFullName.Name = "addFullName";
             this.addFullName.Size = new System.Drawing.Size(195, 23);
             this.addFullName.TabIndex = 16;
+            this.addFullName.Validating += new System.ComponentModel.CancelEventHandler(this.addFullName_Validating);
             // 
             // label8
             // 
@@ -273,7 +283,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.lbxModules.ItemHeight = 17;
             this.lbxModules.Location = new System.Drawing.Point(14, 103);
             this.lbxModules.Name = "lbxModules";
-            this.lbxModules.Size = new System.Drawing.Size(211, 123);
+            this.lbxModules.Size = new System.Drawing.Size(211, 106);
             this.lbxModules.TabIndex = 4;
             // 
             // cbxModule
@@ -303,7 +313,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnAddStudent.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddStudent.ForeColor = System.Drawing.Color.White;
             this.btnAddStudent.Location = new System.Drawing.Point(714, 491);
-            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(155, 35);
             this.btnAddStudent.TabIndex = 24;
@@ -319,7 +329,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(714, 439);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(155, 35);
             this.btnClear.TabIndex = 25;
@@ -335,7 +345,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Location = new System.Drawing.Point(714, 540);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(155, 35);
             this.btnBack.TabIndex = 26;
@@ -351,7 +361,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.btnExit.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(932, 7);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(40, 40);
             this.btnExit.TabIndex = 27;
@@ -372,6 +382,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(979, 58);
             this.panel1.TabIndex = 28;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
@@ -455,6 +466,18 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.panel4.Size = new System.Drawing.Size(240, 283);
             this.panel4.TabIndex = 32;
             // 
+            // EPFullName
+            // 
+            this.EPFullName.ContainerControl = this;
+            // 
+            // EPStudnetPhone
+            // 
+            this.EPStudnetPhone.ContainerControl = this;
+            // 
+            // EPStudentAddress
+            // 
+            this.EPStudentAddress.ContainerControl = this;
+            // 
             // frmAddStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,7 +492,7 @@ namespace Group_Project_PRG282.Presentation_Layer
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAddStudent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAddStudents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddStudents";
@@ -485,6 +508,9 @@ namespace Group_Project_PRG282.Presentation_Layer
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EPFullName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPStudnetPhone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPStudentAddress)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -522,5 +548,8 @@ namespace Group_Project_PRG282.Presentation_Layer
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ErrorProvider EPFullName;
+        private System.Windows.Forms.ErrorProvider EPStudnetPhone;
+        private System.Windows.Forms.ErrorProvider EPStudentAddress;
     }
 }

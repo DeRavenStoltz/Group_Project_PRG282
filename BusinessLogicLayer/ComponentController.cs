@@ -1,29 +1,20 @@
-
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Group_Project_PRG282.DataAccesLayer;
-
-
-
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace Group_Project_PRG282.Presentation_Layer
 {
     internal class ComponentController//For clearing or adjusting all visual components
     {
+        private DataHandler dh = new DataHandler();
 
-        DataHandler dh = new DataHandler();
-        
-
-        public void clearFieldsLogIn(TextBox txtName,TextBox txtPass)
+        public void clearFieldsLogIn(TextBox txtName, TextBox txtPass)
 
         {
             txtName.Clear();
             txtPass.Clear();
         }
+
         public void fillCBXModule(ComboBox cbx)
         {
             List<Module> lmod = new List<Module>();
@@ -33,8 +24,8 @@ namespace Group_Project_PRG282.Presentation_Layer
                 cbx.Items.Add(module.ModuleID);
             }
         }
-        
-        public void fillUpdateCBX(ComboBox cbx,ListBox lbx, List<Module> lmod)
+
+        public void fillUpdateCBX(ComboBox cbx, ListBox lbx, List<Module> lmod)
         {
             foreach (Module mod in lmod)
             {
