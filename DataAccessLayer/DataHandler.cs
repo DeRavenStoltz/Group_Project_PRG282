@@ -10,14 +10,12 @@ namespace Group_Project_PRG282.DataAccesLayer
         public DataHandler()
         {
         }
-
         public SqlConnection ConnectDatabase()
         {
-            SqlConnection connection = new SqlConnection(@"Data Source = DESKTOP-IHTCUHK\SQLEXPRESS; Initial Catalog = StudentSystem; Integrated Security = True");
+            SqlConnection connection = new SqlConnection(@"Data Source = .; Initial Catalog = StudentSystem; Integrated Security = True");
 
             return connection;
         }
-
         public List<Student> GetStudents(SqlConnection connection)
         {
             List<Student> students = new List<Student>();
@@ -36,7 +34,6 @@ namespace Group_Project_PRG282.DataAccesLayer
                     students.Add(new Student(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), byteData));
                 }
             }
-
             return students;
         }
 
@@ -105,8 +102,6 @@ namespace Group_Project_PRG282.DataAccesLayer
                     }
                 }
             }
-            
-            
             return false;
         }
 

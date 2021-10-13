@@ -10,7 +10,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
     internal class CheckLogin
     {
         public event loginDelegate loginSuccess;
-
         public void checkLogin(string username, string password, List<string> usernames)
         {
             try

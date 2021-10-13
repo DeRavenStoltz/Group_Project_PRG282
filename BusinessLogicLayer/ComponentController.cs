@@ -7,14 +7,11 @@ namespace Group_Project_PRG282.Presentation_Layer
     internal class ComponentController//For clearing or adjusting all visual components
     {
         private DataHandler dh = new DataHandler();
-
         public void clearFieldsLogIn(TextBox txtName, TextBox txtPass)
-
         {
             txtName.Clear();
             txtPass.Clear();
         }
-
         public void fillCBXModule(ComboBox cbx)
         {
             List<Module> lmod = new List<Module>();
@@ -24,7 +21,6 @@ namespace Group_Project_PRG282.Presentation_Layer
                 cbx.Items.Add(module.ModuleID);
             }
         }
-
         public void fillUpdateCBX(ComboBox cbx, ListBox lbx, List<Module> lmod)
         {
             foreach (Module mod in lmod)
@@ -35,7 +31,6 @@ namespace Group_Project_PRG282.Presentation_Layer
                 }
             }
         }
-
         public void AddModuleLBX(ListBox lbxModules, ComboBox cbxModule)
         {
             if (cbxModule.Text == "")
@@ -49,7 +44,6 @@ namespace Group_Project_PRG282.Presentation_Layer
                 cbxModule.Text = "";
             }
         }
-
         public void RemoveModuleLBX(ListBox lbxModules, ComboBox cbxModule)
         {
             if (lbxModules.SelectedIndex == -1)
