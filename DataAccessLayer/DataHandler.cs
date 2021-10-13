@@ -13,7 +13,7 @@ namespace Group_Project_PRG282.DataAccesLayer
 
         public SqlConnection ConnectDatabase()
         {
-            SqlConnection connection = new SqlConnection(@"Server=LAPTOP-S4VFC76G\SQLEXPRESS02;Initial Catalog=StudentSystem; Initial Catalog=StudentSystem; Integrated Security=true");
+            SqlConnection connection = new SqlConnection(@"Data Source = DESKTOP-IHTCUHK\SQLEXPRESS; Initial Catalog = StudentSystem; Integrated Security = True");
 
             return connection;
         }
@@ -89,20 +89,24 @@ namespace Group_Project_PRG282.DataAccesLayer
         public bool JustString(string name)
         {
             string[] Fullname = name.Split(' ');
-
-            foreach (char item in Fullname[0])
+            if (Fullname.Length==2)//ensuring both name and surname
             {
-                if (char.IsLetter(item))
+                foreach (char item in Fullname[0])
                 {
-                    foreach (char next in Fullname[1])
+                    if (char.IsLetter(item))
                     {
-                        if (char.IsLetter(next))
+                        foreach (char next in Fullname[1])
                         {
-                            return true;
+                            if (char.IsLetter(next))
+                            {
+                                return true;
+                            }
                         }
                     }
                 }
             }
+            
+            
             return false;
         }
 

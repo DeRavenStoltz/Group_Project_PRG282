@@ -71,7 +71,7 @@ namespace Group_Project_PRG282.Presentation_Layer
                             }
                             else
                             {
-                                if (cbxModule.Text == "")
+                                if (lbxModules.Items.Count == 0)
                                 {
                                     MessageBox.Show("Please choose a Module");
                                 }
@@ -93,7 +93,7 @@ namespace Group_Project_PRG282.Presentation_Layer
                 }
                 else
                 {
-                    MessageBox.Show("The name can only contain letters. ");
+                    MessageBox.Show("Please ensure both name and surname are entered and that they only contains letters. ");
                 }
             }
             else
@@ -207,6 +207,11 @@ namespace Group_Project_PRG282.Presentation_Layer
                 e.Cancel = false;
                 EPStudentAddress.SetError(addStudAddress, "");
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
