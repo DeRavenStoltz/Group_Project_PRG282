@@ -85,49 +85,54 @@ namespace Group_Project_PRG282.PresentationLayer
             Application.Exit();
         }
 
-        //private void txtModuleID_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        //{
-        //    if (string.IsNullOrWhiteSpace(txtModuleID.Text))
-        //    {
-        //        e.Cancel = true;
-        //        txtModuleID.Focus();
-        //        EPModuleID.SetError(txtModuleID, "This can not be empty");
-        //    }
-        //    else
-        //    {
-        //        e.Cancel = false;
-        //        EPModuleID.SetError(txtModuleID, "");
-        //    }
-        //}
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
-        //private void txtModuleName_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        //{
-        //    if (string.IsNullOrWhiteSpace(txtModuleName.Text))
-        //    {
-        //        e.Cancel = true;
-        //        txtModuleName.Focus();
-        //        EPModuleName.SetError(txtModuleName, "This can not be empty");
-        //    }
-        //    else
-        //    {
-        //        e.Cancel = false;
-        //        EPModuleName.SetError(txtModuleName, "");
-        //    }
-        //}
+        }
 
-        //private void txtModuleDescription_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        //{
-        //    if (string.IsNullOrWhiteSpace(txtModuleDescription.Text))
-        //    {
-        //        e.Cancel = true;
-        //        txtModuleDescription.Focus();
-        //        EPModuleDecription.SetError(txtModuleDescription, "This can not be empty");
-        //    }
-        //    else
-        //    {
-        //        e.Cancel = false;
-        //        EPModuleDecription.SetError(txtModuleDescription, "");
-        //    }
-        //}
+        private void txtModuleID_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtModuleID.Text))
+            {
+                e.Cancel = true;
+                txtModuleID.Focus();
+                EPModuleID.SetError(txtModuleID, "This can not be empty");
+            }
+            else
+            {
+                e.Cancel = false;
+                EPModuleID.SetError(txtModuleID, "");
+            }
+        }
+
+        private void txtModuleName_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtModuleName.Text))
+            {
+                e.Cancel = true;
+                txtModuleName.Focus();
+                EPModuleName.SetError(txtModuleName, "This can not be empty");
+            }
+            else
+            {
+                e.Cancel = false;
+                EPModuleName.SetError(txtModuleName, "");
+            }
+        }
+
+        private void txtModuleDescription_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtModuleDescription.Text))
+            {
+                e.Cancel = true;
+                txtModuleDescription.Focus();
+                EPModuleDecription.SetError(txtModuleDescription, "This can not be empty");
+            }
+            else
+            {
+                e.Cancel = false;
+                EPModuleDecription.SetError(txtModuleDescription, "");
+            }
+        }
     }
 }

@@ -26,11 +26,17 @@ namespace Group_Project_PRG282
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string newUser = ru.addUser(txtUsername.Text, txtPassword.Text);
-            existingUsers.Add(newUser);
-            db.addUser(existingUsers);
-            clearFields();
-            showLogin();
+            Validation v = new Validation();
+            if (v.RegisterValidation(txtPassword.Text,txtUsername.Text))
+            {
+                string newUser = ru.addUser(txtUsername.Text, txtPassword.Text);
+                existingUsers.Add(newUser);
+                db.addUser(existingUsers);
+                MessageBox.Show("Registration Succesful");
+                clearFields();
+                showLogin();
+            }
+           
         }
 
         private void btnClearLogin_Click(object sender, EventArgs e)

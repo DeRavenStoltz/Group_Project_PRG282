@@ -70,10 +70,10 @@ namespace Group_Project_PRG282.PresentationLayer
             // greenTick
             // 
             this.greenTick.Image = ((System.Drawing.Image)(resources.GetObject("greenTick.Image")));
-            this.greenTick.Location = new System.Drawing.Point(329, 313);
-            this.greenTick.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.greenTick.Location = new System.Drawing.Point(247, 254);
+            this.greenTick.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.greenTick.Name = "greenTick";
-            this.greenTick.Size = new System.Drawing.Size(31, 28);
+            this.greenTick.Size = new System.Drawing.Size(23, 23);
             this.greenTick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.greenTick.TabIndex = 26;
             this.greenTick.TabStop = false;
@@ -82,10 +82,10 @@ namespace Group_Project_PRG282.PresentationLayer
             // redCross
             // 
             this.redCross.Image = ((System.Drawing.Image)(resources.GetObject("redCross.Image")));
-            this.redCross.Location = new System.Drawing.Point(329, 313);
-            this.redCross.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.redCross.Location = new System.Drawing.Point(247, 254);
+            this.redCross.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.redCross.Name = "redCross";
-            this.redCross.Size = new System.Drawing.Size(31, 28);
+            this.redCross.Size = new System.Drawing.Size(23, 23);
             this.redCross.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.redCross.TabIndex = 25;
             this.redCross.TabStop = false;
@@ -93,10 +93,10 @@ namespace Group_Project_PRG282.PresentationLayer
             // txtLink
             // 
             this.txtLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtLink.Location = new System.Drawing.Point(56, 313);
-            this.txtLink.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLink.Location = new System.Drawing.Point(42, 254);
+            this.txtLink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLink.Name = "txtLink";
-            this.txtLink.Size = new System.Drawing.Size(269, 30);
+            this.txtLink.Size = new System.Drawing.Size(203, 26);
             this.txtLink.TabIndex = 24;
             this.txtLink.TextChanged += new System.EventHandler(this.txtLink_TextChanged);
             // 
@@ -104,49 +104,48 @@ namespace Group_Project_PRG282.PresentationLayer
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(124, 286);
+            this.label1.Location = new System.Drawing.Point(93, 232);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 25);
+            this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 23;
             this.label1.Text = "Module Link";
             // 
             // txtModuleDescription
             // 
             this.txtModuleDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtModuleDescription.Location = new System.Drawing.Point(56, 240);
-            this.txtModuleDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtModuleDescription.Location = new System.Drawing.Point(42, 195);
+            this.txtModuleDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtModuleDescription.Name = "txtModuleDescription";
-            this.txtModuleDescription.Size = new System.Drawing.Size(269, 30);
+            this.txtModuleDescription.Size = new System.Drawing.Size(203, 26);
             this.txtModuleDescription.TabIndex = 22;
-  //          this.txtModuleDescription.Validating += new System.ComponentModel.CancelEventHandler(this.txtModuleDescription_Validating);
             // 
             // txtModuleName
             // 
             this.txtModuleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtModuleName.Location = new System.Drawing.Point(56, 158);
-            this.txtModuleName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtModuleName.Location = new System.Drawing.Point(42, 128);
+            this.txtModuleName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtModuleName.Name = "txtModuleName";
-            this.txtModuleName.Size = new System.Drawing.Size(269, 30);
+            this.txtModuleName.Size = new System.Drawing.Size(203, 26);
             this.txtModuleName.TabIndex = 21;
-      //      this.txtModuleName.Validating += new System.ComponentModel.CancelEventHandler(this.txtModuleName_Validating);
             // 
             // txtModuleID
             // 
             this.txtModuleID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtModuleID.Location = new System.Drawing.Point(56, 85);
-            this.txtModuleID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtModuleID.Location = new System.Drawing.Point(42, 69);
+            this.txtModuleID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtModuleID.Name = "txtModuleID";
-            this.txtModuleID.Size = new System.Drawing.Size(269, 30);
+            this.txtModuleID.Size = new System.Drawing.Size(203, 26);
             this.txtModuleID.TabIndex = 16;
-        //    this.txtModuleID.Validating += new System.ComponentModel.CancelEventHandler(this.txtModuleID_Validating);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(81, 213);
+            this.label8.Location = new System.Drawing.Point(61, 173);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(197, 25);
+            this.label8.Size = new System.Drawing.Size(163, 20);
             this.label8.TabIndex = 14;
             this.label8.Text = "Module Description";
             // 
@@ -154,9 +153,10 @@ namespace Group_Project_PRG282.PresentationLayer
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(124, 130);
+            this.label10.Location = new System.Drawing.Point(93, 106);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(145, 25);
+            this.label10.Size = new System.Drawing.Size(118, 20);
             this.label10.TabIndex = 12;
             this.label10.Text = "Module Name";
             // 
@@ -164,9 +164,10 @@ namespace Group_Project_PRG282.PresentationLayer
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(127, 58);
+            this.label3.Location = new System.Drawing.Point(95, 47);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 25);
+            this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Module ID";
             // 
@@ -174,9 +175,10 @@ namespace Group_Project_PRG282.PresentationLayer
             // 
             this.lblAddStudents.AutoSize = true;
             this.lblAddStudents.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddStudents.Location = new System.Drawing.Point(79, 436);
+            this.lblAddStudents.Location = new System.Drawing.Point(59, 354);
+            this.lblAddStudents.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddStudents.Name = "lblAddStudents";
-            this.lblAddStudents.Size = new System.Drawing.Size(280, 47);
+            this.lblAddStudents.Size = new System.Drawing.Size(223, 38);
             this.lblAddStudents.TabIndex = 9;
             this.lblAddStudents.Text = "ADD MODULE";
             // 
@@ -187,10 +189,9 @@ namespace Group_Project_PRG282.PresentationLayer
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(776, 663);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Location = new System.Drawing.Point(582, 539);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(207, 43);
+            this.btnAdd.Size = new System.Drawing.Size(155, 35);
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "ADD MODULE";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -203,10 +204,9 @@ namespace Group_Project_PRG282.PresentationLayer
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(776, 602);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Location = new System.Drawing.Point(582, 489);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(207, 43);
+            this.btnClear.Size = new System.Drawing.Size(155, 35);
             this.btnClear.TabIndex = 12;
             this.btnClear.Text = "CLEAR ALL";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -218,10 +218,9 @@ namespace Group_Project_PRG282.PresentationLayer
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(776, 732);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Location = new System.Drawing.Point(582, 595);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(207, 43);
+            this.btnCancel.Size = new System.Drawing.Size(155, 35);
             this.btnCancel.TabIndex = 13;
             this.btnCancel.Text = "BACK TO MAIN";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -237,10 +236,10 @@ namespace Group_Project_PRG282.PresentationLayer
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1305, 71);
+            this.panel1.Size = new System.Drawing.Size(979, 58);
             this.panel1.TabIndex = 14;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnClose
             // 
@@ -249,10 +248,9 @@ namespace Group_Project_PRG282.PresentationLayer
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1243, 7);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Location = new System.Drawing.Point(932, 6);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(53, 49);
+            this.btnClose.Size = new System.Drawing.Size(40, 40);
             this.btnClose.TabIndex = 28;
             this.btnClose.Text = "x";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -261,10 +259,9 @@ namespace Group_Project_PRG282.PresentationLayer
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 18);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(75, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 32);
+            this.label2.Size = new System.Drawing.Size(200, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "BELGIUM CAMPUS";
             // 
@@ -272,10 +269,9 @@ namespace Group_Project_PRG282.PresentationLayer
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(93, 60);
+            this.pictureBox2.Size = new System.Drawing.Size(70, 49);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -288,19 +284,17 @@ namespace Group_Project_PRG282.PresentationLayer
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(0, 71);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(0, 58);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(423, 751);
+            this.panel2.Size = new System.Drawing.Size(317, 610);
             this.panel2.TabIndex = 15;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 172);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 140);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(423, 242);
+            this.pictureBox1.Size = new System.Drawing.Size(317, 197);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -319,10 +313,9 @@ namespace Group_Project_PRG282.PresentationLayer
             this.panel3.Controls.Add(this.redCross);
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.panel3.Location = new System.Drawing.Point(684, 164);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(513, 133);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(375, 406);
+            this.panel3.Size = new System.Drawing.Size(281, 330);
             this.panel3.TabIndex = 27;
             // 
             // EPModuleID
@@ -339,9 +332,9 @@ namespace Group_Project_PRG282.PresentationLayer
             // 
             // frmAddModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1305, 822);
+            this.ClientSize = new System.Drawing.Size(979, 668);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -349,7 +342,6 @@ namespace Group_Project_PRG282.PresentationLayer
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAddModule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddModule";

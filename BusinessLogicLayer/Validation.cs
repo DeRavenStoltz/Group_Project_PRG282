@@ -51,5 +51,41 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
             else return false;
         }
+
+        public bool RegisterValidation(string password,string username)
+        {
+            if (password==""||username=="")
+            {
+                MessageBox.Show("Fill in all fields");
+                return false;
+            }
+
+            if (password.Length >= 8)
+            {
+                bool up = false;
+                foreach (var let in password)
+                {
+                    if (Char.IsUpper(let))
+                    {
+                        up = true;
+                    }
+                }
+                if (!up)
+                {
+                    MessageBox.Show("Password must contain at least 1 uppercase letter");
+                    return false;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Password must contain at least 8 characters");
+                return false;
+            }
+
+
+
+            return true;
+        }
     }
 }
