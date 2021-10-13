@@ -13,7 +13,7 @@ namespace Group_Project_PRG282.DataAccesLayer
 
         public SqlConnection ConnectDatabase()
         {
-            SqlConnection connection = new SqlConnection(@"Data Source = DESKTOP-IHTCUHK\SQLEXPRESS; Initial Catalog = StudentSystem; Integrated Security = True");
+            SqlConnection connection = new SqlConnection(@"Data Source = .; Initial Catalog = StudentSystem; Integrated Security = True");
 
             return connection;
         }
