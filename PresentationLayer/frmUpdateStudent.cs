@@ -95,17 +95,86 @@ namespace Group_Project_PRG282.PresentationLayer
             {
                 studentGender = "Female";
             }
+            bool DataCorrect = false;
+            List<Module> AddedModules = new List<Module>();
+            string gender;
+            if (bytes != null)
+            {
+                if (datahandler.JustString(txtFullName.Text))
+                {
+                    if ((this.rdbMale.Checked || this.rdbFemale.Checked))
+                    {
+                        if (datahandler.checkNumber(txtPhone.Text))
+                        {
+                            if (txtAddress.Text == "")
+                            {
+                                MessageBox.Show("Please fill in the student address");
+                            }
+                            else
+                            {
+                                if (lbxModules.Items.Count == 0)
+                                {
+                                    MessageBox.Show("Please choose a Module");
+                                }
+                                else
+                                {
+                                    DataCorrect = true;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please check if the phone number is correct");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please choose a gender");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please ensure both name and surname are entered and that they only contains letters. ");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a photo");
+            }
+            if (rdbMale.Checked)
+            {
+                gender = rdbMale.Text;
+            }
+            else
+            {
+                gender = rdbFemale.Text;
+            }
+            foreach (Module mod in lmod)
+            {
+                if (lbxModules.Items.Contains(mod.ModuleID))
+                {
+                    AddedModules.Add(mod);
+                }
+            }
 
-            try
+            if (DataCorrect)
             {
-                operations.UpdateStudentInfo(datahandler.ConnectDatabase(), TxtStudentID.Text, txtFullName.Text, dtpDatePicker.Text, studentGender, txtPhone.Text, txtAddress.Text, bytes);
-                operations.UpdateStudentModules(ldel, ladd, int.Parse(TxtStudentID.Text), datahandler.ConnectDatabase());
-                MessageBox.Show("Information successfully updated");
+                try
+                {
+                        operations.UpdateStudentInfo(datahandler.ConnectDatabase(), TxtStudentID.Text, txtFullName.Text, dtpDatePicker.Text, studentGender, txtPhone.Text, txtAddress.Text, bytes);
+                        operations.UpdateStudentModules(ldel, ladd, int.Parse(TxtStudentID.Text), datahandler.ConnectDatabase());
+                       MessageBox.Show("Information successfully updated");
+
+                    frmMain main = new frmMain();
+                    main.Show();
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There was an error, please try again", ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error! Please try again", ex.Message);
-            }
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)

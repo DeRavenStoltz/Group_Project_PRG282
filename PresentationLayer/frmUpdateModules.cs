@@ -39,13 +39,17 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            dbo.updateModule(dh.ConnectDatabase(), txtCode.Text, txtModuleName.Text, txtDescription.Text, txtLink.Text);
-            if (updateSuccess != null)
+            Validation v = new Validation();
+            if (v.FinalValidate(txtCode.Text, txtModuleName.Text, txtDescription.Text))
             {
-                updateSuccess();
+                dbo.updateModule(dh.ConnectDatabase(), txtCode.Text, txtModuleName.Text, txtDescription.Text, txtLink.Text);
+                if (updateSuccess != null)
+                {
+                    updateSuccess();
+                }
+                frm.Show();
+                Close();
             }
-            frm.Show();
-            Close();
         }
 
         private void btnBack_Click(object sender, EventArgs e)

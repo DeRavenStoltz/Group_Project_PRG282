@@ -35,20 +35,32 @@ namespace Group_Project_PRG282.PresentationLayer
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (op.InsertModules(dh.ConnectDatabase(), txtModuleID.Text, txtModuleName.Text, txtModuleDescription.Text, txtLink.Text))
+            Validation v = new Validation();
+            if (v.FinalValidate(txtModuleID.Text,txtModuleName.Text,txtModuleDescription.Text))
             {
-                MessageBox.Show("Insert Completed");
-                if (moduleAdded != null)
+                if (greenTick.Visible != true)
                 {
-                    moduleAdded();
+                    MessageBox.Show("Invalid Link");
                 }
+                else
+                if (op.InsertModules(dh.ConnectDatabase(), txtModuleID.Text, txtModuleName.Text, txtModuleDescription.Text, txtLink.Text))
+                {
+                    MessageBox.Show("Insert Completed");
+                    if (moduleAdded != null)
+                    {
+                        moduleAdded();
+                    }
+                    txtModuleDescription.Clear();
+                    txtModuleID.Clear();
+                    txtModuleName.Clear();
+                    frm.Show();
+                    Close();
+                }
+                else MessageBox.Show("Insert Failed");
+               
+                
             }
-            else MessageBox.Show("Insert Failed");
-            txtModuleDescription.Clear();
-            txtModuleID.Clear();
-            txtModuleName.Clear();
-            frm.Show();
-            Close();
+            
         }
 
         private void txtLink_TextChanged(object sender, EventArgs e)
@@ -73,49 +85,49 @@ namespace Group_Project_PRG282.PresentationLayer
             Application.Exit();
         }
 
-        private void txtModuleID_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtModuleID.Text))
-            {
-                e.Cancel = true;
-                txtModuleID.Focus();
-                EPModuleID.SetError(txtModuleID, "This can not be empty");
-            }
-            else
-            {
-                e.Cancel = false;
-                EPModuleID.SetError(txtModuleID, "");
-            }
-        }
+        //private void txtModuleID_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        //{
+        //    if (string.IsNullOrWhiteSpace(txtModuleID.Text))
+        //    {
+        //        e.Cancel = true;
+        //        txtModuleID.Focus();
+        //        EPModuleID.SetError(txtModuleID, "This can not be empty");
+        //    }
+        //    else
+        //    {
+        //        e.Cancel = false;
+        //        EPModuleID.SetError(txtModuleID, "");
+        //    }
+        //}
 
-        private void txtModuleName_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtModuleName.Text))
-            {
-                e.Cancel = true;
-                txtModuleName.Focus();
-                EPModuleName.SetError(txtModuleName, "This can not be empty");
-            }
-            else
-            {
-                e.Cancel = false;
-                EPModuleName.SetError(txtModuleName, "");
-            }
-        }
+        //private void txtModuleName_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        //{
+        //    if (string.IsNullOrWhiteSpace(txtModuleName.Text))
+        //    {
+        //        e.Cancel = true;
+        //        txtModuleName.Focus();
+        //        EPModuleName.SetError(txtModuleName, "This can not be empty");
+        //    }
+        //    else
+        //    {
+        //        e.Cancel = false;
+        //        EPModuleName.SetError(txtModuleName, "");
+        //    }
+        //}
 
-        private void txtModuleDescription_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtModuleDescription.Text))
-            {
-                e.Cancel = true;
-                txtModuleDescription.Focus();
-                EPModuleDecription.SetError(txtModuleDescription, "This can not be empty");
-            }
-            else
-            {
-                e.Cancel = false;
-                EPModuleDecription.SetError(txtModuleDescription, "");
-            }
-        }
+        //private void txtModuleDescription_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        //{
+        //    if (string.IsNullOrWhiteSpace(txtModuleDescription.Text))
+        //    {
+        //        e.Cancel = true;
+        //        txtModuleDescription.Focus();
+        //        EPModuleDecription.SetError(txtModuleDescription, "This can not be empty");
+        //    }
+        //    else
+        //    {
+        //        e.Cancel = false;
+        //        EPModuleDecription.SetError(txtModuleDescription, "");
+        //    }
+        //}
     }
 }

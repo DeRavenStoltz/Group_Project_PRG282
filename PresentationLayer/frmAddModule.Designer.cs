@@ -118,7 +118,7 @@ namespace Group_Project_PRG282.PresentationLayer
             this.txtModuleDescription.Name = "txtModuleDescription";
             this.txtModuleDescription.Size = new System.Drawing.Size(269, 30);
             this.txtModuleDescription.TabIndex = 22;
-            this.txtModuleDescription.Validating += new System.ComponentModel.CancelEventHandler(this.txtModuleDescription_Validating);
+  //          this.txtModuleDescription.Validating += new System.ComponentModel.CancelEventHandler(this.txtModuleDescription_Validating);
             // 
             // txtModuleName
             // 
@@ -128,7 +128,7 @@ namespace Group_Project_PRG282.PresentationLayer
             this.txtModuleName.Name = "txtModuleName";
             this.txtModuleName.Size = new System.Drawing.Size(269, 30);
             this.txtModuleName.TabIndex = 21;
-            this.txtModuleName.Validating += new System.ComponentModel.CancelEventHandler(this.txtModuleName_Validating);
+      //      this.txtModuleName.Validating += new System.ComponentModel.CancelEventHandler(this.txtModuleName_Validating);
             // 
             // txtModuleID
             // 
@@ -138,7 +138,7 @@ namespace Group_Project_PRG282.PresentationLayer
             this.txtModuleID.Name = "txtModuleID";
             this.txtModuleID.Size = new System.Drawing.Size(269, 30);
             this.txtModuleID.TabIndex = 16;
-            this.txtModuleID.Validating += new System.ComponentModel.CancelEventHandler(this.txtModuleID_Validating);
+        //    this.txtModuleID.Validating += new System.ComponentModel.CancelEventHandler(this.txtModuleID_Validating);
             // 
             // label8
             // 

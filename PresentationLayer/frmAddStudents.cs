@@ -115,12 +115,7 @@ namespace Group_Project_PRG282.Presentation_Layer
                     AddedModules.Add(mod);
                 }
             }
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(addFullName.Text, "Message");
-                MessageBox.Show(addStudAddress.Text, "Message");
-                MessageBox.Show(addStudPhone.Text, "Message");
-            }
+           
             if (DataCorrect)
             {
                 try
