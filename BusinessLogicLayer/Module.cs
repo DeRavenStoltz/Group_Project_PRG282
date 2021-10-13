@@ -8,7 +8,6 @@
         public Module()
         {
         }
-
         public Module(string moduleID, string moduleName, string moduleDescription, string moduleLink)
         {
             this.ModuleID = moduleID;
@@ -16,7 +15,6 @@
             this.ModuleDescription = moduleDescription;
             ModuleLink = moduleLink;
         }
-
         public string ModuleID { get => moduleID; set => moduleID = value; }
         public string ModuleName { get => moduleName; set => moduleName = value; }
         public string ModuleDescription { get => moduleDescription; set => moduleDescription = value; }

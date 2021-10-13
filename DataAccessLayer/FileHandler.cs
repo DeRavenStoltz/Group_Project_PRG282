@@ -11,9 +11,7 @@ namespace Group_Project_PRG282.DataAccesLayer
         public FileHandler()
         {
         }
-
         private string users = $"{AppContext.BaseDirectory}Users.txt";
-
         public List<string> getUsers()
         {
             FileStream Stream = new FileStream(users, FileMode.OpenOrCreate);
@@ -33,10 +31,8 @@ namespace Group_Project_PRG282.DataAccesLayer
             {
                 MessageBox.Show(ex.Message);
             }
-
             return usernames;
         }
-
         public void addUser(List<string> newUser)
         {
             File.WriteAllLines(users, newUser);

@@ -9,11 +9,9 @@
         private string studentPhone;
         private string studentAddress;
         private byte[] photo;
-
         public Student()
         {
         }
-
         public Student(int studentNumber, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] photo)
         {
             this.studentNumber = studentNumber;
@@ -24,7 +22,6 @@
             this.studentAddress = studentAddress;
             this.photo = photo;
         }
-
         public int StudentNumber { get => studentNumber; set => studentNumber = value; }
         public string FullName { get => fullName; set => fullName = value; }
         public string DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }

@@ -25,9 +25,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                 return bytes;
             }
         }
-
         public void InsertStudents(SqlConnection connection, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes, List<Module> lAddedModules)
-
         {
             try
             {
@@ -84,7 +82,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                 MessageBox.Show("Error! Something went wrong", ex.Message);
             }
         }
-
         public int NewestStudentID(SqlConnection connection)
         {
             int ID;
@@ -93,7 +90,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             ID = (int)cmd.ExecuteScalar();
             return ID;
         }
-
         public List<string> studentModules(int studNumber, SqlConnection connection)//returns all modules for a specific student
         {
             List<string> lCodes = new List<string>();
@@ -121,9 +117,7 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
             return lCodes;
         }
-
         public bool InsertModules(SqlConnection connection, string modID, string ModName, string ModDescr, string link)
-
         {
             try
             {
@@ -160,7 +154,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
                 return false;
             }
         }
-
         public List<Student> SearchStudent(List<Student> students, string search)
         {
             List<Student> searchedStudents = new List<Student>();
@@ -193,7 +186,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 
             return searchedStudents;
         }
-
         public List<Module> SearchModule(List<Module> modules, string search)
         {
             List<Module> searchedModule = new List<Module>();
@@ -222,7 +214,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 
             return searchedModule;
         }
-
         public void deleteStudent(SqlConnection connection, int ID, string fullName)
         {
             connection.Open();
@@ -238,7 +229,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
             connection.Close();
         }
-
         public void deleteModule(SqlConnection connection, string ID, string ModName)
         {
             connection.Open();
@@ -255,7 +245,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
             connection.Close();
         }
-
         public void updateModule(SqlConnection connection, string ID, string ModName, string Description, string link)
         {
             connection.Open();
@@ -264,7 +253,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             cmd.ExecuteNonQuery();
             connection.Close();
         }
-
         public void UpdateStudentInfo(SqlConnection connection, string id, string fullName, string dateOfBirth, string studentGender, string studentPhone, string studentAddress, byte[] imageBytes)
         {
             string query = "UPDATE tblStudents set studentFullName = @fullName, studentDOB= @dateOfBirth, studentGender = @studentGender,studentPhone= @studentPhone ,studentAddress= @studentAddress,studentImage = @studentImage WHERE studentNumber = @id";
@@ -299,7 +287,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
 
             connection.Close();
         }
-
         public void UpdateStudentModules(List<string> ldel, List<string> ladd, int ID, SqlConnection connection)
         {
             try
@@ -342,7 +329,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             {
                 MessageBox.Show(e.Message);
             }
-
             connection.Close();
         }
     }

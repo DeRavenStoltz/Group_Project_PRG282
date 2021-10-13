@@ -18,7 +18,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
             else return true;
         }
-
         public bool ModuleCode(string id)
         {
             if (id.Length!= 3 && id.Length != 2)
@@ -37,7 +36,6 @@ namespace Group_Project_PRG282.BusinessLogicLayer
             }
             return true;
         }
-
         public bool FinalValidate(string id, string name, string descr)
         {
             if (ModuleCheckNull(name, descr) )

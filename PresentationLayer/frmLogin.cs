@@ -15,29 +15,24 @@ namespace Group_Project_PRG282
         private ComponentController cc = new ComponentController();
         private CheckLogin cl = new CheckLogin();
         private List<string> usersInSystem = new List<string>();
-
         public frmLogin()
         {
             InitializeComponent();
         }
-
         private void linkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Register registerForm = new Register();
             registerForm.Show();
             Hide();
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             cl.checkLogin(txtusernameBoxLogin.Text, txtpasswordBoxLogin.Text, usersInSystem);
         }
-
         private void btnClearLogin_Click(object sender, EventArgs e)
         {
             cc.clearFieldsLogIn(txtusernameBoxLogin, txtpasswordBoxLogin);
         }
-
         public void loginSuccessful()
         {
             frmNavigation navigation = new frmNavigation();
@@ -52,12 +47,10 @@ namespace Group_Project_PRG282
             cl.loginSuccess += loginSuccessful;
             usersInSystem = db.getUsers();
         }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void txtFocus_Enter(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
@@ -66,7 +59,6 @@ namespace Group_Project_PRG282
             textBox.BackColor = Color.White;
             parent.BackColor = Color.White;
         }
-
         private void txtFocus_Leave(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
@@ -75,12 +67,10 @@ namespace Group_Project_PRG282
             textBox.BackColor = SystemColors.Control;
             parent.BackColor = SystemColors.Control;
         }
-
         private void passwordPicture_MouseDown(object sender, MouseEventArgs e)
         {
             txtpasswordBoxLogin.UseSystemPasswordChar = false;
         }
-
         private void passwordPicture_MouseUp(object sender, MouseEventArgs e)
         {
             txtpasswordBoxLogin.UseSystemPasswordChar = true;
